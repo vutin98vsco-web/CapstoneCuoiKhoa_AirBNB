@@ -25,5 +25,6 @@ jobs:
         with:
           name: encrypted-postgres-${{ github.run_id }}
           path: .backups/*.tnbackup
+          include-hidden-files: true
           retention-days: 7
           if-no-files-found: error
