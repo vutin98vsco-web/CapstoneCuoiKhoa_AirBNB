@@ -7,7 +7,7 @@ import { encryptBackup } from '../lib/backup-crypto.js';
 const args = process.argv.slice(2), output = args[args.indexOf('--output') + 1];
 const docker = args.includes('--docker'), verify = args.includes('--verify-restore');
 let container;
-const run = (command, argv, options = {}) => { const result = spawnSync(command, argv, { windowsHide: true, timeout: 180000, maxBuffer: 64 * 1024 * 1024, ...options }); if (result.error || result.status !== 0) throw new Error('Backup/restore command failed; check tool versions, TLS and credentials.'); return result.stdout; };
+const run = (command, argv, options = {}) => { const result = spawnSync(command, argv, { windowsHide: true, timeout: 180000, maxBuffer: 64 * 1024 * 1024, ...options }); if (result.error || result.status !== 0) { const detail=result.stderr?.toString()||'';const cause=/already exists/i.test(detail)?'existing_schema':/certificate|SSL|TLS/i.test(detail)?'tls':/password|authentication/i.test(detail)?'authentication':/version/i.test(detail)?'version':/Connection|resolve|translate|timed out/i.test(detail)?'connection':result.error?.code||'command';const stage=argv.includes('pg_dump')?'dump':argv.includes('pg_restore')?'restore':argv.includes('psql')?'verify':'container';throw new Error(`Backup ${stage} failed (${cause}).`); } return result.stdout; };
 try {
   if (!args.includes('--output') || !output || !process.env.BACKUP_PUBLIC_KEY || !process.env.BACKUP_DATABASE_URL) throw new Error('Set BACKUP_DATABASE_URL/BACKUP_PUBLIC_KEY and --output.');
   const target = resolve(output), inPublic = relative(resolve('public'), target);
@@ -24,7 +24,7 @@ try {
     let ready = false;
     for (let i = 0; i < 30; i++) { if (spawnSync('docker',['exec',container,'pg_isready','-U','postgres'],{ windowsHide: true,stdio:'ignore' }).status === 0) { ready = true; break; } await setTimeout(1000); }
     if (!ready) throw new Error('Restore verification database did not start');
-    run('docker',['exec','-i',container,'pg_restore','--username=postgres','--dbname=postgres','--no-owner','--no-acl','--exit-on-error'],{ input: data });
+    run('docker',['exec','-i',container,'pg_restore','--username=postgres','--dbname=postgres','--clean','--if-exists','--no-owner','--no-acl','--exit-on-error'],{ input: data });
     const tables = run('docker',['exec',container,'psql','-U','postgres','-Atc',"SELECT count(*) FROM information_schema.tables WHERE table_schema='public' AND table_name IN ('accounts','bookings','reviews')"]).toString().trim();
     if (tables !== '3') throw new Error('Restored backup is missing application tables');
   }
