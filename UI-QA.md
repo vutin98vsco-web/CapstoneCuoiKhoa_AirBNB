@@ -29,6 +29,7 @@ Cập nhật ngày 23/11/2026. Đã kiểm tra bản production cục bộ bằn
 - Các luồng HTTP danh mục, đặt phòng, tài khoản, đánh giá và quản trị đã đạt trên cơ sở dữ liệu thử riêng.
 - Danh mục kiểm tra đủ 160 trang chi tiết theo hai ngôn ngữ, 16 danh sách địa danh, 80 ảnh đại diện khách sạn và các trang nguồn.
 - Bổ sung kiểm tra chuyển ngôn ngữ giữ query/hash, cookie và từ chối chuyển hướng sang website khác.
+- Nhánh CyberSoft: đã thử form chọn nguồn/địa điểm và trang chi tiết trên màn hình 390, 768, 1440 px với dữ liệu mô phỏng; không tràn ngang, không lỗi JavaScript. Đã xem thông báo thử lại khi dịch vụ chi tiết lỗi. Kết nối CyberSoft thật cần token được cấp.
 
 ## Chưa kiểm tra trên thiết bị thật
 

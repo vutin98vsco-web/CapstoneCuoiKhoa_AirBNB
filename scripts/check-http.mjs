@@ -13,7 +13,7 @@ if (postgres && !databaseUrl) throw new Error('Set DATABASE_URL before PostgreSQ
 const testSchema = postgres ? `tnbnb_test_${randomBytes(8).toString('hex')}` : '';
 const directory = await mkdtemp(join(tmpdir(),'tnbnb-http-')), filename = join(directory,'test.sqlite');
 const port = process.env.TNB_TEST_PORT || '3002', base = `http://127.0.0.1:${port}`;
-const env = { ...process.env,NODE_ENV: 'production',DATABASE_URL: databaseUrl,POSTGRES_URL: '',TNB_DATABASE_SCHEMA: testSchema,TNB_BOOKINGS_DB_PATH: filename,TEST_BASE_URL: base,NEXT_TELEMETRY_DISABLED: '1' };
+const env = { ...process.env,NODE_ENV: 'production',DATABASE_URL: databaseUrl,POSTGRES_URL: '',CYBERSOFT_TOKEN: '',TNB_DATABASE_SCHEMA: testSchema,TNB_BOOKINGS_DB_PATH: filename,TEST_BASE_URL: base,NEXT_TELEMETRY_DISABLED: '1' };
 let output = '', server;
 const run = (file,args = []) => new Promise((resolveRun,reject) => {
   const child = spawn(process.execPath,[file,...args],{ env,stdio: 'inherit',windowsHide: true });

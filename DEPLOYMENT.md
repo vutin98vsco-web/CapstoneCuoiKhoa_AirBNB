@@ -16,6 +16,10 @@ Project Vercel dùng framework Next.js, lệnh cài đặt `npm ci`, lệnh buil
 
 Schema PostgreSQL được khởi tạo khi kết nối đầu tiên, có khóa giao dịch để tránh khởi tạo đồng thời. Các thay đổi nhiều bước dùng một kết nối trong giao dịch. Khóa theo nghiệp vụ và ràng buộc duy nhất bảo vệ yêu cầu gửi trùng, thay đổi quyền và mã khôi phục khi nhiều instance xử lý cùng lúc.
 
+Để bật danh mục CyberSoft, thêm `CYBERSOFT_TOKEN` do lớp cấp trong Settings → Environment Variables của project Vercel, chọn Production, rồi redeploy. Không dùng tên `NEXT_PUBLIC_*`. Nhánh này chỉ đọc danh mục, phòng và địa điểm; dữ liệu tài khoản và nghiệp vụ TNbnb không chuyển sang CyberSoft. Khi token thiếu hoặc hết hạn, danh mục TNbnb vẫn dùng được và nguồn CyberSoft hiển thị thông báo riêng.
+
+Kiểm tra token thật tại môi trường đã nạp biến bằng `npm run check:cybersoft`; lệnh chỉ gửi GET và không xuất credential. `npm run check:http:cybersoft` dùng máy chủ mô phỏng riêng, chạy sau build và không ghi vào dịch vụ CyberSoft. Chạy các kịch bản HTTP nối tiếp nhau vì chúng chuẩn bị cùng thư mục standalone.
+
 Để lấy biến Development về máy, dùng `npx vercel env pull .env.local`. Tệp này được loại khỏi Git. Các lệnh CLI Node.js cần nạp biến, ví dụ:
 
 ```sh

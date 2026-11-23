@@ -1,11 +1,10 @@
 import { reply, sameOrigin, readJson, errorReply, pageNumber } from '../../../lib/http.server';
 import { currentUser } from '../../../lib/auth/session.server';
 import { bookingStore } from '../../../lib/bookings/store.server';
-import { currentProperties } from '../../../lib/admin/catalog.server';
-import { getCatalog } from '../../../lib/catalog';
+import { getProperty } from '../../../lib/catalog';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-async function exists(id) { return typeof id === 'string' && ((await currentProperties()).some(property => property.id === id) || id.startsWith('api-') && (await getCatalog()).rooms.some(property => property.id === id)); }
+async function exists(id) { return Boolean(await getProperty(id)); }
 export async function GET(request) {
   try {
     const query = new URL(request.url).searchParams, propertyId = query.get('propertyId'); if (!await exists(propertyId)) return reply({ error: 'not_found' },404);

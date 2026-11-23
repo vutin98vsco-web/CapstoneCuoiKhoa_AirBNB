@@ -18,8 +18,8 @@ export default function AuthProvider({ initialUser, children }) {
     window.addEventListener('storage', sync); window.addEventListener('focus', refresh);
     return () => { window.removeEventListener('storage', sync); window.removeEventListener('focus', refresh); };
   }, [refresh]);
-  function commit(next, imported = false) {
-    if (imported) { try { localStorage.removeItem(guestFavoritesKey); } catch {} }
+  function commit(next, imported = false, deferred = []) {
+    if (imported) { try { const keep = guestFavorites().filter(id => deferred.includes(id)); if (keep.length) localStorage.setItem(guestFavoritesKey, JSON.stringify(keep)); else localStorage.removeItem(guestFavoritesKey); } catch {} }
     setUser(next);
     try { localStorage.setItem(signal, String(Date.now())); } catch {}
     window.dispatchEvent(new Event('tnbnb-favorites-change'));

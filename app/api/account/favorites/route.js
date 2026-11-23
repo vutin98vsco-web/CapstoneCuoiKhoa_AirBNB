@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { currentUser } from '../../../../lib/auth/session.server';
-import { knownProperty } from '../../../../lib/auth/service.server';
+import { knownProperty, propertyIdShape } from '../../../../lib/auth/service.server';
 import { bookingStore } from '../../../../lib/bookings/store.server';
 import { sameOrigin } from '../../../../lib/http.server';
 export const runtime = 'nodejs';
@@ -17,7 +17,8 @@ export async function POST(request) {
   try {
     const raw = await request.text(); if (raw.length > 1024) return reply({ error: 'invalid_request' }, 413);
     const body = JSON.parse(raw);
-    if (!knownProperty(body?.propertyId) || typeof body.saved !== 'boolean') return reply({ error: 'invalid_request' }, 400);
+    if (!propertyIdShape(body?.propertyId) || typeof body.saved !== 'boolean') return reply({ error: 'invalid_request' }, 400);
+    if (body.saved && !await knownProperty(body.propertyId)) return reply({ error: 'invalid_request' }, 400);
     return reply({ favorites: await bookingStore().accounts.saveFavorite(user.id, body.propertyId, body.saved) });
-  } catch { return reply({ error: 'invalid_request' }, 400); }
+  } catch (error) { return reply({ error: error.name === 'CyberSoftError' ? 'service_unavailable' : 'invalid_request' }, error.name === 'CyberSoftError' ? 503 : 400); }
 }

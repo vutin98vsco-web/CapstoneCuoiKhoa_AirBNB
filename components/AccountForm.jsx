@@ -29,7 +29,7 @@ export default function AccountForm({ mode, returnTo }) {
     setBusy(true); setError('');
     try {
       const result = await authRequest(mode, { ...form, favoriteIds: resetting ? [] : guestFavorites() });
-      if (!resetting) auth.commit(result.user, true);
+      if (!resetting) auth.commit(result.user, true, result.deferredFavoriteIds || []);
       setForm(old => ({ ...old, password: '', confirm: '', recoveryCode: '' }));
       if (result.recoveryCode) setCode(result.recoveryCode); else go();
     } catch (failure) { setError(failure.code); setErrors(failure.fields || {}); requestAnimationFrame(() => feedback.current?.focus()); }

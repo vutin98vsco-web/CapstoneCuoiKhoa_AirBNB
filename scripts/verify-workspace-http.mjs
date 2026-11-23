@@ -61,6 +61,16 @@ assert.equal((await a.api('/api/admin/rooms',{ method: 'POST',body: roomBody }))
 assert.equal((await admin.api('/api/admin/rooms',{ method: 'POST',body: { ...roomBody,priceContext: { vi: '',en: '' } } })).status,400);
 const category = await admin.api('/api/admin/rooms',{ method: 'POST',body: roomBody }); assert.equal(category.status,200);
 const publicPage = await anonymous.api(`/phong/${id}`); assert.equal(publicPage.status,200); assert.ok(publicPage.data.includes(propertyBody.name));
+// Admin-created IDs must work in direct saves and guest-to-account imports.
+assert.equal((await a.api('/api/account/favorites',{ method: 'POST',body: { propertyId: id,saved: true } })).status,200);
+assert.ok((await a.api('/api/account/favorites')).data.favorites.includes(id));
+assert.ok(!(await admin.api('/api/account/favorites')).data.favorites.includes(id));
+assert.equal((await a.api('/api/account/favorites',{ method: 'POST',body: { propertyId: 'tn-does-not-exist',saved: true } })).status,400);
+assert.equal((await a.api('/api/account/favorites',{ method: 'POST',body: { propertyId: 'api-1999999999',saved: false } })).status,200);
+assert.equal((await a.api('/api/account/favorites',{ method: 'POST',body: { propertyId: id,saved: false } })).status,200);
+assert.ok(!(await a.api('/api/account/favorites')).data.favorites.includes(id));
+assert.equal((await a.auth('login',{ email: author.email,password,favoriteIds: [id,id,'tn-does-not-exist'] })).status,200);
+assert.ok((await a.api('/api/account/favorites')).data.favorites.includes(id));
 const checkin = nextDay(nextDay(todayInVietnam())), checkout = nextDay(checkin), query = new URLSearchParams({ property: id,roomType: category.data.id,checkin,checkout,guests: '2',rooms: '1' });
 const checkoutPage = await a.api(`/dat-phong?${query}`); assert.equal(checkoutPage.status,200); assert.ok(checkoutPage.data.includes('1.500.000'));
 // The authoritative quote includes exactly the same grade price object saved by the administrator.
@@ -72,6 +82,10 @@ assert.equal((await admin.api('/api/admin/bookings',{ method: 'POST',body: { id:
 assert.ok(!(await a.api(`/dat-phong/${booking.data.id}`)).data.includes('Private administrative note'));
 assert.equal((await admin.api('/api/admin/properties',{ method: 'POST',body: { id,action: 'archive' } })).status,200);
 assert.equal((await anonymous.api(`/phong/${id}`)).status,404); assert.equal((await a.api(`/dat-phong/${booking.data.id}`)).status,200);
+assert.equal((await admin.api('/api/account/favorites',{ method: 'POST',body: { propertyId: id,saved: true } })).status,400);
+assert.equal((await a.api('/api/account/favorites',{ method: 'POST',body: { propertyId: id,saved: false } })).status,200);
+assert.equal((await a.auth('login',{ email: author.email,password,favoriteIds: [id] })).status,200);
+assert.ok(!(await a.api('/api/account/favorites')).data.favorites.includes(id));
 assert.equal((await admin.api('/api/admin/bookings',{ method: 'POST',body: { id: booking.data.id,stage: 'closed',note: 'Cancelled by manager',cancel: true } })).status,200);
 assert.equal((await a.api('/api/bookings')).data.bookings.find(value => value.id === booking.data.id).status,'cancelled');
 assert.equal((await admin.api('/api/admin/properties',{ method: 'POST',body: { id,action: 'restore' } })).status,200); assert.equal((await anonymous.api(`/phong/${id}`)).status,200);
@@ -80,4 +94,4 @@ assert.equal((await a.api('/api/reviews',{ method: 'DELETE',body: { propertyId: 
 const logs = (await admin.api('/api/admin/audit')).data; assert.ok(logs.count >= 10); assert.ok(!JSON.stringify(logs).includes(password));
 assert.match((await admin.api('/api/admin/overview')).response.headers.get('cache-control'),/no-store/);
 assert.equal((await admin.api('/api/admin/overview',{ method: 'POST',body: {},origin: 'https://foreign.example' })).status,403);
-console.log(JSON.stringify({ reviews: 'create/edit/delete/score/moderation passed',permissions: 'anonymous/member/admin isolation passed',catalog: 'city/property/room editing and archive passed',bookingOperations: 'internal notes, cancellation and snapshot retention passed',roles: 'password confirmation, lockout and session revocation passed',locales: 2,audit: 'passed' }));
+console.log(JSON.stringify({ reviews: 'create/edit/delete/score/moderation passed',permissions: 'anonymous/member/admin isolation passed',catalog: 'city/property/room editing and archive passed',favorites: 'admin-created property saves, removals, imports, isolation and archives passed',bookingOperations: 'internal notes, cancellation and snapshot retention passed',roles: 'password confirmation, lockout and session revocation passed',locales: 2,audit: 'passed' }));

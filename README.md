@@ -92,7 +92,30 @@ Thống kê sau lần bổ sung ngày 22/11/2026:
 
 Giá được hiển thị bằng VNĐ và USD, kèm nguồn, ngày tra cứu và điều kiện. Tỷ giá tham khảo trong dữ liệu là **1 USD = 25.900 VNĐ**, ghi nhận từ Vietcombank ngày 18/11/2026; không tự cập nhật và không phải tỷ giá thanh toán.
 
-Các tệp dữ liệu chính nằm trong `lib/data`. Adapter tại `lib/catalog.js` hỗ trợ bổ sung dữ liệu từ [API CyberSoft](https://airbnbnew.cybersoft.edu.vn/swagger/index.html). Nhánh API trực tiếp chưa được kiểm chứng trong đợt kiểm tra vì chưa cấu hình token được cấp.
+Các tệp dữ liệu chính nằm trong `lib/data`. [API CyberSoft](https://airbnbnew.cybersoft.edu.vn/swagger/index.html) được gọi từ máy chủ qua `lib/cybersoft/client.js`, chuẩn hóa tại `lib/cybersoft/normalize.js` và ghép vào danh mục qua `lib/catalog.js`.
+
+Khi có `CYBERSOFT_TOKEN`, trang khám phá cho phép chọn nguồn TNbnb/CyberSoft, lọc địa điểm CyberSoft và tìm kiếm không phân biệt dấu. Trang chi tiết gọi đúng `/api/phong-thue/{id}`; mã dạng `api-123` tách biệt với cơ sở TNbnb. Giá CyberSoft dùng USD theo giao diện mẫu, có quy đổi VNĐ. API không cung cấp hạng phòng khách sạn nên không tự tạo hạng phòng từ dữ liệu này.
+
+| API CyberSoft | Sử dụng |
+| --- | --- |
+| `GET /api/phong-thue` | Danh mục phòng; chuẩn hóa và bỏ bản ghi trùng/không hợp lệ |
+| `GET /api/phong-thue/{id}` | Chi tiết, kiểm tra phòng tồn tại khi lưu yêu thích/đánh giá |
+| `GET /api/phong-thue/lay-phong-theo-vi-tri` | Lọc địa điểm từ form khám phá |
+| `GET /api/vi-tri` và `GET /api/vi-tri/{id}` | Tên thành phố, khu vực và thông tin địa điểm |
+| Hai API `phan-trang-tim-kiem` của phòng/địa điểm | Bộ gọi hỗ trợ tìm kiếm và phân trang theo Swagger; lệnh kiểm tra kết nối xác nhận hợp đồng phản hồi |
+
+Danh mục trên giao diện lọc từ tập dữ liệu đã tải để giữ cách tìm không dấu và bộ lọc tiện nghi thống nhất. Lỗi xác thực/kết nối có thông báo; nguồn TNbnb vẫn hoạt động. Lỗi khi tải riêng một phòng được xử lý bằng trang thử lại, không biến lỗi API thành kết quả “không tồn tại”.
+
+Tài khoản, yêu thích, yêu cầu đặt phòng, đánh giá và quản trị tiếp tục dùng API TNbnb cùng PostgreSQL/SQLite. Công cụ giá ở phòng CyberSoft chỉ tính dự kiến, chưa gửi yêu cầu sang `/api/dat-phong` của CyberSoft. Các thao tác quản trị TNbnb không sửa dữ liệu dùng chung trên CyberSoft.
+
+Nhánh CyberSoft đã qua kiểm thử bằng máy chủ mô phỏng và kiểm tra giao diện; cần token được cấp để xác nhận kết nối thật. Đặt token trong `.env.local` tại máy, hoặc Environment Variables của Production trên Vercel và triển khai lại, rồi chạy:
+
+```sh
+npm run check:cybersoft
+npm run check:http:cybersoft
+```
+
+Lệnh đầu gọi dịch vụ thật bằng GET và chỉ xuất trạng thái/số lượng, không in token. Lệnh thứ hai dùng dữ liệu mô phỏng và cơ sở dữ liệu thử riêng, kiểm tra hai ngôn ngữ, các nguồn danh mục, lọc địa điểm, chi tiết, yêu thích và phương án khi API lỗi; không gửi dữ liệu thử đến CyberSoft.
 
 ## Tài khoản và quản trị
 
@@ -116,7 +139,7 @@ npm run check:http
 
 Lệnh `check:http` cần bản build, tự chạy máy chủ thử tại cổng 3002 với SQLite riêng và dọn dữ liệu sau kiểm tra. Có thể đổi cổng bằng `TNB_TEST_PORT`.
 
-Ngày 23/11/2026, **21/21 kiểm thử tự động và 4/4 kiểm thử tích hợp PostgreSQL đạt**, build production thành công. Các bộ kiểm tra HTTP danh mục, đặt phòng, tài khoản, quản trị và đánh giá đều đạt trên SQLite và PostgreSQL với dữ liệu thử riêng. Kiểm tra trực quan và tương tác trên máy tính/điện thoại còn các mục chưa hoàn tất, được liệt kê trong [UI-QA.md](UI-QA.md).
+Ngày 23/11/2026, **25/25 kiểm thử tự động và 4/4 kiểm thử tích hợp PostgreSQL đạt**, build production thành công. Các bộ kiểm tra HTTP danh mục, đặt phòng, tài khoản, quản trị và đánh giá dùng dữ liệu thử riêng. Kiểm tra yêu thích bổ sung việc lưu/bỏ lưu, nhập danh sách khi đăng nhập, cơ sở bị ẩn và cách ly giữa tài khoản. Giao diện đã kiểm tra trên 10 kích thước Chromium mô phỏng, hai ngôn ngữ; phạm vi và phần thiết bị thật còn chờ nằm trong [UI-QA.md](UI-QA.md).
 
 Để kiểm tra PostgreSQL sau khi có `.env.local` chứa kết nối Neon:
 

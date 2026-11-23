@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getCatalog } from '../../../lib/catalog';
+import { getCatalog, getProperty } from '../../../lib/catalog';
 import Icon from '../../../components/Icon';
 import BookingEstimate from '../../../components/BookingEstimate';
 import PropertyGallery from '../../../components/PropertyGallery';
@@ -20,10 +20,11 @@ import { cookies } from 'next/headers';
 import { currentUser } from '../../../lib/auth/session.server';
 import { bookingStore } from '../../../lib/bookings/store.server';
 import PropertyReviews from '../../../components/PropertyReviews';
+import { cyberSoftCopy } from '../../../lib/cybersoft-copy';
 
 export async function generateMetadata({ params }) {
   const { id } = await params; const { locale, t } = await getI18n();
-  const { rooms } = await getCatalog(); const raw = rooms.find(room => String(room.id) === id);
+  const raw = await getProperty(id).catch(() => null);
   if (!raw) return { title: t.detailTitle };
   const room = localizeRoom(raw, locale); return { title: room.tenPhong, description: room.moTa };
 }
@@ -31,13 +32,14 @@ export async function generateMetadata({ params }) {
 export default async function RoomPage({ params, searchParams }) {
   const { id } = await params;
   const { locale, t } = await getI18n();
-  const catalog = await getCatalog();
-  const rawRoom = catalog.rooms.find(room => String(room.id) === id);
+  const rawRoom = await getProperty(id);
   if (!rawRoom) notFound();
+  const catalog = await getCatalog(rawRoom.dataSource === 'api' ? 'cybersoft' : 'tnbnb');
   const room = localizeRoom(rawRoom, locale);
   const c = detailCopy[locale];
   const rc = roomTypeCopy[locale];
   const isReference = room.dataSource === 'reference';
+  const cc = cyberSoftCopy[locale];
   const cityUrl = `/rooms?q=${encodeURIComponent(room.viTri)}`;
   const address = room.address?.[locale] || `${room.viTri}, ${t.country}`;
   const destination = destinations.find(item => item.id === room.cityId);
@@ -50,8 +52,9 @@ export default async function RoomPage({ params, searchParams }) {
     <nav className="breadcrumb" aria-label={t.mainNav}><Link href="/">{t.home}</Link><span>/</span><Link href={cityUrl}>{room.viTri}</Link><span>/</span><span>{c.accommodation}</span></nav>
     <div className="property-title-row"><div><p className="property-kicker"><span>{c[room.category] || c.accommodation}</span>{isReference && <span><Icon name="check" size={14} />{c.verifiedSource}</span>}</p><h1>{room.tenPhong}</h1></div><PropertyActions id={room.id} name={room.tenPhong} /></div>
     <div className="property-subtitle"><a href="#location"><Icon name="pin" size={16} />{address}</a>{rating && <a href="#reviews"><Icon name="star" size={16} /><strong>{rating.score}/{rating.scale}</strong><span>{room.sourceName}</span></a>}</div>
-    <PropertyGallery images={room.photos || (room.hinhAnh ? [{ url: room.hinhAnh }] : [])} name={room.tenPhong} sourceUrl={room.sourceUrl} />
-    <nav className="property-section-nav" aria-label={t.detailTitle}>{['overview', 'room-types', 'amenities', 'location', 'reviews', 'policies'].map(key => <a key={key} href={`#${key}`}>{key === 'room-types' ? rc.nav : c[key]}</a>)}</nav>
+    {!isReference && <p className="data-note">{cc.listingNote}</p>}
+    <PropertyGallery images={room.photos || (room.hinhAnh ? [{ url: room.hinhAnh }] : [])} name={room.tenPhong} sourceUrl={room.sourceUrl} photoSourceLabel={!isReference ? cc.photoSource : undefined} />
+    <nav className="property-section-nav" aria-label={t.detailTitle}>{['overview', ...(isReference ? ['room-types'] : []), 'amenities', 'location', 'reviews', 'policies'].map(key => <a key={key} href={`#${key}`}>{key === 'room-types' ? rc.nav : c[key]}</a>)}</nav>
     <RoomSelectionProvider roomTypes={room.roomTypes || []} initialType={typeof query.roomType === 'string' ? query.roomType : ''}>
     <div className="detail-grid property-content-grid"><div className="property-main">
       <section className="property-section" id="overview"><div className="property-overview-heading"><div><p className="eyebrow coral">{c.about}</p><h2>{format(t.stayAt, { destination: room.viTri })}</h2></div><span className="property-host-icon"><Icon name="home" size={30} /></span></div><p className="property-description">{room.moTa}</p><div className="property-facts"><div><Icon name="home" /><span>{c.accommodation}<strong>{room.tenPhong}</strong></span></div><div><Icon name="pin" /><span>{t.destination}<strong>{room.viTri}</strong></span></div><div><Icon name="shield" /><span>{c.source}<strong>{room.sourceName || 'CyberSoft'}</strong></span></div></div><p className="property-help">{isReference ? c.capacityNote : roomSummary(room, locale, true)}</p></section>
