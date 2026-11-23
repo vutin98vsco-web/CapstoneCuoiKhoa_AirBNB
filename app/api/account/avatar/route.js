@@ -7,13 +7,13 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 const reply = (body, status = 200) => NextResponse.json(body, { status, headers: { 'Cache-Control': 'private, no-store' } });
 export async function GET(request) {
-  const user = currentUser(request.cookies); if (!user) return reply({ error: 'unauthorized' }, 401);
-  const bytes = bookingStore().accounts.avatar(user.id); if (!bytes) return new NextResponse(null, { status: 404 });
+  const user = (await currentUser(request.cookies)); if (!user) return reply({ error: 'unauthorized' }, 401);
+  const bytes = await bookingStore().accounts.avatar(user.id); if (!bytes) return new NextResponse(null, { status: 404 });
   return new NextResponse(new Uint8Array(bytes), { headers: { 'Content-Type': 'image/webp', 'Cache-Control': 'private, no-store', 'X-Content-Type-Options': 'nosniff' } });
 }
 export async function POST(request) {
   if (!sameOrigin(request)) return reply({ error: 'invalid_origin' }, 403);
-  const user = currentUser(request.cookies); if (!user) return reply({ error: 'unauthorized' }, 401);
+  const user = (await currentUser(request.cookies)); if (!user) return reply({ error: 'unauthorized' }, 401);
   if (!request.headers.get('content-type')?.startsWith('multipart/form-data')) return reply({ error: 'avatar_invalid' }, 415);
   if (Number(request.headers.get('content-length')) > 2200000) return reply({ error: 'avatar_large' }, 413);
   try {
@@ -27,12 +27,12 @@ export async function POST(request) {
     const bytes = Buffer.from(await file.arrayBuffer()); const meta = await sharp(bytes, { limitInputPixels: 16000000 }).metadata();
     if (!['jpeg', 'png', 'webp'].includes(meta.format) || (meta.pages || 1) > 1) return reply({ error: 'avatar_invalid' }, 400);
     const image = await sharp(bytes, { limitInputPixels: 16000000 }).rotate().resize(256, 256, { fit: 'cover' }).webp({ quality: 85 }).toBuffer();
-    if (!currentUser(request.cookies)) return reply({ error: 'unauthorized' }, 401);
-    return reply({ user: bookingStore().accounts.setAvatar(user.id, image) });
+    if (!(await currentUser(request.cookies))) return reply({ error: 'unauthorized' }, 401);
+    return reply({ user: await bookingStore().accounts.setAvatar(user.id, image) });
   } catch { return reply({ error: 'avatar_invalid' }, 400); }
 }
 export async function DELETE(request) {
   if (!sameOrigin(request)) return reply({ error: 'invalid_origin' }, 403);
-  const user = currentUser(request.cookies); if (!user) return reply({ error: 'unauthorized' }, 401);
-  return reply({ user: bookingStore().accounts.removeAvatar(user.id) });
+  const user = (await currentUser(request.cookies)); if (!user) return reply({ error: 'unauthorized' }, 401);
+  return reply({ user: await bookingStore().accounts.removeAvatar(user.id) });
 }

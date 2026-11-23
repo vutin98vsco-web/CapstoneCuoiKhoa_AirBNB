@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { openBookingStore } from '../lib/bookings/store.server.js';
+import { openPostgresStore } from '../lib/database/postgres.server.js';
 import { referenceRooms } from '../lib/reference-catalog.js';
 import { findBookingOffer } from '../lib/bookings/offers.server.js';
 import { nextDay, todayInVietnam } from '../lib/trip.js';
@@ -22,8 +23,9 @@ const password = 'Synthetic-admin-test-123', suffix = randomUUID(), anonymous = 
 const make = async (client,name) => { const result = await client.auth('register',{ email: `${name}-${suffix}@example.test`,name,password }); assert.equal(result.status,200); return result.data.user; };
 const administrator = await make(admin,'Manager'), author = await make(a,'Author'), other = await make(b,'Other');
 assert.equal(administrator.role,'user'); assert.equal((await admin.api('/api/admin/overview')).status,403); assert.equal((await anonymous.api('/api/admin/users')).status,401);
-const db = openBookingStore(process.env.TNB_BOOKINGS_DB_PATH);
-try { db.workspace.bootstrapRole(administrator.id,'admin'); } finally { db.close(); }
+if (process.env.DATABASE_URL && !/^tnbnb_test_[a-f0-9]+$/.test(process.env.TNB_DATABASE_SCHEMA || '')) throw new Error('PostgreSQL checks require an isolated test schema.');
+const db = process.env.DATABASE_URL ? openPostgresStore(process.env.DATABASE_URL,{ schema: process.env.TNB_DATABASE_SCHEMA }) : openBookingStore(process.env.TNB_BOOKINGS_DB_PATH);
+try { await db.workspace.bootstrapRole(administrator.id,'admin'); } finally { await db.close(); }
 assert.equal((await admin.auth('login',{ email: administrator.email,password })).status,200);
 const property = referenceRooms[0], room = property.roomTypes[0], review = { propertyId: property.id,rating: 5,body: 'Helpful synthetic review for automated tests only.' };
 assert.equal((await anonymous.api('/api/reviews',{ method: 'POST',body: review })).status,401);

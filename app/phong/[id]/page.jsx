@@ -45,7 +45,7 @@ export default async function RoomPage({ params, searchParams }) {
   const rating = room.sourceRating;
   const query = await searchParams;
   const initial = { checkin: validDate(query.checkin), checkout: validDate(query.checkout), guests: typeof query.guests === 'string' ? query.guests : '' };
-  const user = currentUser(await cookies()); const reviews = { ...bookingStore().workspace.reviewList(id),viewerId: user?.id || null,mine: user ? bookingStore().workspace.ownReview(user.id,id) : null };
+  const user = (await currentUser(await cookies())); const reviews = { ...await bookingStore().workspace.reviewList(id),viewerId: user?.id || null,mine: user ? await bookingStore().workspace.ownReview(user.id,id) : null };
   return <main className="shell detail property-detail" id="main-content">
     <nav className="breadcrumb" aria-label={t.mainNav}><Link href="/">{t.home}</Link><span>/</span><Link href={cityUrl}>{room.viTri}</Link><span>/</span><span>{c.accommodation}</span></nav>
     <div className="property-title-row"><div><p className="property-kicker"><span>{c[room.category] || c.accommodation}</span>{isReference && <span><Icon name="check" size={14} />{c.verifiedSource}</span>}</p><h1>{room.tenPhong}</h1></div><PropertyActions id={room.id} name={room.tenPhong} /></div>

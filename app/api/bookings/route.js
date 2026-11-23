@@ -9,8 +9,8 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 const reply = (body, status = 200) => NextResponse.json(body, { status, headers: { 'Cache-Control': 'private, no-store' } });
 export async function GET(request) {
-  const owner = bookingOwner(request.cookies);
-  try { return reply({ bookings: owner ? bookingStore().list(owner) : [] }); }
+  const owner = (await bookingOwner(request.cookies));
+  try { return reply({ bookings: owner ? await bookingStore().list(owner) : [] }); }
   catch { return reply({ error: 'service_unavailable' }, 503); }
 }
 export async function POST(request) {
@@ -21,16 +21,16 @@ export async function POST(request) {
   let body;
   try { const text = await request.text(); if (text.length > 16384) return reply({ error: 'invalid_request' }, 413); body = JSON.parse(text); }
   catch { return reply({ error: 'invalid_request' }, 400); }
-  const offer = findBookingOffer(body?.propertyId, body?.roomTypeId);
+  const offer = await findBookingOffer(body?.propertyId, body?.roomTypeId);
   if (!offer) return reply({ error: 'room_unavailable' }, 404);
   const { errors, value } = validateBooking(body, offer.capacity);
   if (Object.keys(errors).length) return reply({ error: 'validation', fields: errors }, 400);
   if (body.quoteVersion !== offer.quoteVersion) return reply({ error: 'quote_changed' }, 409);
   const token = request.cookies.get(bookingCookie)?.value;
-  const owner = bookingOwner(request.cookies);
+  const owner = (await bookingOwner(request.cookies));
   if (!owner) return reply({ error: 'session_required' }, 409);
   try {
-    const result = bookingStore().create(owner, key, value, makeBookingSnapshot(offer, value));
+    const result = await bookingStore().create(owner, key, value, makeBookingSnapshot(offer, value));
     if (result.error) return reply(result, 409);
     const response = reply({ id: result.booking.id, reference: result.booking.reference, status: result.booking.status }, result.replay ? 200 : 201);
     if (sessionHash(token)) response.cookies.set(bookingCookie, token, { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax', maxAge: sessionLifetime, path: '/' });

@@ -10,7 +10,7 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 export async function generateMetadata() { const { locale } = await getI18n(); return { title: detailCopy[locale].sourceTitle }; }
 export default async function DataSourcesPage() {
-  const { locale,t } = await getI18n(), c = detailCopy[locale], rc = roomTypeCopy[locale], cities = currentCities(), properties = currentProperties();
+  const { locale,t } = await getI18n(), c = detailCopy[locale], rc = roomTypeCopy[locale], cities = (await currentCities()), properties = (await currentProperties());
   const date = value => value ? new Intl.DateTimeFormat(intlLocale(locale),{ dateStyle: 'medium',timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date(`${value.slice(0,10)}T12:00:00+07:00`)) : '—';
   return <main className="shell listing-page" id="main-content"><nav className="breadcrumb" aria-label={t.mainNav}><Link href="/">{t.home}</Link><span>/</span><span>{c.sourceTitle}</span></nav><h1>{c.sourceTitle}</h1><p className="sources-intro">{c.sourceIntro} {c.referenceNote}</p>
     <div className="sources-rate"><strong>{c.rate}: 1 USD = {formatCurrency(exchangeRate.usdToVnd,locale,'VND')}</strong><p>{c.rateKind} · {date(exchangeRate.asOf)} · <a href={exchangeRate.sourceUrl} target="_blank" rel="noreferrer">{exchangeRate.provider}</a></p><p>{c.rateNote}</p></div>

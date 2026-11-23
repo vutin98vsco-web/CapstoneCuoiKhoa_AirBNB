@@ -1,6 +1,30 @@
 # Chuẩn bị triển khai TNbnb
 
-Bản này chạy Next.js trên Node.js 24, dùng SQLite lưu tài khoản, yêu cầu đặt phòng, yêu thích, đánh giá và thay đổi quản trị. Triển khai một instance có ổ đĩa bền vững. Chưa phù hợp với hosting chỉ có filesystem tạm hoặc nhiều bản sao cùng ghi một tệp SQLite.
+Bản này chạy Next.js trên Node.js 24. Khi cấu hình `DATABASE_URL`, tài khoản, yêu cầu đặt phòng, yêu thích, đánh giá và thay đổi quản trị được lưu trên PostgreSQL. Nếu không có biến này, bản chạy tại máy dùng SQLite và cần ổ đĩa bền vững.
+
+## Vercel và Neon
+
+Project Vercel dùng framework Next.js, lệnh cài đặt `npm ci`, lệnh build `npm run build` và khu vực `sin1`. Không đặt lệnh `npm start` làm build hoặc override Output Directory. Tệp `vercel.json` lưu các thiết lập này.
+
+1. Liên kết thư mục với project bằng `npx vercel link`.
+2. Trong phần Git của project, kết nối đúng tài khoản GitHub và repository `vutin98vsco-web/CapstoneCuoiKhoa_AirBNB`. Nhánh production là `main`.
+3. Tạo hoặc kết nối Neon qua Marketplace, chọn gói Free và khu vực Singapore. Ứng dụng dùng xác thực TNbnb nên không cần bật Neon Auth.
+4. Kết nối database với môi trường Production để Vercel cấp `DATABASE_URL`. Development có thể dùng kết nối dành riêng cho phát triển; Preview nên dùng database/nhánh riêng khi triển khai bản thử.
+5. Chạy kiểm thử và triển khai bằng `npx vercel --prod`. Khi Git đã được liên kết, các lần push vào `main` có thể kích hoạt deployment production.
+
+Schema PostgreSQL được khởi tạo khi kết nối đầu tiên, có khóa giao dịch để tránh khởi tạo đồng thời. Các thay đổi nhiều bước dùng một kết nối trong giao dịch. Khóa theo nghiệp vụ và ràng buộc duy nhất bảo vệ yêu cầu gửi trùng, thay đổi quyền và mã khôi phục khi nhiều instance xử lý cùng lúc.
+
+Để lấy biến Development về máy, dùng `npx vercel env pull .env.local`. Tệp này được loại khỏi Git. Các lệnh CLI Node.js cần nạp biến, ví dụ:
+
+```sh
+node --env-file=.env.local scripts/admin-role.mjs --email owner@example.com
+npm run check:postgres
+npm run check:http:postgres
+```
+
+Lệnh kiểm tra PostgreSQL chỉ thao tác trong schema thử có tên ngẫu nhiên và tự dọn khi kết thúc. Danh mục 80 cơ sở và ảnh vẫn được đóng gói từ JSON và `public`; không cần nhập chúng thành bảng để hiển thị.
+
+Lệnh `db:backup` bên dưới dành cho SQLite. Với PostgreSQL, sao lưu/khôi phục bằng công cụ của nhà cung cấp hoặc `pg_dump`/`pg_restore`, rồi kiểm tra trên database riêng trước khi áp dụng vào production. Không dùng đường dẫn SQLite để sao lưu bản Neon.
 
 ## Kiểm tra trước khi chuyển máy chủ
 
@@ -75,6 +99,6 @@ Dùng tên mới cho mỗi bản sao. Công cụ dùng SQLite Backup API và ki�
 
 ## Trạng thái bàn giao
 
-Các tệp triển khai được chuẩn bị trong repository. Chưa xuất bản lên một hosting hay tên miền cụ thể. Chạy thử Docker và xác nhận HTTPS trên máy chủ đích trước khi đưa vào sử dụng.
+Các tệp triển khai được chuẩn bị trong repository. Docker là phương án chạy riêng với SQLite, cần kiểm tra container trên máy chủ đích. Vercel dùng PostgreSQL qua `DATABASE_URL`; kiểm tra `/api/health`, tài khoản và yêu cầu đặt phòng sau mỗi deployment.
 
 Tài liệu chính thức: [Next.js standalone](https://nextjs.org/docs/app/api-reference/config/next-config-js/output), [Docker cho Next.js](https://docs.docker.com/guides/nextjs/), [SQLite Backup trong Node.js](https://nodejs.org/download/release/v24.15.0/docs/api/sqlite.html#sqlitebackupsourceDb-path-options).

@@ -7,6 +7,8 @@
     "test": "node --test tests/catalog.test.mjs tests/bookings.test.mjs tests/accounts.test.mjs tests/workspace.test.mjs tests/enrichment.test.mjs",
     "admin:grant": "node scripts/admin-role.mjs",
     "check:http": "node scripts/check-http.mjs",
+    "check:postgres": "node --env-file-if-exists=.env.local --test tests/postgres.test.mjs",
+    "check:http:postgres": "node scripts/check-http.mjs --postgres",
     "db:backup": "node scripts/backup-db.mjs",
     "dev": "next dev",
     "build": "next build",
@@ -18,12 +20,13 @@
   "type": "module",
   "dependencies": {
     "next": "^16.4.6",
+    "pg": "^8.23.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "sharp": "0.35.5"
   },
   "private": true,
   "engines": {
-    "node": ">=24.0.0"
+    "node": "24.x"
   }
 }

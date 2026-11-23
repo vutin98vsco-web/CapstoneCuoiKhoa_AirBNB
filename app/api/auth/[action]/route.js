@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 const reply = (body, status = 200) => NextResponse.json(body, { status, headers: { 'Cache-Control': 'private, no-store' } });
 export async function GET(request, { params }) {
   if ((await params).action !== 'session') return reply({ error: 'not_found' }, 404);
-  try { return reply({ user: currentUser(request.cookies) }); } catch { return reply({ error: 'service_unavailable' }, 503); }
+  try { return reply({ user: (await currentUser(request.cookies)) }); } catch { return reply({ error: 'service_unavailable' }, 503); }
 }
 export async function POST(request, { params }) {
   if (!sameOrigin(request)) return reply({ error: 'invalid_origin' }, 403);

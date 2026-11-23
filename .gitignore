@@ -10,3 +10,5 @@ reports/
 *.sqlite-wal
 *.sqlite-shm
 *.log
+
+.vercel/

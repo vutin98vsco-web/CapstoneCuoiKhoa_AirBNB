@@ -13,8 +13,8 @@ export const dynamic = 'force-dynamic';
 export async function generateMetadata() { const { locale } = await getI18n(); return { title: bookingCopy[locale].tripsTitle, robots: { index: false, follow: false } }; }
 export default async function TripsPage({ searchParams }) {
   const { locale } = await getI18n(); const c = bookingCopy[locale]; const query = await searchParams;
-  const jar = await cookies(); const user = currentUser(jar); const owner = bookingOwner(jar);
-  const bookings = owner ? bookingStore().list(owner) : []; const today = todayInVietnam();
+  const jar = await cookies(); const user = (await currentUser(jar)); const owner = (await bookingOwner(jar));
+  const bookings = owner ? await bookingStore().list(owner) : []; const today = todayInVietnam();
   const groups = { all: bookings, upcoming: bookings.filter(booking => booking.status === 'pending' && booking.checkout > today), past: bookings.filter(booking => booking.status === 'pending' && booking.checkout <= today), cancelled: bookings.filter(booking => booking.status === 'cancelled') };
   const tab = ['upcoming', 'past', 'cancelled'].includes(query.tab) ? query.tab : 'all';
   return <main className="booking-flow" id="main-content"><div className="shell booking-shell"><header className="booking-page-heading"><p className="eyebrow coral">TNbnb</p><h1>{c.tripsTitle}</h1><p>{c.tripsIntro}</p></header><p className="trips-session-note"><Icon name="shield" size={17} />{user ? accountCopy[locale].syncedTrips : c.sessionNote}{!user && <Link href="/dang-nhap?returnTo=%2Fchuyen-di">{accountCopy[locale].login}</Link>}</p>

@@ -10,7 +10,7 @@ Dự án có 80 cơ sở lưu trú tại 8 địa danh, 350 hạng phòng, các 
 | --- | --- |
 | Giao diện và máy chủ | Next.js App Router, React |
 | Ngôn ngữ | JavaScript, CSS thuần |
-| Cơ sở dữ liệu | SQLite qua `node:sqlite` |
+| Cơ sở dữ liệu | PostgreSQL trên Vercel/Neon; SQLite khi chạy tại máy |
 | Xử lý ảnh đại diện | Sharp |
 | Kiểm thử | Node.js test runner và các kịch bản HTTP |
 | Môi trường chạy | Node.js 24 trở lên, npm |
@@ -46,10 +46,11 @@ Khi dùng API CyberSoft ở môi trường phát triển, sao chép `.env.exampl
 | Biến | Ý nghĩa |
 | --- | --- |
 | `CYBERSOFT_TOKEN` | Token được cấp để gọi API CyberSoft từ máy chủ; có thể để trống khi sử dụng danh mục tham khảo |
+| `DATABASE_URL` | Kết nối PostgreSQL, được Neon cấp qua Vercel; chỉ dùng trên máy chủ |
 | `TNB_BOOKINGS_DB_PATH` | Đường dẫn SQLite; mặc định `.data/tnbnb-bookings.sqlite` |
 | `TNB_HOST` | Địa chỉ lắng nghe của lệnh `npm start`; mặc định `127.0.0.1` |
 
-Không đưa token vào biến `NEXT_PUBLIC_*` hoặc commit `.env.local`. Cơ sở dữ liệu được tạo khi sử dụng chức năng lưu trữ và cần được giữ lại giữa các lần chạy.
+Khi có `DATABASE_URL`, ứng dụng sử dụng PostgreSQL. Nếu không cấu hình biến này, bản chạy tại máy sử dụng SQLite. Bản Vercel yêu cầu PostgreSQL, không ghi dữ liệu vào tệp tạm. Không đưa token hoặc URL kết nối vào biến `NEXT_PUBLIC_*` hay commit `.env.local`.
 
 ## Chức năng chính
 
@@ -93,7 +94,7 @@ Các tệp dữ liệu chính nằm trong `lib/data`. Adapter tại `lib/catalog
 
 ## Tài khoản và quản trị
 
-Tài khoản TNbnb được lưu trong SQLite. Mật khẩu dùng scrypt với muối ngẫu nhiên; mã phiên và mã khôi phục được lưu dạng băm. Cookie tài khoản có `HttpOnly`, `SameSite=Lax` và `Secure` trong production. Khôi phục mật khẩu sử dụng mã đã cấp cho người dùng, chưa gửi email.
+Tài khoản TNbnb được lưu trong cơ sở dữ liệu đã cấu hình. Mật khẩu dùng scrypt với muối ngẫu nhiên; mã phiên và mã khôi phục được lưu dạng băm. Cookie tài khoản có `HttpOnly`, `SameSite=Lax` và `Secure` trong production. Khôi phục mật khẩu sử dụng mã đã cấp cho người dùng, chưa gửi email.
 
 Tài khoản mới có vai trò người dùng. Để cấp quyền quản trị, đăng ký tài khoản trước rồi chạy lệnh tại máy chủ với đúng đường dẫn cơ sở dữ liệu:
 
@@ -113,7 +114,16 @@ npm run check:http
 
 Lệnh `check:http` cần bản build, tự chạy máy chủ thử tại cổng 3002 với SQLite riêng và dọn dữ liệu sau kiểm tra. Có thể đổi cổng bằng `TNB_TEST_PORT`.
 
-Ngày 23/11/2026, **21/21 kiểm thử tự động đạt** và build production thành công. Các bộ kiểm tra HTTP danh mục, đặt phòng, tài khoản, quản trị và đánh giá đã đạt trong đợt 22/11/2026. Kiểm tra trực quan và tương tác trên máy tính/điện thoại còn các mục chưa hoàn tất, được liệt kê trong [UI-QA.md](UI-QA.md).
+Ngày 23/11/2026, **21/21 kiểm thử tự động và 4/4 kiểm thử tích hợp PostgreSQL đạt**, build production thành công. Các bộ kiểm tra HTTP danh mục, đặt phòng, tài khoản, quản trị và đánh giá đều đạt trên SQLite và PostgreSQL với dữ liệu thử riêng. Kiểm tra trực quan và tương tác trên máy tính/điện thoại còn các mục chưa hoàn tất, được liệt kê trong [UI-QA.md](UI-QA.md).
+
+Để kiểm tra PostgreSQL sau khi có `.env.local` chứa kết nối Neon:
+
+```sh
+npm run check:postgres
+npm run check:http:postgres
+```
+
+Các kiểm tra PostgreSQL sử dụng schema thử riêng và tự dọn sau khi chạy, không thêm dữ liệu thử vào schema của website. Bốn kiểm thử tích hợp PostgreSQL xác nhận gửi đồng thời, phiên/tài khoản, đánh giá/danh mục và phân quyền.
 
 ## Cấu trúc thư mục
 
@@ -132,8 +142,8 @@ deploy/       Cấu hình triển khai mẫu
 - Yêu cầu đặt phòng được lưu trong TNbnb, chưa gửi đến khách sạn, giữ phòng hoặc thu tiền.
 - Đánh giá cộng đồng chưa xác minh người viết đã lưu trú và được tách khỏi điểm của nguồn ngoài.
 - Chưa có gửi/xác minh email, đăng nhập mạng xã hội hoặc tích hợp thanh toán.
-- Đã có cấu hình Docker và GitHub Actions; chưa chạy thử container hoặc xuất bản website. Kết quả chạy tại máy không thay thế kết quả CI trên GitHub.
-- Bản hiện tại ghi SQLite vào ổ đĩa bền vững. Nếu triển khai theo hướng Vercel, cần thay lớp lưu trữ phù hợp; việc chuyển đổi chưa thực hiện.
+- Có cấu hình Docker và GitHub Actions; container chưa được chạy thử. Kết quả chạy tại máy không thay thế kết quả CI trên GitHub.
+- Cấu hình Vercel nằm trong `vercel.json`; kết nối Neon được lưu bằng biến môi trường của Vercel. Thư mục dữ liệu, bí mật và báo cáo nội bộ được loại khỏi bản triển khai.
 
 ## Tài liệu và tài nguyên
 

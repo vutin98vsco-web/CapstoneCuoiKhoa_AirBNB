@@ -1,0 +1,10 @@
+.git
+.reference
+.data
+.backups
+reports
+.env*
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.log

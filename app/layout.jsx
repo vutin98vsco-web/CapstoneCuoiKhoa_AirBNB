@@ -22,7 +22,7 @@ export async function generateMetadata() {
 
 export default async function RootLayout({ children }) {
   const { locale, t } = await getI18n();
-  const user = currentUser(await cookies());
+  const user = (await currentUser(await cookies()));
   return (
     <html lang={locale}>
       <body>

@@ -2,7 +2,7 @@
 const config = {
   output: 'standalone',
   poweredByHeader: false,
-  outputFileTracingExcludes: { '/*': ['./.data/**/*','./.reference/**/*','./.env*','./.backups/**/*','./.git/**/*'] },
+  outputFileTracingExcludes: { '/*': ['./.data/**/*','./.reference/**/*','./.env*','./.backups/**/*','./.git/**/*','./reports/**/*','./.vercel/**/*'] },
   outputFileTracingIncludes: { '/api/account/avatar': ['./node_modules/sharp/**/*','./node_modules/@img/**/*'] },
   async headers() { return [{ source: '/:path*',headers: [
     { key: 'X-Content-Type-Options',value: 'nosniff' },
