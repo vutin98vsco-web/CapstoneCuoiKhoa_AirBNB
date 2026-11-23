@@ -21,3 +21,23 @@ jobs:
       - run: npm run build
       - run: npm run check:http
       - run: npm run check:http:cybersoft
+  container:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t tnbnb-ci .
+      - run: docker run -d --name tnbnb-ci -p 127.0.0.1:3004:3000 tnbnb-ci
+      - name: Check container
+        run: |
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:3004/api/health; then
+              curl --fail --silent http://127.0.0.1:3004/robots.txt
+              curl --fail --silent http://127.0.0.1:3004/sitemap.xml >/dev/null
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
+      - if: always()
+        run: docker rm -f tnbnb-ci || true

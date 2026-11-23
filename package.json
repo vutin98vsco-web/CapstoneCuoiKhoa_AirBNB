@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node --test tests/catalog.test.mjs tests/bookings.test.mjs tests/accounts.test.mjs tests/workspace.test.mjs tests/enrichment.test.mjs tests/cybersoft.test.mjs",
+    "test": "node --test tests/catalog.test.mjs tests/bookings.test.mjs tests/accounts.test.mjs tests/workspace.test.mjs tests/enrichment.test.mjs tests/cybersoft.test.mjs tests/operations.test.mjs",
     "check:cybersoft": "node --env-file-if-exists=.env.local scripts/check-cybersoft.mjs",
     "check:http:cybersoft": "node scripts/check-cybersoft-http.mjs",
     "admin:grant": "node scripts/admin-role.mjs",

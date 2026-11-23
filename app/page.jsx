@@ -7,6 +7,7 @@ import SearchForm from '../components/SearchForm';
 import HeroVideo from '../components/HeroVideo';
 import Icon from '../components/Icon';
 import StayFilters from '../components/StayFilters';
+export const metadata = { alternates: { canonical: '/' } };
 
 export default async function Home({ searchParams }) {
   const params = await searchParams;

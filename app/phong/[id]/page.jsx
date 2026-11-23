@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
   const { id } = await params; const { locale, t } = await getI18n();
   const raw = await getProperty(id).catch(() => null);
   if (!raw) return { title: t.detailTitle };
-  const room = localizeRoom(raw, locale); return { title: room.tenPhong, description: room.moTa };
+  const room = localizeRoom(raw, locale); return { title: room.tenPhong, description: room.moTa, alternates: { canonical: `/phong/${encodeURIComponent(id)}` }, ...(room.dataSource === 'api' ? { robots: { index: false, follow: true } } : {}), openGraph: { title: room.tenPhong, description: room.moTa, images: room.hinhAnh ? [{ url: room.hinhAnh }] : [] } };
 }
 
 export default async function RoomPage({ params, searchParams }) {

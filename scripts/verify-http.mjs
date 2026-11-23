@@ -58,6 +58,9 @@ for (const locale of ['vi', 'en']) {
 }
 const missing = await fetch(`${base}/phong/missing-property`);
 assert.equal(missing.status, 404);
+const sitemap = await (await fetch(`${base}/sitemap.xml`)).text();
+assert.ok(sitemap.includes('/phong/hanoi-4689061')); assert.ok(!sitemap.includes('/tai-khoan'));
+const robots = await (await fetch(`${base}/robots.txt`)).text(); assert.ok(robots.includes('Disallow: /quan-tri')); assert.ok(robots.includes('/sitemap.xml'));
 for (const cover of Object.values(covers)) {
   const response = await fetch(`${base}${cover.thumbnailPath || cover.path}`);
   assert.equal(response.status, 200);

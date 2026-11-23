@@ -13,7 +13,7 @@ import { roomCardData } from '../../lib/room-view';
 import { cyberSoftCopy } from '../../lib/cybersoft-copy';
 import { cyberSoftId } from '../../lib/cybersoft/client';
 
-export async function generateMetadata() { const { t } = await getI18n(); return { title: t.roomsPageTitle }; }
+export async function generateMetadata({ searchParams }) { const { t } = await getI18n(); const query = await searchParams; return { title: t.roomsPageTitle, alternates: { canonical: '/rooms' }, robots: query.favorites === '1' || Object.values(query).some(Boolean) ? { index: false, follow: true } : { index: true, follow: true } }; }
 
 export default async function RoomsPage({ searchParams }) {
   const params = await searchParams;

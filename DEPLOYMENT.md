@@ -81,6 +81,20 @@ Trong website, quản trị viên có thể quản lý tài khoản khác sau kh
 
 ## Sao lưu và khôi phục
 
+PostgreSQL trên Neon được sao lưu bằng workflow `Encrypted PostgreSQL backup` mỗi ngày lúc 02:17 giờ Việt Nam (có thể khởi chạy thủ công trên GitHub Actions). Hai secret `BACKUP_DATABASE_URL` và `BACKUP_PUBLIC_KEY` thuộc repository; khóa riêng không được đưa lên GitHub. Mỗi lượt sao lưu dùng `pg_dump` PostgreSQL 18, thử khôi phục trong container riêng rồi mới tải bản mã hóa AES-256-GCM/RSA-OAEP-SHA256 lên artifact, lưu 7 ngày.
+
+Khóa giải mã được lưu nội bộ ở `.backups/tnbnb-backup-private.pem`. Cần giữ thêm một bản tại nơi riêng tư ngoài máy; mất khóa này sẽ không giải mã được các bản sao tương ứng. Thư mục `.backups` không được commit hoặc xuất bản.
+
+Sau khi tải artifact về máy, giải mã bằng:
+
+```sh
+node scripts/decrypt-backup.mjs --input encrypted.tnbackup --key .backups/tnbnb-backup-private.pem --output .backups/restored.dump
+```
+
+Dùng `pg_restore` vào một PostgreSQL riêng trước khi phục hồi dữ liệu thật. Công cụ không ghi đè tệp đích có sẵn. Không đưa bản đã giải mã vào `public/`, Git hoặc artifact công khai.
+
+Workflow `Website availability` kiểm tra website, cơ sở dữ liệu, robots và sitemap mỗi giờ. Lỗi làm workflow thất bại để xuất hiện trong GitHub Actions; thông báo email phụ thuộc cài đặt Notifications của tài khoản GitHub. Lỗi máy chủ có log cấu trúc `tnbnb_error` trên Vercel, không chứa nội dung biểu mẫu, token hoặc URL kết nối.
+
 ```sh
 docker compose exec web node scripts/backup-db.mjs --output /data/tnbnb-backup-YYYYMMDD.sqlite
 ```
