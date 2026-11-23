@@ -14,6 +14,7 @@ import './property.css';
 import './booking.css';
 import './account.css';
 import './workspace.css';
+import './responsive.css';
 
 export async function generateMetadata() {
   const { t } = await getI18n();

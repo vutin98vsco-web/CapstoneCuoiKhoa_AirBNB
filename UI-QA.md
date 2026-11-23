@@ -1,21 +1,35 @@
-# Kiểm tra giao diện trước khi triển khai
+# Kiểm tra giao diện
 
-Tình trạng ngày 22/11/2026: build production, kiểm thử logic và các luồng HTTP đã qua. Chưa hoàn tất kiểm tra trực quan: công cụ trả `The browser access host is unavailable` và `Computer Use native pipe is unavailable (os error 2)`; thử kết nối lại vẫn lỗi. Không có ảnh chụp kiểm chứng bố cục máy tính/điện thoại trong đợt bàn giao này.
+Cập nhật ngày 23/11/2026. Đã kiểm tra bản production cục bộ bằng Chromium chạy qua Brave ở chế độ headless. Có chụp và xem ảnh giao diện điện thoại, máy tính bảng, máy tính. Tài khoản, đánh giá và yêu cầu đặt phòng thử nằm trong SQLite riêng, không ghi vào dữ liệu website đang chạy.
 
-Khi kết nối trình duyệt hoạt động lại, kiểm tra trên môi trường thử riêng và tài khoản quản trị thử, không ghi nhận xét hoặc hủy yêu cầu trên dữ liệu thật.
+## Kích thước và phạm vi
 
-| Màn hình | Việc cần kiểm tra trực tiếp | Trạng thái |
-| --- | --- | --- |
-| Máy tính 1440 × 900 và 1366 × 768 | Header/video, khoảng cách nội dung, lưới khách sạn, tìm kiếm và lịch | Chưa kiểm chứng trực quan |
-| Điện thoại 390 × 844 và 360 × 800 | Menu, đổi ngôn ngữ, tìm kiếm/lọc, không tràn ngang toàn trang, nút và chữ đủ lớn | Chưa kiểm chứng trực quan |
-| Chi tiết/hạng phòng | Gallery mở/đóng bằng bàn phím, chuyển ảnh, chọn hạng cập nhật giá/điều kiện sức chứa | Chưa kiểm chứng tương tác |
-| Đánh giá | Chọn 1–5 sao, nhập/sửa/xóa nhận xét, hộp xác nhận, sắp xếp/phân trang, thông báo lỗi mạng | Chưa kiểm chứng tương tác |
-| Quản trị | Chuyển tab, tìm kiếm/phân trang, mở/đóng form, hiển thị lỗi theo trường, cuộn bảng trên điện thoại | Chưa kiểm chứng trực quan |
-| Form quản trị | Tạo/sửa/ẩn/hiện cơ sở và hạng; không mất nội dung khi lỗi; giá trống không hiển thị bằng 0 | Logic/API đã qua; tương tác chưa kiểm chứng |
-| Phân quyền | Khách/thành viên không đọc được dữ liệu quản trị; khóa/đổi quyền thu hồi phiên; trang hết phiên rõ ràng | API đã qua; giao diện chưa kiểm chứng |
-| Việt/Anh | Nhãn, trạng thái, hộp thoại và lỗi đổi đúng ngôn ngữ; nội dung người dùng được giữ nguyên | HTML/từ điển đã qua; trực quan chưa kiểm chứng |
-| Khả năng tiếp cận | Tab, focus rõ, Escape đóng hộp thoại, nhãn input, đọc thông báo lỗi, reduced motion | Có triển khai; chưa kiểm chứng thực tế |
+- Điện thoại: 320 × 740, 360 × 800, 390 × 844; màn hình ngang 844 × 390.
+- Máy tính bảng: 600 × 960, 768 × 1024, 820 × 1180, 1024 × 768, 1180 × 820.
+- Máy tính: 1440 × 900.
+- Mỗi kích thước đều kiểm tra tiếng Việt và tiếng Anh.
+- 240 lượt mở trang, 492 kiểm tra bố cục/tương tác cơ bản: không tràn ngang toàn trang, không có lỗi JavaScript chưa xử lý. Bảng quản trị, thanh mục chi tiết và hàng ảnh thu nhỏ được cuộn ngang trong vùng riêng.
 
-Trang quan trọng: `/`, `/rooms`, `/phong/hanoi-4689061`, `/dat-phong`, `/dang-nhap`, `/tai-khoan`, `/chuyen-di`, `/quan-tri`.
+| Phần giao diện | Kết quả |
+| --- | --- |
+| Trang chủ | Header trong suốt trên video; thu gọn menu trên màn hình nhỏ; bố cục tìm kiếm và bộ lọc thích ứng kích thước |
+| Danh sách chỗ ở | Một cột trên điện thoại, hai cột trên máy tính bảng; ảnh khách sạn giữ tỷ lệ; tên khách sạn được xuống dòng |
+| Chi tiết và hạng phòng | Khối đặt phòng đưa lên trước nội dung khi không còn cột bên; thông số, giá và nút chọn phòng không bị tràn |
+| Lịch chọn ngày | Mở trong khung màn hình, chọn/đóng được; Escape trả focus; lịch ở form đặt phòng cũng đã kiểm tra |
+| Thư viện ảnh | Mở/đóng, chuyển ảnh, cuộn ảnh nhỏ và vuốt bằng sự kiện cảm ứng đã qua kiểm tra |
+| Đặt phòng | Điện thoại/máy tính bảng hiển thị tóm tắt trước form; gửi yêu cầu bằng giao diện và mở lại trong chuyến đi thành công |
+| Tài khoản | Đăng nhập qua form thành công; kiểm tra bố cục đăng ký, khôi phục, hồ sơ và bảo mật |
+| Bình luận/đánh giá | Chọn sao, gửi, sửa, xóa qua giao diện trên điện thoại tiếng Việt và máy tính bảng tiếng Anh thành công |
+| Quản trị | Tổng quan, danh sách cơ sở và hộp thoại thêm cơ sở hiển thị trong khung; bảng cuộn riêng, form cuộn dọc |
+| Chuyển ngôn ngữ | Đổi qua menu thành công, giữ tham số hạng phòng; chuyển hướng tương đối giữ tên miền đang truy cập |
 
-Không coi media query hoặc kết quả HTTP 200 là bằng chứng bố cục đã đúng trên thiết bị. Trước khi xuất bản cần hoàn tất các mục trực quan còn chờ, chạy thử Docker trên máy đích, kiểm tra HTTPS và sao lưu/khôi phục.
+## Kiểm tra mã nguồn và HTTP
+
+- Build production thành công, 21 kiểm thử logic đạt.
+- Các luồng HTTP danh mục, đặt phòng, tài khoản, đánh giá và quản trị đã đạt trên cơ sở dữ liệu thử riêng.
+- Danh mục kiểm tra đủ 160 trang chi tiết theo hai ngôn ngữ, 16 danh sách địa danh, 80 ảnh đại diện khách sạn và các trang nguồn.
+- Bổ sung kiểm tra chuyển ngôn ngữ giữ query/hash, cookie và từ chối chuyển hướng sang website khác.
+
+## Chưa kiểm tra trên thiết bị thật
+
+Chưa kiểm tra Safari/iOS, bàn phím ảo, vùng tai thỏ trên iPhone/iPad thật, công cụ đọc màn hình và thao tác tải ảnh đại diện bằng camera. Mô phỏng Chromium không thay thế các kiểm tra này. Docker cũng chưa được chạy thử trong đợt kiểm tra giao diện này.

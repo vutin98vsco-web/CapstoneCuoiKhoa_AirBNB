@@ -64,4 +64,15 @@ for (const cover of Object.values(covers)) {
   assert.match(response.headers.get('content-type'), /image\/webp/);
   await response.arrayBuffer();
 }
-console.log(JSON.stringify({ detailPages: checked, destinationLists: 16, hotelCovers: Object.keys(covers).length, sourcePages: 2, selectedRoomChecks: 4, homePages: 2, missingProperty: 404 }));
+for (const locale of ['vi', 'en']) {
+  const returnTo = `/phong/${properties[0].slug}?roomType=${typesByProperty[properties[0].slug][0].id}&guests=2#room-types`;
+  const response = await fetch(`${base}/language`, { method: 'POST', body: new URLSearchParams({ locale, returnTo }), redirect: 'manual' });
+  assert.equal(response.status, 303);
+  assert.equal(response.headers.get('location'), returnTo, 'Language switching must retain query/hash on the public host.');
+  assert.match(response.headers.get('set-cookie'), new RegExp(`tnbnb-language=${locale}`));
+}
+for (const returnTo of ['https://foreign.example', '//foreign.example', '/\\foreign.example']) {
+  const response = await fetch(`${base}/language`, { method: 'POST', body: new URLSearchParams({ locale: 'vi', returnTo }), redirect: 'manual' });
+  assert.equal(response.headers.get('location'), '/', 'Language switching must not redirect to an external host.');
+}
+console.log(JSON.stringify({ detailPages: checked, destinationLists: 16, hotelCovers: Object.keys(covers).length, sourcePages: 2, selectedRoomChecks: 4, homePages: 2, languageRedirects: 5, missingProperty: 404 }));
