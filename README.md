@@ -125,7 +125,6 @@ public/       Logo, font, video và ảnh
 scripts/      Kiểm tra HTTP, cấp quyền và sao lưu
 tests/        Kiểm thử tự động
 deploy/       Cấu hình triển khai mẫu
-reports/      Báo cáo Word
 ```
 
 ## Phạm vi hiện tại
@@ -138,10 +137,7 @@ reports/      Báo cáo Word
 
 ## Tài liệu và tài nguyên
 
-- [Báo cáo đồ án](BAO-CAO.md)
-- [Báo cáo Word chi tiết](reports/Bao_cao_chi_tiet_du_an_TNbnb_2026-11-23.docx)
 - [Hướng dẫn triển khai](DEPLOYMENT.md)
-- [Đối chiếu giao diện](DOI-CHIEU-GIAO-DIEN.md)
 - [Các mục kiểm tra giao diện](UI-QA.md)
 
 Logo TNbnb được thiết kế bằng SVG. Video và một số ảnh tham khảo từ website mẫu, sử dụng cho đồ án học tập. Ảnh địa danh lấy từ Wikimedia Commons; tác giả và giấy phép được ghi tại `/image-credits` và `lib/destination-sources.js`. Font Be Vietnam Pro nằm trong `public/fonts`, kèm giấy phép OFL.

@@ -6,5 +6,6 @@ node_modules
 .data
 .reference
 .backups
+reports
 *.sqlite*
 *.log

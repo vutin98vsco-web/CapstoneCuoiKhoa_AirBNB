@@ -5,6 +5,7 @@ node_modules/
 .reference/
 .data/
 .backups/
+reports/
 *.sqlite
 *.sqlite-wal
 *.sqlite-shm
