@@ -4,6 +4,8 @@ Bản này chạy Next.js trên Node.js 24. Khi cấu hình `DATABASE_URL`, tài
 
 ## Vercel và Neon
 
+Website production: [https://tnbnb.vercel.app](https://tnbnb.vercel.app). Project `tnbnb` thuộc workspace `tinng`, liên kết repository GitHub và nhánh `main`. Bản triển khai ngày 23/11/2026 dùng Node.js 24, Neon PostgreSQL tại Singapore; đã kiểm tra HTTPS, 16 lượt trang ở hai ngôn ngữ, healthcheck cơ sở dữ liệu, phân quyền quản trị và ảnh/video.
+
 Project Vercel dùng framework Next.js, lệnh cài đặt `npm ci`, lệnh build `npm run build` và khu vực `sin1`. Không đặt lệnh `npm start` làm build hoặc override Output Directory. Tệp `vercel.json` lưu các thiết lập này.
 
 1. Liên kết thư mục với project bằng `npx vercel link`.

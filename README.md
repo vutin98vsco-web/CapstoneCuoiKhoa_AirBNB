@@ -2,6 +2,8 @@
 
 Website tìm kiếm chỗ ở và quản lý yêu cầu đặt phòng, thực hiện trong đồ án Capstone Airbnb của **Nguyễn Vũ Tín**. Giao diện tham khảo [CyberSoftbnb](https://demo5.cybersoft.edu.vn/), sử dụng thương hiệu TNbnb và hỗ trợ tiếng Việt, tiếng Anh.
 
+**Website:** [https://tnbnb.vercel.app](https://tnbnb.vercel.app)
+
 Dự án có 80 cơ sở lưu trú tại 8 địa danh, 350 hạng phòng, các chức năng tài khoản, yêu thích, đánh giá và quản trị. Phần đặt phòng ghi nhận yêu cầu trong hệ thống; chưa kết nối tồn phòng hoặc thanh toán của khách sạn.
 
 ## Công nghệ
