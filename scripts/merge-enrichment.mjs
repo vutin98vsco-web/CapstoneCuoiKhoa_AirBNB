@@ -5,14 +5,16 @@ const filename = 'lib/data/room-types.json', original = await readFile(filename,
 const statistics = value => { const rooms = Object.values(value).flat(); return { roomTypes: rooms.length,priced: rooms.filter(room => room.price).length,capacity: rooms.filter(room => room.capacity).length,area: rooms.filter(room => room.areaM2).length,beds: rooms.filter(room => room.beds).length,photos: rooms.reduce((sum,room) => sum+room.images.length,0),atLeast3Photos: rooms.filter(room => room.images.length >= 3).length }; };
 const before = statistics(catalog); let grades = 0;
 const evidenceArray = value => Array.isArray(value) ? value : Object.entries(value || {}).map(([field,evidence]) => ({ fields: [field],...evidence }));
-for (const name of ['enrichment-north-central.json','enrichment-south-coast.json']) {
+for (const name of ['enrichment-north-central.json','enrichment-south-coast.json','enrichment-20261123.json']) {
   const patch = JSON.parse(await readFile(`lib/data/${name}`,'utf8'));
   for (const [slug, types] of Object.entries(patch)) {
     assert.ok(catalog[slug],slug);
     for (const [id,change] of Object.entries(types)) {
       const room = catalog[slug].find(room => room.id === id); assert.ok(room,`${slug}/${id}`); grades++;
-      const allowed = new Set(['capacity','areaM2','beds','occupancyNote','price','images','evidence','checkedAt']); for (const field of Object.keys(change)) assert.ok(allowed.has(field),field);
-      for (const field of ['capacity','areaM2','beds','occupancyNote','price']) if (field in change) room[field] = change[field];
+      const allowed = new Set(['capacity','areaM2','areaRangeM2','areaMinimumM2','beds','occupancyNote','price','images','evidence','checkedAt','sourceUrl','sourceName','sourceNote','description','sharedPhoto']); for (const field of Object.keys(change)) assert.ok(allowed.has(field),field);
+      for (const field of ['capacity','areaM2','areaRangeM2','areaMinimumM2','beds','occupancyNote','price','sourceUrl','sourceName','sourceNote','description','sharedPhoto']) if (field in change) room[field] = change[field];
+      if(change.areaRangeM2)assert.ok(change.areaRangeM2.min>0&&change.areaRangeM2.max>=change.areaRangeM2.min);
+      if(change.areaMinimumM2)assert.ok(change.areaMinimumM2>0);
       if (change.capacity != null) assert.ok(Number.isInteger(change.capacity) && change.capacity >= 1 && change.capacity <= 100);
       if (change.price) { assert.ok(change.price.amount > 0); assert.ok(['VND','USD'].includes(change.price.currency)); assert.match(change.price.sourceUrl,/^https:\/\//); assert.ok(change.price.context.vi && change.price.context.en); assert.equal(change.price.isLive,false); }
       for (const photo of change.images || []) {

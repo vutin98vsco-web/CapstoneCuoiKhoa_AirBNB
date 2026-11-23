@@ -27,12 +27,13 @@ export default function RoomTypeList({ propertyName }) {
           <p className="room-type-description">{type.description[locale]}</p>
           {type.sharedPhoto && <p className="room-shared-photo">{c.sharedPhoto}</p>}
           <ul className="room-type-specs">
-            {type.areaM2 > 0 && <li><Icon name="grid" size={16} /><span>{c.area}: <strong>{type.areaM2} m²</strong></span></li>}
+            {(type.areaM2 > 0 || type.areaRangeM2 || type.areaMinimumM2) && <li><Icon name="grid" size={16} /><span>{c.area}: <strong>{type.areaM2 > 0 ? `${type.areaM2} m²` : type.areaRangeM2 ? `${type.areaRangeM2.min}–${type.areaRangeM2.max} m²` : format(c.areaFrom,{area:type.areaMinimumM2})}</strong></span></li>}
             {type.capacity > 0 && <li><Icon name="user" size={16} /><span>{format(c.maxGuests, { count: type.capacity })}</span></li>}
             {type.beds?.[locale] && <li><Icon name="bed" size={16} /><span>{type.beds[locale]}</span></li>}
             {type.view?.[locale] && <li><Icon name="pin" size={16} /><span>{type.view[locale]}</span></li>}
           </ul>
           {type.occupancyNote?.[locale] && <p className="property-help">{type.occupancyNote[locale]}</p>}
+          {type.sourceNote?.[locale] && <p className="property-help">{type.sourceNote[locale]}</p>}
           <div className="room-type-source"><a href={type.sourceUrl} target="_blank" rel="noreferrer">{c.source}: {type.sourceName} ↗</a></div>
           {Array.isArray(type.evidence) && <div className="room-type-evidence">{[...new Map(type.evidence.filter(item => /^https:\/\//.test(item.url || item.sourceUrl || '')).map(item => [item.url || item.sourceUrl,item])).values()].map(item => <a key={item.url || item.sourceUrl} href={item.url || item.sourceUrl} target="_blank" rel="noreferrer">{c.source}: {new URL(item.url || item.sourceUrl).hostname} · {item.checkedAt}</a>)}</div>}
           <div className="room-type-bottom"><div>{type.price ? <><span className="room-type-rate-label">{c.roomRate}</span><DualPrice room={{ referencePrice: type.price }} locale={locale} /></> : <p className="room-type-unpriced">{c.rateOnRequest}</p>}</div><button type="button" className={isSelected ? 'room-selected-button' : 'button-primary'} aria-pressed={isSelected} onClick={() => selection.selectRoom(type.id, true)}>{isSelected ? <><Icon name="check" size={16} />{c.selected}</> : <>{c.select}<Icon name="arrow" size={16} /></>}</button></div>

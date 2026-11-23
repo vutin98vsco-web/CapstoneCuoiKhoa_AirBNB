@@ -43,7 +43,7 @@ npm run check:http
 
 Kiểm tra HTTP tự khởi động bản standalone tại cổng 3002 với cơ sở dữ liệu tạm riêng, chạy các luồng danh mục/đặt phòng/tài khoản/quản trị/đánh giá và tự dọn dữ liệu thử. Đổi cổng bằng `TNB_TEST_PORT` nếu cổng đã được dùng. Script không dừng máy chủ đang chạy của người dùng.
 
-Workflow `.github/workflows/checks.yml` chạy các bước trên khi push hoặc mở pull request. Cần tạo repository GitHub và cấu hình remote trước khi workflow có thể chạy trên GitHub; không có thông tin đăng nhập nào trong mã nguồn.
+Workflow `.github/workflows/checks.yml` chạy các bước trên khi push hoặc mở pull request. Repository và workflow đã hoạt động; CI gồm kiểm thử logic, HTTP, CyberSoft mô phỏng, email mô phỏng và build/chạy container. Không có thông tin đăng nhập nào trong mã nguồn.
 
 ## Máy chủ Docker
 
@@ -115,10 +115,18 @@ Dùng tên mới cho mỗi bản sao. Công cụ dùng SQLite Backup API và ki�
 - Quản trị có thể ẩn/hiện nhận xét và ghi lý do; không sửa điểm hoặc nội dung người dùng.
 - Giá lưu trong danh mục là giá tham khảo có nguồn và điều kiện. Không tự coi là giá trực tiếp cho ngày khách chọn.
 - Trạng thái xử lý yêu cầu là nội bộ TNbnb, không xác nhận tồn phòng, giữ phòng hoặc thanh toán với khách sạn.
-- Chưa tích hợp gửi/xác minh email, cổng thanh toán hoặc hệ thống tồn phòng của nhà cung cấp.
+- Gửi/xác minh email đã có mã nguồn và kiểm thử; cần khóa Resend cùng địa chỉ gửi đã xác minh để hoạt động thật. Chưa tích hợp cổng thanh toán hoặc hệ thống tồn phòng của nhà cung cấp.
 
 ## Trạng thái bàn giao
 
-Các tệp triển khai được chuẩn bị trong repository. Docker là phương án chạy riêng với SQLite, cần kiểm tra container trên máy chủ đích. Vercel dùng PostgreSQL qua `DATABASE_URL`; kiểm tra `/api/health`, tài khoản và yêu cầu đặt phòng sau mỗi deployment.
+Các tệp triển khai được chuẩn bị trong repository. Docker là phương án chạy riêng với SQLite; build và chạy container đã đạt trên GitHub Actions. Vẫn cần kiểm tra cấu hình mạng/volume trên máy chủ đích. Vercel dùng PostgreSQL qua `DATABASE_URL`; kiểm tra `/api/health`, tài khoản và yêu cầu đặt phòng sau mỗi deployment.
 
 Tài liệu chính thức: [Next.js standalone](https://nextjs.org/docs/app/api-reference/config/next-config-js/output), [Docker cho Next.js](https://docs.docker.com/guides/nextjs/), [SQLite Backup trong Node.js](https://nodejs.org/download/release/v24.15.0/docs/api/sqlite.html#sqlitebackupsourceDb-path-options).
+
+## Email và tác vụ định kỳ
+
+Thêm `RESEND_API_KEY` và `EMAIL_FROM` trong Vercel Production. Địa chỉ gửi phải thuộc tên miền được xác minh trên Resend. Đặt `SITE_URL=https://tnbnb.vercel.app` nếu đổi cấu hình; khi đổi tên miền cần cập nhật biến này trước khi gửi liên kết. Không đặt khóa trong biến NEXT_PUBLIC. Hiện chưa có khóa gửi thật, giao diện hồ sơ báo chưa cấu hình.
+
+`CRON_SECRET` đã được tạo riêng trên Vercel. Cron `/api/cron/email` chạy mỗi ngày 07:00 giờ Việt Nam, phù hợp lịch ngày của gói Hobby. Email được thử gửi ngay sau phản hồi; cron thử lại các email chờ, tối đa 5 lần, loại bỏ liên kết hết hạn. Chỉ gửi thông báo yêu cầu đặt phòng đến email đã xác minh của tài khoản sở hữu yêu cầu; nội dung không xác nhận giữ phòng.
+
+Kiểm thử sau build: `npm run check:http:email` và `npm run check:http:email -- --postgres`. Hai lệnh dùng nhà cung cấp mô phỏng, tài khoản/schema thử riêng, không gửi email thật.

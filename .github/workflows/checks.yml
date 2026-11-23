@@ -21,6 +21,7 @@ jobs:
       - run: npm run build
       - run: npm run check:http
       - run: npm run check:http:cybersoft
+      - run: npm run check:http:email
   container:
     runs-on: ubuntu-latest
     timeout-minutes: 15

@@ -1,9 +1,11 @@
-import { NextResponse } from 'next/server';
+import { NextResponse,after } from 'next/server';
 import { bookingCookie, bookingStore, sessionHash, sessionLifetime } from '../../../lib/bookings/store.server';
 import { currentBookingOffer as findBookingOffer, makeBookingSnapshot } from '../../../lib/bookings/offers.server';
 import { validateBooking } from '../../../lib/bookings/validation';
-import { bookingOwner } from '../../../lib/auth/session.server';
+import { bookingOwner,currentUser } from '../../../lib/auth/session.server';
 import { sameOrigin } from '../../../lib/http.server';
+import { emailConfigured,emailStore,queueBookingEmail,deliverEmails } from '../../../lib/email/service.server';
+import { reportServerError } from '../../../lib/observability';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -33,6 +35,7 @@ export async function POST(request) {
     const result = await bookingStore().create(owner, key, value, makeBookingSnapshot(offer, value));
     if (result.error) return reply(result, 409);
     const response = reply({ id: result.booking.id, reference: result.booking.reference, status: result.booking.status }, result.replay ? 200 : 201);
+    if(emailConfigured())try{const user=await currentUser(request.cookies);if(user&&user.email===result.booking.email&&await(await emailStore()).verified(user.id)){const job=await queueBookingEmail(result.booking,request.cookies.get('tnbnb-language')?.value);after(async()=>{try{await deliverEmails(job);}catch(error){reportServerError('booking.email',error);}});}}catch(error){reportServerError('booking.email',error);}
     if (sessionHash(token)) response.cookies.set(bookingCookie, token, { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax', maxAge: sessionLifetime, path: '/' });
     return response;
   } catch { return reply({ error: 'service_unavailable' }, 503); }

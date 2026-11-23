@@ -25,7 +25,7 @@ Cập nhật ngày 23/11/2026. Đã kiểm tra bản production cục bộ bằn
 
 ## Kiểm tra mã nguồn và HTTP
 
-- Build production thành công, 21 kiểm thử logic đạt.
+- Build production thành công, 29 kiểm thử logic đạt.
 - Các luồng HTTP danh mục, đặt phòng, tài khoản, đánh giá và quản trị đã đạt trên cơ sở dữ liệu thử riêng.
 - Danh mục kiểm tra đủ 160 trang chi tiết theo hai ngôn ngữ, 16 danh sách địa danh, 80 ảnh đại diện khách sạn và các trang nguồn.
 - Bổ sung kiểm tra chuyển ngôn ngữ giữ query/hash, cookie và từ chối chuyển hướng sang website khác.
@@ -33,4 +33,6 @@ Cập nhật ngày 23/11/2026. Đã kiểm tra bản production cục bộ bằn
 
 ## Chưa kiểm tra trên thiết bị thật
 
-Chưa kiểm tra Safari/iOS, bàn phím ảo, vùng tai thỏ trên iPhone/iPad thật, công cụ đọc màn hình và thao tác tải ảnh đại diện bằng camera. Mô phỏng Chromium không thay thế các kiểm tra này. Docker cũng chưa được chạy thử trong đợt kiểm tra giao diện này.
+Đã bổ sung 42 lượt kiểm tra bằng Chromium và WebKit trên màn hình 390, 768, 1440 px: hồ sơ, xác minh/khôi phục email, danh mục và hạng phòng có khoảng diện tích/ảnh mới; không tràn ngang hoặc lỗi JavaScript. Đã xem ảnh chụp hai engine. WebKit mô phỏng không tương đương Safari trên thiết bị thật.
+
+Chưa kiểm tra Safari/iOS trên thiết bị thật, bàn phím ảo, vùng tai thỏ trên iPhone/iPad thật, công cụ đọc màn hình và thao tác tải ảnh đại diện bằng camera. Mô phỏng Chromium không thay thế các kiểm tra này. Docker đã build và chạy kiểm tra HTTP trong GitHub Actions.

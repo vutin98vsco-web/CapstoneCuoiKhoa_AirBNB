@@ -48,6 +48,9 @@ Khi dùng API CyberSoft ở môi trường phát triển, sao chép `.env.exampl
 | Biến | Ý nghĩa |
 | --- | --- |
 | `CYBERSOFT_TOKEN` | Token được cấp để gọi API CyberSoft từ máy chủ; có thể để trống khi sử dụng danh mục tham khảo |
+| `RESEND_API_KEY`, `EMAIL_FROM` | Khóa Resend và địa chỉ gửi đã xác minh; chỉ dùng trên máy chủ |
+| `CRON_SECRET` | Bí mật cho endpoint xử lý email chờ; Vercel tự gửi trong cron |
+| `SITE_URL` | URL HTTPS chính thức dùng cho liên kết email và SEO |
 | `DATABASE_URL` | Kết nối PostgreSQL, được Neon cấp qua Vercel; chỉ dùng trên máy chủ |
 | `TNB_BOOKINGS_DB_PATH` | Đường dẫn SQLite; mặc định `.data/tnbnb-bookings.sqlite` |
 | `TNB_HOST` | Địa chỉ lắng nghe của lệnh `npm start`; mặc định `127.0.0.1` |
@@ -75,18 +78,18 @@ Các trang chính: `/`, `/rooms`, `/phong/[id]`, `/dat-phong`, `/dang-ky`, `/dan
 
 Danh mục gồm Hà Nội, Hồ Chí Minh, Đà Nẵng, Đà Lạt, Nha Trang, Vũng Tàu, Phú Quốc và Hội An, mỗi địa danh có 10 cơ sở. Dữ liệu được tổng hợp từ nguồn công khai, gồm trang của cơ sở và nhà cung cấp; thông tin nguồn và ngày tra cứu được lưu cùng bản ghi, hiển thị tại `/data-sources`.
 
-Thống kê sau lần bổ sung ngày 22/11/2026:
+Thống kê sau lần bổ sung ngày 23/11/2026:
 
 | Nội dung | Số lượng |
 | --- | ---: |
 | Cơ sở lưu trú | 80 |
 | Hạng phòng | 350 |
-| Hạng có giá tham khảo đúng hạng | 22 |
-| Hạng có sức chứa | 154 |
-| Hạng có diện tích | 222 |
-| Hạng có thông tin giường | 204 |
-| Ảnh hạng phòng | 1.015 |
-| Hạng có ít nhất 3 ảnh | 246 |
+| Hạng có giá tham khảo đúng hạng | 105 |
+| Hạng có sức chứa | 237 |
+| Hạng có diện tích | 271 chính xác, 6 khoảng, 3 tối thiểu |
+| Hạng có thông tin giường | 272 |
+| Ảnh hạng phòng | 1.067 |
+| Hạng có ít nhất 3 ảnh | 269 |
 
 Ảnh đại diện khách sạn được lưu riêng với ảnh hạng phòng. Thông số chưa tìm được nguồn hoặc có nguồn mâu thuẫn được để trống. Hạng chưa có giá không sử dụng giá khởi điểm của khách sạn để thay thế.
 
@@ -119,7 +122,7 @@ Lệnh đầu gọi dịch vụ thật bằng GET và chỉ xuất trạng thái
 
 ## Tài khoản và quản trị
 
-Tài khoản TNbnb được lưu trong cơ sở dữ liệu đã cấu hình. Mật khẩu dùng scrypt với muối ngẫu nhiên; mã phiên và mã khôi phục được lưu dạng băm. Cookie tài khoản có `HttpOnly`, `SameSite=Lax` và `Secure` trong production. Khôi phục mật khẩu sử dụng mã đã cấp cho người dùng, chưa gửi email.
+Tài khoản TNbnb được lưu trong cơ sở dữ liệu đã cấu hình. Mật khẩu dùng scrypt với muối ngẫu nhiên; mã phiên và mã khôi phục được lưu dạng băm. Cookie tài khoản có `HttpOnly`, `SameSite=Lax` và `Secure` trong production. Khôi phục mật khẩu bằng mã đã cấp hoặc liên kết email khi đã cấu hình nhà cung cấp. Xác minh email dùng liên kết một lần, hết hạn sau 24 giờ; liên kết đặt lại mật khẩu hết hạn sau 30 phút. Đổi mật khẩu qua email kết thúc các phiên cũ và cấp mã khôi phục mới.
 
 Tài khoản mới có vai trò người dùng. Để cấp quyền quản trị, đăng ký tài khoản trước rồi chạy lệnh tại máy chủ với đúng đường dẫn cơ sở dữ liệu:
 
@@ -135,11 +138,12 @@ Thay `owner@example.com` bằng email đã đăng ký, sau đó đăng nhập l�
 npm test
 npm run build
 npm run check:http
+npm run check:http:email
 ```
 
 Lệnh `check:http` cần bản build, tự chạy máy chủ thử tại cổng 3002 với SQLite riêng và dọn dữ liệu sau kiểm tra. Có thể đổi cổng bằng `TNB_TEST_PORT`.
 
-Ngày 23/11/2026, **25/25 kiểm thử tự động và 4/4 kiểm thử tích hợp PostgreSQL đạt**, build production thành công. Các bộ kiểm tra HTTP danh mục, đặt phòng, tài khoản, quản trị và đánh giá dùng dữ liệu thử riêng. Kiểm tra yêu thích bổ sung việc lưu/bỏ lưu, nhập danh sách khi đăng nhập, cơ sở bị ẩn và cách ly giữa tài khoản. Giao diện đã kiểm tra trên 10 kích thước Chromium mô phỏng, hai ngôn ngữ; phạm vi và phần thiết bị thật còn chờ nằm trong [UI-QA.md](UI-QA.md).
+Ngày 23/11/2026, **29/29 kiểm thử tự động và 4/4 kiểm thử tích hợp PostgreSQL đạt**, build production thành công. Các bộ kiểm tra HTTP danh mục, đặt phòng, tài khoản, quản trị và đánh giá dùng dữ liệu thử riêng. Kiểm tra yêu thích bổ sung việc lưu/bỏ lưu, nhập danh sách khi đăng nhập, cơ sở bị ẩn và cách ly giữa tài khoản. Giao diện đã kiểm tra trên 10 kích thước Chromium mô phỏng, hai ngôn ngữ; phạm vi và phần thiết bị thật còn chờ nằm trong [UI-QA.md](UI-QA.md).
 
 Để kiểm tra PostgreSQL sau khi có `.env.local` chứa kết nối Neon:
 
@@ -166,8 +170,8 @@ deploy/       Cấu hình triển khai mẫu
 
 - Yêu cầu đặt phòng được lưu trong TNbnb, chưa gửi đến khách sạn, giữ phòng hoặc thu tiền.
 - Đánh giá cộng đồng chưa xác minh người viết đã lưu trú và được tách khỏi điểm của nguồn ngoài.
-- Chưa có gửi/xác minh email, đăng nhập mạng xã hội hoặc tích hợp thanh toán.
-- Có cấu hình Docker và GitHub Actions; container chưa được chạy thử. Kết quả chạy tại máy không thay thế kết quả CI trên GitHub.
+- Luồng xác minh email, khôi phục mật khẩu và gửi thông báo yêu cầu đã được triển khai, kiểm tra HTTP trên SQLite/PostgreSQL bằng nhà cung cấp mô phỏng. Gửi email thật cần `RESEND_API_KEY` và `EMAIL_FROM` thuộc tên miền đã xác minh. Chưa có đăng nhập mạng xã hội hoặc tích hợp thanh toán.
+- Docker đã build và chạy healthcheck thành công trên GitHub Actions. Sao lưu PostgreSQL hằng ngày được mã hóa, kiểm tra khôi phục trong container riêng và lưu artifact 7 ngày; kiểm tra website chạy mỗi giờ.
 - Cấu hình Vercel nằm trong `vercel.json`; kết nối Neon được lưu bằng biến môi trường của Vercel. Thư mục dữ liệu, bí mật và báo cáo nội bộ được loại khỏi bản triển khai.
 
 ## Tài liệu và tài nguyên
