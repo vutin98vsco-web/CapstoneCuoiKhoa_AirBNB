@@ -1,100 +1,147 @@
-# TNbnb — Ở đâu cũng thấy thuộc về
+# TNbnb
 
-Giao diện Next.js App Router dựa theo [CyberSoftbnb](https://demo5.cybersoft.edu.vn/), dùng JavaScript và CSS thuần. Yêu cầu Node.js 24 trở lên; phần lưu yêu cầu đặt phòng sử dụng SQLite tích hợp trong Node.js.
+Website tìm kiếm chỗ ở và quản lý yêu cầu đặt phòng, thực hiện trong đồ án Capstone Airbnb của **Nguyễn Vũ Tín**. Giao diện tham khảo [CyberSoftbnb](https://demo5.cybersoft.edu.vn/), sử dụng thương hiệu TNbnb và hỗ trợ tiếng Việt, tiếng Anh.
 
-## Chạy dự án
+Dự án có 80 cơ sở lưu trú tại 8 địa danh, 350 hạng phòng, các chức năng tài khoản, yêu thích, đánh giá và quản trị. Phần đặt phòng ghi nhận yêu cầu trong hệ thống; chưa kết nối tồn phòng hoặc thanh toán của khách sạn.
+
+## Công nghệ
+
+| Thành phần | Công nghệ sử dụng |
+| --- | --- |
+| Giao diện và máy chủ | Next.js App Router, React |
+| Ngôn ngữ | JavaScript, CSS thuần |
+| Cơ sở dữ liệu | SQLite qua `node:sqlite` |
+| Xử lý ảnh đại diện | Sharp |
+| Kiểm thử | Node.js test runner và các kịch bản HTTP |
+| Môi trường chạy | Node.js 24 trở lên, npm |
+
+Phiên bản thư viện và các lệnh chạy nằm trong [package.json](package.json).
+
+## Cài đặt và chạy
 
 ```sh
+git clone https://github.com/vutin98vsco-web/CapstoneCuoiKhoa_AirBNB.git
+cd CapstoneCuoiKhoa_AirBNB
 npm ci
 npm run dev
 ```
 
-Truy cập http://localhost:3000. Trên Windows PowerShell nếu `npm.ps1` bị chặn, dùng `npm.cmd run dev`.
+Mở [http://localhost:3000](http://localhost:3000). Danh mục tham khảo hoạt động ngay, không bắt buộc cấu hình token API.
+
+Nếu PowerShell chặn `npm.ps1`, dùng `npm.cmd` thay cho `npm`, ví dụ `npm.cmd run dev`.
+
+Để chạy bản production tại máy:
 
 ```sh
 npm run build
 npm start
 ```
 
-## Phần đã thực hiện
+`npm start` chạy bản standalone, mặc định tại `127.0.0.1:3000`. Hướng dẫn triển khai, HTTPS và sao lưu xem tại [DEPLOYMENT.md](DEPLOYMENT.md).
 
-- Trang chủ: header cố định hoàn toàn trong suốt trên video, không có lớp phủ hoặc hiệu ứng làm mờ; chữ sáng khi nằm trên banner và nền trắng khi cuộn xuống nội dung; menu theo ngôn ngữ đang chọn, avatar tròn viền hồng, video banner gốc, tìm kiếm, 8 điểm đến, 4 loại chỗ ở, banner giới thiệu và footer.
-- Chuyển tiếng Việt/Anh ở đầu trang. Mặc định tiếng Việt; lựa chọn lưu bằng cookie trong một năm. Đổi ngôn ngữ giữ nguyên trang, bộ lọc và liên kết đến mục đang xem.
-- Nội dung giao diện, khẩu hiệu, tiêu đề trang, nhãn hỗ trợ tiếp cận, thông báo, phòng mẫu, tiện nghi và giá đều được bản địa hóa. Bộ lịch riêng dùng nhãn và thông báo kiểm tra ngày theo ngôn ngữ đã chọn, hỗ trợ nhập ngày/tháng/năm.
-- `/rooms`: lọc tên phòng/địa điểm có dấu hoặc không dấu, sức chứa, loại chỗ ở, giá tối đa, số phòng ngủ và tiện nghi. Bộ lọc lưu trên URL và dùng chung biểu mẫu tìm kiếm.
-- Yêu thích: khách lưu trong trình duyệt; người đăng nhập đồng bộ theo tài khoản. Xem tại `/rooms?favorites=1`.
-- `/phong/[id]`: thư viện ảnh cơ sở, các hạng phòng có ảnh và nguồn riêng, mô tả, tiện nghi, vị trí, điểm đánh giá có xuất xứ và giờ nhận/trả phòng. Chọn hạng phòng cập nhật khung giá và lưu lựa chọn trong URL.
-- Giá VNĐ và USD xuất hiện cùng nhau. Mỗi mức giá ghi rõ phạm vi: giá khởi điểm cơ sở hoặc giá của một hạng phòng. Hạng chưa có giá xác minh không kế thừa giá khởi điểm của khách sạn.
-- `/data-sources`: nguồn thông tin, nguồn ảnh, ngày tra cứu, bối cảnh giá và nguồn hạng phòng của từng cơ sở.
-- Ngày và số khách được chuyển từ kết quả tìm kiếm sang trang chi tiết. Chặn ngày trả phòng trước hoặc cùng ngày nhận phòng.
-- Bố cục cho điện thoại, máy tính bảng và desktop; menu điện thoại, hỗ trợ bàn phím, reduced motion và nút dừng video.
-- Trên điện thoại hoặc khi tiết kiệm dữ liệu/reduced motion, video không tự phát. Ảnh poster được nén WebP; font và ảnh phục vụ từ thư mục `public`.
-- Đánh giá cộng đồng 1–5 sao: đăng nhập để gửi, sửa hoặc xóa nhận xét của mình; một nhận xét cho mỗi tài khoản/cơ sở; phân trang và sắp xếp. Điểm cộng đồng tách khỏi điểm nguồn ngoài và không gắn nhãn đã lưu trú xác minh.
-- `/quan-tri`: tổng quan, tìm kiếm/phân trang người dùng, cơ sở và hạng phòng, địa danh, xử lý yêu cầu, ẩn/hiện đánh giá và nhật ký thay đổi. Dữ liệu quản trị lưu trong SQLite và áp dụng lên danh mục công khai; ẩn cơ sở/hạng phòng không làm mất biên nhận đã tạo.
+### Cấu hình môi trường
 
-## Quản trị và triển khai
+Khi dùng API CyberSoft ở môi trường phát triển, sao chép `.env.example` thành `.env.local` và thêm token được cấp. Với `npm start`, khai báo biến trong môi trường của tiến trình hoặc dịch vụ chạy ứng dụng; lệnh khởi động đọc đường dẫn dữ liệu và địa chỉ lắng nghe trước khi Next.js chạy.
 
-Tài khoản mới luôn là người dùng thường. Đăng ký tài khoản của người quản lý, sau đó chạy `npm run admin:grant -- --email owner@example.com` với `TNB_BOOKINGS_DB_PATH` trỏ đúng tệp dữ liệu. Công cụ không tạo tài khoản/mật khẩu mặc định; sau khi cấp quyền cần đăng nhập lại. Thao tác đổi quyền/khóa tài khoản qua web yêu cầu mật khẩu quản trị hiện tại và thu hồi phiên của người bị tác động.
+| Biến | Ý nghĩa |
+| --- | --- |
+| `CYBERSOFT_TOKEN` | Token được cấp để gọi API CyberSoft từ máy chủ; có thể để trống khi sử dụng danh mục tham khảo |
+| `TNB_BOOKINGS_DB_PATH` | Đường dẫn SQLite; mặc định `.data/tnbnb-bookings.sqlite` |
+| `TNB_HOST` | Địa chỉ lắng nghe của lệnh `npm start`; mặc định `127.0.0.1` |
 
-`npm start` chạy bản standalone, chép tài nguyên công khai cần thiết và giữ đường dẫn SQLite theo thư mục dự án. Mặc định lắng nghe `127.0.0.1`; đặt `TNB_HOST` khi cần một địa chỉ lắng nghe khác. Bản production cần reverse proxy HTTPS. Có Dockerfile, Compose với volume bền vững, healthcheck, CI và công cụ sao lưu. Chi tiết tại [DEPLOYMENT.md](DEPLOYMENT.md). Chưa xuất bản lên hosting cụ thể.
+Không đưa token vào biến `NEXT_PUBLIC_*` hoặc commit `.env.local`. Cơ sở dữ liệu được tạo khi sử dụng chức năng lưu trữ và cần được giữ lại giữa các lần chạy.
 
-## Bổ sung dữ liệu ngày 22/11/2026
+## Chức năng chính
 
-Đối chiếu thêm nguồn chính thức/nhà cung cấp cho 185 hạng phòng tại 38 cơ sở. Danh mục vẫn có 80 cơ sở và 350 hạng phòng; hiện có **154 hạng có sức chứa xác minh, 222 hạng có diện tích, 204 hạng có thông tin giường, 22 hạng có giá và 1.015 ảnh hạng phòng**. Có 246 hạng có từ 3 ảnh trở lên. Mỗi bổ sung có bằng chứng và nguồn theo trường, xem trong `lib/data/room-types.json`; các liên kết nguồn bổ sung được hiển thị trên giao diện.
+| Nhóm | Nội dung |
+| --- | --- |
+| Trang chủ | Logo TNbnb, video giới thiệu, header trong suốt trên video, tìm kiếm và 8 điểm đến |
+| Tìm kiếm | Tìm tên hoặc địa danh có dấu/không dấu; lọc loại chỗ ở, số khách, giá, phòng ngủ và tiện nghi |
+| Chi tiết cơ sở | Ảnh khách sạn, hạng phòng, tiện nghi, vị trí, chính sách và nguồn dữ liệu |
+| Hạng phòng | Thư viện ảnh riêng, diện tích, giường, sức chứa và giá khi nguồn có thông tin |
+| Ngôn ngữ | Tiếng Việt/Anh; lưu lựa chọn bằng cookie và giữ điều kiện tìm kiếm khi đổi ngôn ngữ |
+| Tài khoản | Đăng ký, đăng nhập, sửa hồ sơ/ảnh đại diện, đổi mật khẩu, mã khôi phục và đăng xuất |
+| Yêu thích | Lưu trong trình duyệt khi chưa đăng nhập; đồng bộ theo tài khoản khi đăng nhập |
+| Yêu cầu đặt phòng | Chọn hạng, ngày, số phòng/khách; gửi yêu cầu, xem biên nhận, lịch sử và hủy yêu cầu |
+| Đánh giá | Chấm 1–5 sao, viết/sửa/xóa nhận xét của mình, sắp xếp và phân trang |
+| Quản trị | Quản lý cơ sở, hạng phòng, địa danh, người dùng, yêu cầu, kiểm duyệt đánh giá và nhật ký |
 
-Hai tệp `enrichment-north-central.json` và `enrichment-south-coast.json` là bản vá nguồn. `node scripts/merge-enrichment.mjs` kiểm tra thay đổi; thêm `--apply` để hợp nhất. Ảnh mới được nối thêm, không thay thế thư viện cũ hoặc tự điền ảnh hạng khác. Điều kiện người lớn/trẻ em được giữ trong `occupancyNote`; giới hạn chọn khách dùng sức chứa bảo thủ theo số người lớn khi nguồn có giới hạn này. Phần thiếu hoặc nguồn mâu thuẫn được để trống.
+Các trang chính: `/`, `/rooms`, `/phong/[id]`, `/dat-phong`, `/dang-ky`, `/dang-nhap`, `/tai-khoan`, `/chuyen-di`, `/quan-tri`.
 
-## Dữ liệu và API
+## Dữ liệu chỗ ở
 
-Mặc định có **80 cơ sở lưu trú thật, 10 cơ sở tại mỗi điểm đến**, không cần token. Dữ liệu công khai được tra cứu ngày 18/11/2026. Tên, địa chỉ, tiện nghi, giờ nhận/trả và điểm tổng hợp của cơ sở có nguồn KAYAK; giá trên danh sách là giá tham khảo cho kỳ ngày được ghi cụ thể trong từng bản ghi, không phải báo giá trực tiếp cho ngày người dùng chọn.
+Danh mục gồm Hà Nội, Hồ Chí Minh, Đà Nẵng, Đà Lạt, Nha Trang, Vũng Tàu, Phú Quốc và Hội An, mỗi địa danh có 10 cơ sở. Dữ liệu được tổng hợp từ nguồn công khai, gồm trang của cơ sở và nhà cung cấp; thông tin nguồn và ngày tra cứu được lưu cùng bản ghi, hiển thị tại `/data-sources`.
 
-`lib/data/properties.json` lưu thông tin cơ sở; `lib/data/property-images.json` lưu thư viện 5 ảnh của từng cơ sở; `lib/data/property-covers.json` lưu riêng ảnh đại diện khách sạn cho trang Khám phá chỗ ở, danh sách yêu thích và gợi ý liên quan. Ảnh đại diện ưu tiên mặt ngoài/toàn cảnh khách sạn, không dùng ảnh phòng làm ảnh khách sạn. Mỗi ảnh có nguồn, loại ảnh và chú thích Việt/Anh; ảnh nằm trong `public/images/property-covers`.
+Thống kê sau lần bổ sung ngày 22/11/2026:
 
-`lib/data/room-types.json` lưu các hạng phòng, ảnh đúng hạng và nguồn riêng. Thư viện mỗi hạng được bổ sung tối đa 4 góc chụp khi nguồn có ảnh xác minh được; hạng chưa tìm thấy thêm ảnh giữ số ảnh thực tế. Không lặp cùng ảnh hoặc dùng ảnh hạng khác để đủ số lượng. Ảnh hạng phòng được đối chiếu từ trang chi tiết hoặc thẻ hạng phòng của cơ sở/nhà cung cấp, không phân hạng dựa trên một ảnh phòng chung. Trường diện tích, giường và sức chứa chỉ được điền khi nguồn xác nhận. Danh sách hạng hiển thị gồm các hạng đã đối chiếu, có thể chưa bao gồm toàn bộ danh mục của nhà cung cấp.
+| Nội dung | Số lượng |
+| --- | ---: |
+| Cơ sở lưu trú | 80 |
+| Hạng phòng | 350 |
+| Hạng có giá tham khảo đúng hạng | 22 |
+| Hạng có sức chứa | 154 |
+| Hạng có diện tích | 222 |
+| Hạng có thông tin giường | 204 |
+| Ảnh hạng phòng | 1.015 |
+| Hạng có ít nhất 3 ảnh | 246 |
 
-Tỷ giá quy đổi tham khảo: **1 USD = 25.900 VND**, giá bán USD do Vietcombank công bố lúc 00:05:02 ngày 18/11/2026; liên kết XML có tại `lib/currency.js` và `/data-sources`. Đây là ảnh chụp dữ liệu tham khảo, không tự cập nhật hay cam kết tỷ giá thanh toán.
+Ảnh đại diện khách sạn được lưu riêng với ảnh hạng phòng. Thông số chưa tìm được nguồn hoặc có nguồn mâu thuẫn được để trống. Hạng chưa có giá không sử dụng giá khởi điểm của khách sạn để thay thế.
 
-Để sử dụng [API CyberSoft](https://airbnbnew.cybersoft.edu.vn/swagger/index.html), sao chép `.env.example` thành `.env.local`, đặt token lớp học được cấp vào `CYBERSOFT_TOKEN`, rồi khởi động lại server. Token chỉ dùng trên server, không đặt trong biến `NEXT_PUBLIC_*`.
+Giá được hiển thị bằng VNĐ và USD, kèm nguồn, ngày tra cứu và điều kiện. Tỷ giá tham khảo trong dữ liệu là **1 USD = 25.900 VNĐ**, ghi nhận từ Vietcombank ngày 18/11/2026; không tự cập nhật và không phải tỷ giá thanh toán.
 
-`lib/catalog.js` giữ nguyên 80 cơ sở tham khảo khi có token, đồng thời bổ sung dữ liệu API với tiền tố mã `api-` để tránh trùng mã. Dữ liệu API lưu cache 60 giây. Nếu API lỗi, giao diện thông báo và dùng danh mục tham khảo có nguồn. API chưa cung cấp dữ liệu hạng phòng tương ứng với các nguồn bên ngoài.
+Các tệp dữ liệu chính nằm trong `lib/data`. Adapter tại `lib/catalog.js` hỗ trợ bổ sung dữ liệu từ [API CyberSoft](https://airbnbnew.cybersoft.edu.vn/swagger/index.html). Nhánh API trực tiếp chưa được kiểm chứng trong đợt kiểm tra vì chưa cấu hình token được cấp.
 
-Luồng `/dat-phong` nhận yêu cầu theo hạng phòng, ngày, số phòng, số khách và thông tin liên hệ. Yêu cầu được lưu trên máy chủ tại `.data/tnbnb-bookings.sqlite`, có mã riêng, xem lại ở `/chuyen-di` và có thể hủy. Tệp dữ liệu được loại khỏi Git. Có thể cấu hình đường dẫn bằng biến server `TNB_BOOKINGS_DB_PATH`; cần giữ lại tệp này khi khởi động lại hoặc chuyển máy chủ.
+## Tài khoản và quản trị
 
-Trước khi lưu, phiên khách được thiết lập bằng cookie ngẫu nhiên HTTP-only; cơ sở dữ liệu chỉ lưu mã băm của phiên. Người dùng chỉ xem/hủy được yêu cầu trong phiên của mình. Gửi lại một yêu cầu với cùng khóa chống trùng không tạo thêm bản ghi. Không lưu thông tin liên hệ vào localStorage.
+Tài khoản TNbnb được lưu trong SQLite. Mật khẩu dùng scrypt với muối ngẫu nhiên; mã phiên và mã khôi phục được lưu dạng băm. Cookie tài khoản có `HttpOnly`, `SameSite=Lax` và `Secure` trong production. Khôi phục mật khẩu sử dụng mã đã cấp cho người dùng, chưa gửi email.
 
-Đây là **yêu cầu đặt phòng trong TNbnb**, chưa chuyển đến cơ sở, chưa xác nhận phòng trống/giữ phòng và không thu tiền. Nguồn giá chỉ là giá tham khảo của đúng hạng phòng; hạng chưa có giá được lưu với tổng tiền chưa xác định, không dùng giá khởi điểm khách sạn thay thế. Có liên kết tới nhà cung cấp để xác nhận và đặt phòng thực tế. Chưa kết nối tồn phòng/thanh toán của nhà cung cấp.
+Tài khoản mới có vai trò người dùng. Để cấp quyền quản trị, đăng ký tài khoản trước rồi chạy lệnh tại máy chủ với đúng đường dẫn cơ sở dữ liệu:
 
-## Tài khoản TNbnb
+```sh
+npm run admin:grant -- --email owner@example.com
+```
 
-- `/dang-ky`, `/dang-nhap`, `/tai-khoan`: đăng ký, đăng nhập, sửa họ tên/số điện thoại, đổi hoặc xóa ảnh đại diện, đổi mật khẩu và đăng xuất. Hồ sơ được dùng để điền nhanh thông tin liên hệ khi đặt phòng. Email đăng nhập hiện chỉ đọc.
-- `/quen-mat-khau`: đặt lại mật khẩu bằng email và mã khôi phục. Mã được hiển thị một lần khi đăng ký, có nút sao chép/tải về; có thể tạo mã mới trong hồ sơ sau khi xác nhận mật khẩu. Mã đã dùng hoặc bị thay thế không thể dùng lại. Chưa cấu hình SMTP, xác minh email, đăng nhập mạng xã hội hoặc liên kết tài khoản CyberSoft; không gửi email giả lập.
-- Tài khoản, ảnh đại diện, phiên, yêu thích và yêu cầu đặt phòng dùng chung tệp SQLite đã cấu hình ở trên. Cần sao lưu tệp này để giữ dữ liệu khi chuyển máy chủ. Mật khẩu băm bằng scrypt với muối ngẫu nhiên riêng; mã khôi phục và mã phiên chỉ lưu dạng băm. Không lưu mật khẩu, mã khôi phục hay token vào localStorage.
-- Cookie tài khoản HTTP-only, SameSite=Lax và Secure trong bản production. Chọn duy trì đăng nhập: tối đa 30 ngày; bỏ chọn: cookie phiên và thời hạn máy chủ 24 giờ. Đăng xuất thu hồi phiên trên máy chủ. Đổi mật khẩu kết thúc các phiên khác; khôi phục mật khẩu kết thúc toàn bộ phiên cũ. Giới hạn 8 lần thử sai/15 phút theo tài khoản cho đăng nhập, khôi phục và xác nhận mật khẩu.
-- Khi đăng nhập/đăng ký, yêu cầu của đúng cookie khách trong trình duyệt được gắn vào tài khoản; cookie khách được xoay mới và cookie cũ không còn truy cập các yêu cầu đã gắn. Không ghép dữ liệu theo email liên hệ. Người dùng xem/hủy được yêu cầu trên thiết bị khác sau khi đăng nhập.
-- Yêu thích khi chưa đăng nhập vẫn lưu cục bộ. Khi đăng nhập, chúng được nhập vào tài khoản và xóa khỏi kho khách của trình duyệt. Yêu thích của tài khoản được lưu trên máy chủ, tách riêng từng người dùng và đồng bộ giữa các phiên đăng nhập.
-- Ảnh đại diện: JPG/PNG/WebP tĩnh, tối đa 2 MB và 16 triệu điểm ảnh; máy chủ giải mã, bỏ siêu dữ liệu và lưu lại WebP 256 × 256. Ảnh chỉ được đọc qua phiên tài khoản sở hữu.
-
-`node scripts/verify-accounts-http.mjs` kiểm tra tài khoản qua HTTP với máy chủ thử nghiệm ở `http://localhost:3001` (hoặc `TEST_BASE_URL`). Script tạo dữ liệu tổng hợp; chạy với `TNB_BOOKINGS_DB_PATH` trỏ tới tệp thử nghiệm riêng. Các bài kiểm tra bao gồm phân quyền, nhập yêu cầu khách, hồ sơ/ảnh, yêu thích, phiên, đổi/khôi phục mật khẩu, giới hạn thử sai và cả hai ngôn ngữ.
-
-Từ điển nằm tại `lib/i18n.js`, `lib/detail-copy.js` và `lib/room-type-copy.js`. Thông tin cơ sở và hạng phòng có nội dung Việt/Anh; tên thương hiệu giữ nguyên. Nếu dữ liệu API chưa cung cấp `tenPhongEn`/`moTaEn`, chế độ tiếng Anh dùng tiêu đề địa điểm và thông báo thiếu bản dịch.
+Thay `owner@example.com` bằng email đã đăng ký, sau đó đăng nhập lại để mở `/quan-tri`. Không có tài khoản hoặc mật khẩu quản trị mặc định.
 
 ## Kiểm tra
 
 ```sh
 npm test
 npm run build
+npm run check:http
 ```
 
-Bộ kiểm tra xác nhận mỗi điểm đến có ít nhất 10 cơ sở, mỗi cơ sở có ít nhất 2 hạng đã đối chiếu, nguồn và ảnh có đầy đủ thông tin, ảnh WebP hợp lệ, hai tiền tệ quy đổi đúng và hạng phòng chưa có giá không nhận nhầm giá cơ sở. Kiểm tra HTTP bổ sung được chạy với bản dựng cục bộ. Chưa kiểm chứng tương tác trên trình duyệt tự động vì công cụ trình duyệt của phiên làm việc không khả dụng.
+Lệnh `check:http` cần bản build, tự chạy máy chủ thử tại cổng 3002 với SQLite riêng và dọn dữ liệu sau kiểm tra. Có thể đổi cổng bằng `TNB_TEST_PORT`.
 
-## Tài nguyên tham khảo
+Ngày 23/11/2026, **21/21 kiểm thử tự động đạt** và build production thành công. Các bộ kiểm tra HTTP danh mục, đặt phòng, tài khoản, quản trị và đánh giá đã đạt trong đợt 22/11/2026. Kiểm tra trực quan và tương tác trên máy tính/điện thoại còn các mục chưa hoàn tất, được liệt kê trong [UI-QA.md](UI-QA.md).
 
-Logo TNbnb được thiết kế riêng bằng SVG: biểu tượng ngôi nhà màu hồng san hô với chữ TN âm bản. Các tệp `public/images/tnbnb-logo.svg` và `tnbnb-wordmark.svg` lần lượt là biểu tượng và logo kèm tên. Favicon PNG và biểu tượng Apple được xuất từ cùng bản SVG.
+## Cấu trúc thư mục
 
-Video và ảnh lấy từ tài nguyên công khai của website mẫu CyberSoftbnb và các ảnh Cloudinary được website mẫu sử dụng, phục vụ bản dựng học tập theo yêu cầu. Không dùng lại token có trong mã website mẫu. Font Be Vietnam Pro lưu tại `public/fonts`, kèm giấy phép OFL.
+```text
+app/          Các trang, API và CSS
+components/   Thành phần giao diện
+lib/          Dữ liệu, bản dịch, nghiệp vụ và lưu trữ
+public/       Logo, font, video và ảnh
+scripts/      Kiểm tra HTTP, cấp quyền và sao lưu
+tests/        Kiểm thử tự động
+deploy/       Cấu hình triển khai mẫu
+reports/      Báo cáo Word
+```
 
-Riêng 8 ảnh địa điểm đã thay bằng ảnh chụp đúng danh thắng từ Wikimedia Commons: Chợ Bến Thành, quảng trường Lâm Viên, Cầu Rồng, Tháp Rùa, tháp Bà Ponagar, tượng Chúa Kitô Vua, Bãi Sao và Chùa Cầu. Ảnh được cắt vuông, thu nhỏ 384 × 384px và lưu WebP trong `public/images/destinations`. Thông tin tác giả, nguồn và giấy phép nằm tại `lib/destination-sources.js`, đồng thời hiển thị công khai ở `/image-credits`. Mỗi ảnh giữ giấy phép Creative Commons tương ứng của nguồn gốc.
+## Phạm vi hiện tại
 
-Xem [báo cáo tiến độ](BAO-CAO.md).
+- Yêu cầu đặt phòng được lưu trong TNbnb, chưa gửi đến khách sạn, giữ phòng hoặc thu tiền.
+- Đánh giá cộng đồng chưa xác minh người viết đã lưu trú và được tách khỏi điểm của nguồn ngoài.
+- Chưa có gửi/xác minh email, đăng nhập mạng xã hội hoặc tích hợp thanh toán.
+- Đã có cấu hình Docker và GitHub Actions; chưa chạy thử container hoặc xuất bản website. Kết quả chạy tại máy không thay thế kết quả CI trên GitHub.
+- Bản hiện tại ghi SQLite vào ổ đĩa bền vững. Nếu triển khai theo hướng Vercel, cần thay lớp lưu trữ phù hợp; việc chuyển đổi chưa thực hiện.
 
-Các kích thước banner, khung nội dung, chữ, thẻ và lưới đã được rà lại theo CSS demo. Xem [đối chiếu giao diện](DOI-CHIEU-GIAO-DIEN.md) để biết thông số đã chỉnh và giới hạn kiểm tra trực quan.
+## Tài liệu và tài nguyên
+
+- [Báo cáo đồ án](BAO-CAO.md)
+- [Báo cáo Word chi tiết](reports/Bao_cao_chi_tiet_du_an_TNbnb_2026-11-23.docx)
+- [Hướng dẫn triển khai](DEPLOYMENT.md)
+- [Đối chiếu giao diện](DOI-CHIEU-GIAO-DIEN.md)
+- [Các mục kiểm tra giao diện](UI-QA.md)
+
+Logo TNbnb được thiết kế bằng SVG. Video và một số ảnh tham khảo từ website mẫu, sử dụng cho đồ án học tập. Ảnh địa danh lấy từ Wikimedia Commons; tác giả và giấy phép được ghi tại `/image-credits` và `lib/destination-sources.js`. Font Be Vietnam Pro nằm trong `public/fonts`, kèm giấy phép OFL.
