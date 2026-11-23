@@ -1,0 +1,60 @@
+import assert from 'node:assert/strict';
+import { randomUUID, randomBytes } from 'node:crypto';
+import { referenceRooms } from '../lib/reference-catalog.js';
+import { findBookingOffer } from '../lib/bookings/offers.server.js';
+import { bookingCopy } from '../lib/booking-copy.js';
+import { nextDay, todayInVietnam } from '../lib/trip.js';
+import { priceAmounts } from '../lib/currency.js';
+
+const base = process.argv[2] || 'http://localhost:3001';
+async function api(path, { method = 'GET', cookie, body, key, origin = base } = {}) {
+  const headers = {};
+  if (cookie) headers.Cookie = cookie;
+  if (method === 'POST') headers.Origin = origin;
+  if (body) headers['Content-Type'] = 'application/json';
+  if (key) headers['Idempotency-Key'] = key;
+  const response = await fetch(base + path, { method, headers, body: body ? JSON.stringify(body) : undefined });
+  return { response, status: response.status, data: await response.json() };
+}
+const property = referenceRooms.find(room => room.roomTypes.some(type => type.price));
+const type = property.roomTypes.find(room => room.price);
+const offer = findBookingOffer(property.id, type.id);
+const checkin = nextDay(nextDay(todayInVietnam())), checkout = nextDay(nextDay(checkin));
+const body = { propertyId: property.id, roomTypeId: type.id, checkin, checkout, guests: 2, rooms: 2, fullName: 'TNbnb HTTP Test', email: 'http-test@example.test', phone: '+84901234567', message: '<script>not executable</script>', accepted: true, quoteVersion: offer.quoteVersion, total: 0, price: 1 };
+const key = randomUUID();
+const noSession = await api('/api/bookings', { method: 'POST', body, key }); assert.equal(noSession.status, 409); assert.equal(noSession.data.error, 'session_required');
+const prepared = await api('/api/bookings/session'); assert.equal(prepared.status, 200);
+const setCookie = prepared.response.headers.get('set-cookie');
+assert.match(setCookie, /HttpOnly/i); assert.match(setCookie, /SameSite=lax/i);
+const cookie = setCookie.split(';')[0];
+assert.equal((await api('/api/bookings', { cookie })).data.bookings.length, 0);
+const invalid = await api('/api/bookings', { method: 'POST', cookie, body: { ...body, checkout: checkin }, key }); assert.equal(invalid.status, 400); assert.equal(invalid.data.fields.checkout, 'date_order');
+const csrf = await api('/api/bookings', { method: 'POST', cookie, body, key, origin: 'https://untrusted.example' }); assert.equal(csrf.status, 403);
+const quote = await api('/api/bookings', { method: 'POST', cookie, body: { ...body, quoteVersion: 'forged' }, key }); assert.equal(quote.status, 409); assert.equal(quote.data.error, 'quote_changed');
+const created = await api('/api/bookings', { method: 'POST', cookie, body, key }); assert.equal(created.status, 201); assert.equal(created.data.status, 'pending');
+const repeated = await api('/api/bookings', { method: 'POST', cookie, body, key }); assert.equal(repeated.status, 200); assert.equal(repeated.data.id, created.data.id);
+const duplicate = await api('/api/bookings', { method: 'POST', cookie, body, key: randomUUID() }); assert.equal(duplicate.status, 409); assert.equal(duplicate.data.existingId, created.data.id);
+const bookings = (await api('/api/bookings', { cookie })).data.bookings;
+assert.equal(bookings.length, 1);
+assert.deepEqual(bookings[0].snapshot.totals, priceAmounts({ referencePrice: type.price }, 4));
+assert.equal((await api('/api/bookings')).data.bookings.length, 0);
+const stranger = `tnbnb-booking-session=${randomBytes(32).toString('hex')}`;
+assert.equal((await api(`/api/bookings/${created.data.id}/cancel`, { method: 'POST', cookie: stranger })).status, 404);
+const privateReceipt = await fetch(`${base}/dat-phong/${created.data.id}`); assert.equal(privateReceipt.status, 404);
+for (const locale of ['vi', 'en']) {
+  const headers = { Cookie: `${cookie}; tnbnb-language=${locale}` };
+  const params = new URLSearchParams({ property: property.id, roomType: type.id, checkin, checkout, guests: '2', rooms: '2' });
+  const checkoutPage = await fetch(`${base}/dat-phong?${params}`, { headers }); assert.equal(checkoutPage.status, 200); const checkoutHtml = await checkoutPage.text(); assert.ok(checkoutHtml.includes(bookingCopy[locale].checkoutTitle)); assert.ok(checkoutHtml.includes('VND') && checkoutHtml.includes('USD'));
+  const receipt = await fetch(`${base}/dat-phong/${created.data.id}`, { headers }); assert.equal(receipt.status, 200); const html = await receipt.text(); assert.ok(html.includes(created.data.reference)); assert.ok(html.includes(bookingCopy[locale].savedTitle)); assert.ok(!html.includes('<script>not executable</script>')); assert.ok(html.includes('noindex'));
+  const trips = await fetch(`${base}/chuyen-di`, { headers }); assert.equal(trips.status, 200); assert.ok((await trips.text()).includes(created.data.reference));
+}
+const cancelled = await api(`/api/bookings/${created.data.id}/cancel`, { method: 'POST', cookie }); assert.equal(cancelled.status, 200); assert.equal(cancelled.data.status, 'cancelled');
+assert.equal((await api(`/api/bookings/${created.data.id}/cancel`, { method: 'POST', cookie })).data.status, 'cancelled');
+const unpricedProperty = referenceRooms.find(room => room.roomTypes.some(roomType => !roomType.price));
+const unpricedType = unpricedProperty.roomTypes.find(roomType => !roomType.price);
+const unpricedOffer = findBookingOffer(unpricedProperty.id, unpricedType.id);
+const unpriced = await api('/api/bookings', { method: 'POST', cookie, body: { ...body, propertyId: unpricedProperty.id, roomTypeId: unpricedType.id, guests: 1, rooms: 1, quoteVersion: unpricedOffer.quoteVersion }, key: randomUUID() }); assert.equal(unpriced.status, 201);
+const final = (await api('/api/bookings', { cookie })).data.bookings;
+assert.equal(final.length, 2); assert.equal(final.find(booking => booking.id === unpriced.data.id).snapshot.totals, null);
+assert.match((await api('/api/bookings', { cookie })).response.headers.get('cache-control'), /no-store/);
+console.log(JSON.stringify({ created: 2, cancelled: 1, receiptLanguages: 2, checkoutLanguages: 2, tripLanguages: 2, duplicatePrevention: 'passed', ownerIsolation: 'passed', authoritativePrice: 'passed', unpricedRoom: 'passed', csrf: 'passed' }));

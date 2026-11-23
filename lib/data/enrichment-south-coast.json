@@ -1,0 +1,2789 @@
+{
+  "hcm-102060": {
+    "deluxe-twin-king": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://windsorplazahotel.com/accommodation/deluxe-twin-king/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated in the room facts."
+        },
+        "occupancyNote": {
+          "url": "https://windsorplazahotel.com/accommodation/deluxe-twin-king/",
+          "checkedAt": "2026-11-22",
+          "support": "Room facts separate adult and child allowances."
+        },
+        "images": {
+          "url": "https://windsorplazahotel.com/accommodation/deluxe-twin-king/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; giường phụ có thể có phụ thu, xác nhận tại nguồn.",
+        "en": "2 adults and 1 child; extra-bed charges may apply, confirm at source."
+      },
+      "images": [
+        {
+          "path": "/images/room-types/hcm-102060-deluxe-twin-king-extra-1.webp",
+          "originalUrl": "https://windsorplazahotel.com/wp-content/uploads/2024/06/Deluxe-room-6-1536x1024.webp",
+          "sourceUrl": "https://windsorplazahotel.com/accommodation/deluxe-twin-king/",
+          "checkedAt": "2026-11-22"
+        },
+        {
+          "path": "/images/room-types/hcm-102060-deluxe-twin-king-extra-3.webp",
+          "originalUrl": "https://windsorplazahotel.com/wp-content/uploads/2024/06/Deluxe_bathroom-1-1536x1024.webp",
+          "sourceUrl": "https://windsorplazahotel.com/accommodation/deluxe-twin-king/",
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    },
+    "premier-deluxe": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://windsorplazahotel.com/accommodation/premier-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated in the room facts."
+        },
+        "occupancyNote": {
+          "url": "https://windsorplazahotel.com/accommodation/premier-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "Room facts separate adult and child allowances."
+        },
+        "beds": {
+          "url": "https://windsorplazahotel.com/accommodation/premier-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement appears in the room facts."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; giường phụ có thể có phụ thu, xác nhận tại nguồn.",
+        "en": "2 adults and 1 child; extra-bed charges may apply, confirm at source."
+      },
+      "beds": {
+        "vi": "Giường cỡ king hoặc giường đơn",
+        "en": "King or twin bedding"
+      }
+    },
+    "deluxe-single": {
+      "capacity": 1,
+      "evidence": {
+        "capacity": {
+          "url": "https://windsorplazahotel.com/accommodation/deluxe-single/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated in the room facts."
+        },
+        "beds": {
+          "url": "https://windsorplazahotel.com/accommodation/deluxe-single/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Một giường cỡ queen",
+        "en": "One queen bed"
+      }
+    },
+    "premier-deluxe-accessible": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://windsorplazahotel.com/accommodation/premier-deluxe-accessible/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated in the room facts."
+        },
+        "occupancyNote": {
+          "url": "https://windsorplazahotel.com/accommodation/premier-deluxe-accessible/",
+          "checkedAt": "2026-11-22",
+          "support": "Room facts separate adult and child allowances."
+        },
+        "beds": {
+          "url": "https://windsorplazahotel.com/accommodation/premier-deluxe-accessible/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement appears in the room facts."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; giường phụ có thể có phụ thu, xác nhận tại nguồn.",
+        "en": "2 adults and 1 child; extra-bed charges may apply, confirm at source."
+      },
+      "beds": {
+        "vi": "Giường cỡ king hoặc giường đơn",
+        "en": "King or twin bedding"
+      }
+    },
+    "club-single": {
+      "capacity": 1,
+      "evidence": {
+        "capacity": {
+          "url": "https://windsorplazahotel.com/accommodation/club-single/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated in the room facts."
+        },
+        "beds": {
+          "url": "https://windsorplazahotel.com/accommodation/club-single/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Một giường cỡ queen",
+        "en": "One queen bed"
+      }
+    },
+    "club-twin-king": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://windsorplazahotel.com/accommodation/club-twin-king/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated in the room facts."
+        },
+        "occupancyNote": {
+          "url": "https://windsorplazahotel.com/accommodation/club-twin-king/",
+          "checkedAt": "2026-11-22",
+          "support": "Room facts separate adult and child allowances."
+        },
+        "beds": {
+          "url": "https://windsorplazahotel.com/accommodation/club-twin-king/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement appears in the room facts."
+        },
+        "images": {
+          "url": "https://windsorplazahotel.com/accommodation/club-twin-king/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; giường phụ có thể có phụ thu, xác nhận tại nguồn.",
+        "en": "2 adults and 1 child; extra-bed charges may apply, confirm at source."
+      },
+      "beds": {
+        "vi": "Giường cỡ king hoặc giường đơn",
+        "en": "King or twin bedding"
+      },
+      "images": [
+        {
+          "path": "/images/room-types/hcm-102060-club-twin-king-extra-1.webp",
+          "originalUrl": "https://windsorplazahotel.com/wp-content/uploads/2024/06/club-bathroom-2-copy_wide.jpg",
+          "sourceUrl": "https://windsorplazahotel.com/accommodation/club-twin-king/",
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    },
+    "junior-suite": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://windsorplazahotel.com/accommodation/junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated in the room facts."
+        },
+        "occupancyNote": {
+          "url": "https://windsorplazahotel.com/accommodation/junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Room facts separate adult and child allowances."
+        },
+        "beds": {
+          "url": "https://windsorplazahotel.com/accommodation/junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement appears in the room facts."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; giường phụ có thể có phụ thu, xác nhận tại nguồn.",
+        "en": "2 adults and 1 child; extra-bed charges may apply, confirm at source."
+      },
+      "beds": {
+        "vi": "Giường cỡ king hoặc giường đơn",
+        "en": "King or twin bedding"
+      }
+    },
+    "club-suite": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://windsorplazahotel.com/accommodation/club-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated in the room facts."
+        },
+        "occupancyNote": {
+          "url": "https://windsorplazahotel.com/accommodation/club-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Room facts separate adult and child allowances."
+        },
+        "beds": {
+          "url": "https://windsorplazahotel.com/accommodation/club-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement appears in the room facts."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; giường phụ có thể có phụ thu, xác nhận tại nguồn.",
+        "en": "2 adults and 1 child; extra-bed charges may apply, confirm at source."
+      },
+      "beds": {
+        "vi": "Giường cỡ king hoặc giường đơn",
+        "en": "King or twin bedding"
+      }
+    },
+    "terrace-suite": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://windsorplazahotel.com/accommodation/terrace-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated in the room facts."
+        },
+        "occupancyNote": {
+          "url": "https://windsorplazahotel.com/accommodation/terrace-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Room facts separate adult and child allowances."
+        },
+        "beds": {
+          "url": "https://windsorplazahotel.com/accommodation/terrace-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement appears in the room facts."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; giường phụ có thể có phụ thu, xác nhận tại nguồn.",
+        "en": "2 adults and 1 child; extra-bed charges may apply, confirm at source."
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    },
+    "plaza-suite": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://windsorplazahotel.com/accommodation/plaza-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated in the room facts."
+        },
+        "occupancyNote": {
+          "url": "https://windsorplazahotel.com/accommodation/plaza-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Room facts separate adult and child allowances."
+        },
+        "beds": {
+          "url": "https://windsorplazahotel.com/accommodation/plaza-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement appears in the room facts."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; giường phụ có thể có phụ thu, xác nhận tại nguồn.",
+        "en": "2 adults and 1 child; extra-bed charges may apply, confirm at source."
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    }
+  },
+  "hcm-627662": {
+    "deluxe": {
+      "beds": {
+        "vi": "Giường cỡ king hoặc giường đơn",
+        "en": "King or twin bedding"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/deluxe-hotel/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      }
+    },
+    "deluxe-premium": {
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/deluxe-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      }
+    },
+    "nikko-club-deluxe": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/nikko-club-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "Occupancy is explicitly listed in the room facts."
+        },
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/nikko-club-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Giường cỡ king hoặc giường đơn",
+        "en": "King or twin bedding"
+      }
+    },
+    "nikko-club-deluxe-premium": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/nikko-club-deluxe-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "Occupancy is explicitly listed in the room facts."
+        },
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/nikko-club-deluxe-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    },
+    "nikko-club-junior-suite": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/nikko-club-junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Occupancy is explicitly listed in the room facts."
+        },
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/nikko-club-junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Hai giường cỡ queen",
+        "en": "Two queen beds"
+      }
+    },
+    "nikko-club-executive-suite": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/nikko-club-executive-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Occupancy is explicitly listed in the room facts."
+        },
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/nikko-club-executive-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    },
+    "nikko-club-royal-suite": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/nikko-club-royal-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Occupancy is explicitly listed in the room facts."
+        },
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/nikko-club-royal-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    },
+    "one-bed-room-apartment": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/one-bed-room-apartment/",
+          "checkedAt": "2026-11-22",
+          "support": "Occupancy is explicitly listed in the room facts."
+        },
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/one-bed-room-apartment/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    },
+    "one-bed-room-triangle-apartment": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/one-bed-room-triangle-apartment/",
+          "checkedAt": "2026-11-22",
+          "support": "Occupancy is explicitly listed in the room facts."
+        },
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/one-bed-room-triangle-apartment/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    },
+    "two-bed-room-apartment": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/two-bed-room-apartment/",
+          "checkedAt": "2026-11-22",
+          "support": "Occupancy is explicitly listed in the room facts."
+        },
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/two-bed-room-apartment/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Giường cỡ king và giường đơn",
+        "en": "King and twin bedding"
+      }
+    },
+    "three-bed-room-apartment": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/three-bed-room-apartment/",
+          "checkedAt": "2026-11-22",
+          "support": "Occupancy is explicitly listed in the room facts."
+        },
+        "beds": {
+          "url": "https://hotelnikkosaigon.com.vn/accommodations/three-bed-room-apartment/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the room facts."
+        }
+      },
+      "beds": {
+        "vi": "Hai giường lớn và một giường đơn",
+        "en": "Two king beds and one single bed"
+      }
+    }
+  },
+  "phuquoc-1070237138": {
+    "1-king-standard-ocean-view": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-standard-ocean-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-standard-ocean-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        }
+      },
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      }
+    },
+    "1-king-premium": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        },
+        "images": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      },
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      },
+      "images": [
+        {
+          "path": "/images/room-types/phuquoc-1070237138-1-king-premium-extra-1.webp",
+          "originalUrl": "https://phuquoc.crowneplaza.com/wp-content/uploads/2020/11/Premium-Room-King-bed-1.jpg",
+          "sourceUrl": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium/",
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    },
+    "2-twin-premium": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-twin-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "beds": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-twin-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed count is shown beside the people range."
+        },
+        "areaM2": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-twin-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "Room area is listed beside occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-twin-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        }
+      },
+      "beds": {
+        "vi": "2 giường",
+        "en": "2 beds"
+      },
+      "areaM2": 51,
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      }
+    },
+    "1-king-premium-ocean-view": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium-ocean-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "beds": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium-ocean-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed count is shown beside the people range."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium-ocean-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        }
+      },
+      "beds": {
+        "vi": "1 giường",
+        "en": "1 bed"
+      },
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      }
+    },
+    "2-twin-premium-oceanfront": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-twin-premium-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "beds": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-twin-premium-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed count is shown beside the people range."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-twin-premium-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        }
+      },
+      "beds": {
+        "vi": "2 giường",
+        "en": "2 beds"
+      },
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      }
+    },
+    "1-king-junior-suite": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "beds": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed count is shown beside the people range."
+        },
+        "areaM2": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Room area is listed beside occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        }
+      },
+      "beds": {
+        "vi": "1 giường",
+        "en": "1 bed"
+      },
+      "areaM2": 65,
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      }
+    },
+    "1-king-premium-oceanfront": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "beds": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed count is shown beside the people range."
+        },
+        "areaM2": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Room area is listed beside occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-premium-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        }
+      },
+      "beds": {
+        "vi": "1 giường",
+        "en": "1 bed"
+      },
+      "areaM2": 40,
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      }
+    },
+    "1-king-junior-suite-oceanfront": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-junior-suite-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "beds": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-junior-suite-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed count is shown beside the people range."
+        },
+        "areaM2": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-junior-suite-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Room area is listed beside occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-king-junior-suite-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        }
+      },
+      "beds": {
+        "vi": "1 giường",
+        "en": "1 bed"
+      },
+      "areaM2": 66,
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      }
+    },
+    "1-bedroom-suite-oceanfront": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-bedroom-suite-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "beds": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-bedroom-suite-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed count is shown beside the people range."
+        },
+        "areaM2": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-bedroom-suite-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Room area is listed beside occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-bedroom-suite-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        }
+      },
+      "beds": {
+        "vi": "2 giường",
+        "en": "2 beds"
+      },
+      "areaM2": 95,
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      }
+    },
+    "1-bedroom-suite-grand-oceanfront": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-bedroom-suite-grand-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "beds": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-bedroom-suite-grand-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed count is shown beside the people range."
+        },
+        "areaM2": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-bedroom-suite-grand-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Room area is listed beside occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-bedroom-suite-grand-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        },
+        "images": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/one-bedroom-suite-grand-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      },
+      "beds": {
+        "vi": "2 giường",
+        "en": "2 beds"
+      },
+      "areaM2": 136,
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      },
+      "images": [
+        {
+          "path": "/images/room-types/phuquoc-1070237138-1-bedroom-suite-grand-oceanfront-extra-1.webp",
+          "originalUrl": "https://phuquoc.crowneplaza.com/wp-content/uploads/2020/11/crpqday11426-scaled.jpg",
+          "sourceUrl": "https://phuquoc.crowneplaza.com/accommodation/one-bedroom-suite-grand-oceanfront/",
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    },
+    "2-bedroom-suite": {
+      "capacity": 6,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-bedroom-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "beds": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-bedroom-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed count is shown beside the people range."
+        },
+        "areaM2": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-bedroom-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Room area is listed beside occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-bedroom-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        },
+        "images": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/two-bedroom-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      },
+      "beds": {
+        "vi": "3 giường",
+        "en": "3 beds"
+      },
+      "areaM2": 200,
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      },
+      "images": [
+        {
+          "path": "/images/room-types/phuquoc-1070237138-2-bedroom-suite-extra-1.webp",
+          "originalUrl": "https://phuquoc.crowneplaza.com/wp-content/uploads/2020/11/crpqday22431-scaled.jpg",
+          "sourceUrl": "https://phuquoc.crowneplaza.com/accommodation/two-bedroom-suite/",
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    },
+    "2-bedroom-villa-seafront": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/2-bedroom-villa-seafront/",
+          "checkedAt": "2026-11-22",
+          "support": "Published people range supplies the maximum occupancy."
+        },
+        "beds": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/2-bedroom-villa-seafront/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed count is shown beside the people range."
+        },
+        "areaM2": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/2-bedroom-villa-seafront/",
+          "checkedAt": "2026-11-22",
+          "support": "Room area is listed beside occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/2-bedroom-villa-seafront/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page includes child and extra-person conditions."
+        }
+      },
+      "beds": {
+        "vi": "3 giường",
+        "en": "3 beds"
+      },
+      "areaM2": 411,
+      "occupancyNote": {
+        "vi": "Giường phụ tùy tình trạng; phụ thu phụ thuộc độ tuổi và dịch vụ, cần xác nhận với khách sạn.",
+        "en": "Extra beds depend on availability; age and service surcharges require hotel confirmation."
+      }
+    },
+    "1-bedroom-villa": {
+      "images": [
+        {
+          "path": "/images/room-types/phuquoc-1070237138-1-bedroom-villa-extra-1.webp",
+          "originalUrl": "https://phuquoc.crowneplaza.com/wp-content/uploads/2020/11/crpqday21382-scaled.jpg",
+          "sourceUrl": "https://phuquoc.crowneplaza.com/accommodation/1-bedrooom-villa/",
+          "checkedAt": "2026-11-22"
+        }
+      ],
+      "evidence": {
+        "images": {
+          "url": "https://phuquoc.crowneplaza.com/accommodation/1-bedrooom-villa/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      }
+    }
+  },
+  "phuquoc-421609": {
+    "deluxe-king-garden-view": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "2 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 30
+    },
+    "premium-king-sea-view": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/premium-king-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/premium-king-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/premium-king-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "2 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 32
+    },
+    "deluxe-twin-garden-view": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "2 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 30,
+      "beds": {
+        "vi": "Hai giường đơn",
+        "en": "Two single beds"
+      }
+    },
+    "deluxe-king-private-garden": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-private-graden/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-private-graden/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-private-graden/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-private-graden/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "2 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 30,
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    },
+    "deluxe-twin-private-garden": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-private-graden/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-private-graden/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-private-graden/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-private-graden/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "2 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 30,
+      "beds": {
+        "vi": "Hai giường đơn",
+        "en": "Two single beds"
+      }
+    },
+    "deluxe-king-partial-seaview-with-balcony": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-king-partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "2 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 33,
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    },
+    "deluxe-twin-partial-seaview-with-balcony": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-twin-partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "2 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 33,
+      "beds": {
+        "vi": "Hai giường đơn",
+        "en": "Two single beds"
+      }
+    },
+    "deluxe-triple-garden-view": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-triple-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-triple-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-triple-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-triple-garden-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "3 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "3 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 43,
+      "beds": {
+        "vi": "Một giường đôi và một giường đơn",
+        "en": "One double bed and one single bed"
+      }
+    },
+    "deluxe-triple-mountain-view-with-balcony": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-triple-mountain-view-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-triple-mountain-view-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-triple-mountain-view-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/deluxe-triple-mountain-view-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "3 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "3 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 43,
+      "beds": {
+        "vi": "Một giường đôi và một giường đơn",
+        "en": "One double bed and one single bed"
+      }
+    },
+    "premium-twin-sea-view": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/premium-twin-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/premium-twin-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/premium-twin-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/premium-twin-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "2 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 32,
+      "beds": {
+        "vi": "Hai giường đơn",
+        "en": "Two single beds"
+      }
+    },
+    "family-room-garden-view": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/family-room-garden-view-2/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/family-room-garden-view-2/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/family-room-garden-view-2/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/family-room-garden-view-2/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "4 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "4 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 38,
+      "beds": {
+        "vi": "Hai giường đôi",
+        "en": "Two double beds"
+      }
+    },
+    "family-room-partial-seaview-with-balcony": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/partial-seaview-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "4 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "4 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "beds": {
+        "vi": "Hai giường đôi",
+        "en": "Two double beds"
+      }
+    },
+    "family-room-seaview": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/family-room-seaview/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/family-room-seaview/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/family-room-seaview/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/family-room-seaview/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "4 người lớn và 1 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "4 adults and 1 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 42,
+      "beds": {
+        "vi": "Hai giường đôi",
+        "en": "Two double beds"
+      }
+    },
+    "executive-suite-2-bedroom-sea-view": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/executive-suite-2-bedroom-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/executive-suite-2-bedroom-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/executive-suite-2-bedroom-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/executive-suite-2-bedroom-sea-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "4 người lớn và 2 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "4 adults and 2 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 117,
+      "beds": {
+        "vi": "Hai giường đôi",
+        "en": "Two double beds"
+      }
+    },
+    "executive-suite-2-bedroom-ocean-view": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://worldhotelslongbeach.com/room/executive-suite-2-bedroom-ocean-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The space section gives an explicit adult allowance."
+        },
+        "occupancyNote": {
+          "url": "https://worldhotelslongbeach.com/room/executive-suite-2-bedroom-ocean-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult and child allowances are separately stated."
+        },
+        "areaM2": {
+          "url": "https://worldhotelslongbeach.com/room/executive-suite-2-bedroom-ocean-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Floor area is explicitly listed in the space section."
+        },
+        "beds": {
+          "url": "https://worldhotelslongbeach.com/room/executive-suite-2-bedroom-ocean-view/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is stated in the space section."
+        }
+      },
+      "occupancyNote": {
+        "vi": "4 người lớn và 2 trẻ em; xác nhận giới hạn tuổi và phụ thu với khách sạn.",
+        "en": "4 adults and 2 children; confirm child ages and surcharges with the hotel."
+      },
+      "areaM2": 117,
+      "beds": {
+        "vi": "Hai giường đôi",
+        "en": "Two double beds"
+      }
+    }
+  },
+  "vungtau-632033": {
+    "superior-triple-room": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/superior-triple-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy appears in the room specifications."
+        },
+        "beds": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/superior-triple-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "The room description identifies the bed arrangement."
+        }
+      },
+      "beds": {
+        "vi": "Một giường đôi và một giường đơn",
+        "en": "One double bed and one single bed"
+      }
+    },
+    "superior-family-room": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/superior-family-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy appears in the room specifications."
+        }
+      }
+    },
+    "deluxe-family-room": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/deluxe-family-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy appears in the room specifications."
+        }
+      }
+    },
+    "suite-room": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/suite-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy appears in the room specifications."
+        },
+        "areaM2": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/suite-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "Room area agrees with the room facts and description."
+        }
+      },
+      "areaM2": 60
+    },
+    "green-suite-family-room": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/green-suite-family-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy appears in the room specifications."
+        },
+        "areaM2": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/green-suite-family-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "Room area agrees with the room facts and description."
+        }
+      },
+      "areaM2": 65
+    },
+    "green-deluxe-room": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/green-deluxe-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy appears in the room specifications."
+        }
+      }
+    },
+    "deluxe-triple-room": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/deluxe-triple-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy appears in the room specifications."
+        }
+      }
+    },
+    "deluxe-twin-room": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://greenhotelvungtau.vn/en/rooms/deluxe-twin-room?adults=1",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy appears in the room specifications."
+        }
+      }
+    },
+    "deluxe-double-room": {
+      "evidence": {}
+    },
+    "green-suite-room": {
+      "evidence": {}
+    }
+  },
+  "nhatrang-8830682": {
+    "city-view-with-window": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated for this category."
+        },
+        "occupancyNote": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "The category card specifies a child age restriction."
+        },
+        "beds": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is listed on the category card."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 2 trẻ em dưới 6 tuổi.",
+        "en": "2 adults and 2 children under 6."
+      },
+      "beds": {
+        "vi": "Một giường đôi",
+        "en": "One double bed"
+      }
+    },
+    "city-view-with-balcony": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated for this category."
+        },
+        "occupancyNote": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "The category card specifies a child age restriction."
+        },
+        "beds": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is listed on the category card."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 2 trẻ em dưới 6 tuổi.",
+        "en": "2 adults and 2 children under 6."
+      },
+      "beds": {
+        "vi": "Một giường đôi hoặc hai giường đơn",
+        "en": "One double bed or twin beds"
+      }
+    },
+    "mountain-view-with-balcony": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated for this category."
+        },
+        "occupancyNote": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "The category card specifies a child age restriction."
+        },
+        "beds": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is listed on the category card."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 2 trẻ em dưới 6 tuổi.",
+        "en": "2 adults and 2 children under 6."
+      },
+      "beds": {
+        "vi": "Một giường đôi hoặc hai giường đơn",
+        "en": "One double bed or twin beds"
+      }
+    },
+    "sea-view-with-balcony": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated for this category."
+        },
+        "occupancyNote": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "The category card specifies a child age restriction."
+        },
+        "beds": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is listed on the category card."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 2 trẻ em dưới 6 tuổi.",
+        "en": "2 adults and 2 children under 6."
+      },
+      "beds": {
+        "vi": "Một giường đôi hoặc hai giường đơn",
+        "en": "One double bed or twin beds"
+      }
+    },
+    "family-mountain-view-with-balcony": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated for this category."
+        },
+        "occupancyNote": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "The category card specifies a child age restriction."
+        },
+        "beds": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is listed on the category card."
+        }
+      },
+      "occupancyNote": {
+        "vi": "4 người lớn và 2 trẻ em dưới 6 tuổi.",
+        "en": "4 adults and 2 children under 6."
+      },
+      "beds": {
+        "vi": "Giường đôi và giường đơn",
+        "en": "Double and twin bedding"
+      }
+    },
+    "family-sea-view-with-balcony": {
+      "capacity": 4,
+      "evidence": {
+        "capacity": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated for this category."
+        },
+        "occupancyNote": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "The category card specifies a child age restriction."
+        },
+        "beds": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is listed on the category card."
+        }
+      },
+      "occupancyNote": {
+        "vi": "4 người lớn và 2 trẻ em dưới 6 tuổi.",
+        "en": "4 adults and 2 children under 6."
+      },
+      "beds": {
+        "vi": "Giường đôi và giường đơn",
+        "en": "Double and twin bedding"
+      }
+    },
+    "sky-suite-mountain-view-with-balcony": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated for this category."
+        },
+        "occupancyNote": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "The category card specifies a child age restriction."
+        },
+        "beds": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is listed on the category card."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 2 trẻ em dưới 6 tuổi.",
+        "en": "2 adults and 2 children under 6."
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    },
+    "sky-suite-sea-view-with-balcony": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Adult occupancy is stated for this category."
+        },
+        "occupancyNote": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "The category card specifies a child age restriction."
+        },
+        "beds": {
+          "url": "https://decemberhotel.vn/our-rooms/",
+          "checkedAt": "2026-11-22",
+          "support": "Bed arrangement is listed on the category card."
+        }
+      },
+      "occupancyNote": {
+        "vi": "2 người lớn và 2 trẻ em dưới 6 tuổi.",
+        "en": "2 adults and 2 children under 6."
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    }
+  },
+  "hcm-67116": {
+    "superior-room": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/superior/",
+          "checkedAt": "2026-11-22",
+          "support": "The room description states a maximum of two adults."
+        },
+        "occupancyNote": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/superior/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page separately states the child allowance."
+        },
+        "beds": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the category description."
+        }
+      },
+      "occupancyNote": {
+        "vi": "Hai người lớn và một trẻ em dùng giường có sẵn; giường phụ phải xác nhận với khách sạn.",
+        "en": "Two adults and one child using existing bedding; confirm any extra bed with the hotel."
+      },
+      "beds": {
+        "vi": "Một giường lớn hoặc hai giường đơn",
+        "en": "One king bed or twin beds"
+      }
+    },
+    "deluxe-room": {
+      "beds": {
+        "vi": "Một giường lớn hoặc hai giường đơn",
+        "en": "One king bed or twin beds"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the category description."
+        }
+      }
+    },
+    "premium-deluxe-room": {
+      "price": {
+        "amount": 79,
+        "currency": "USD",
+        "unit": "night",
+        "sourceUrl": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+        "checkedAt": "2026-11-22",
+        "isLive": false,
+        "context": {
+          "vi": "Giá từ theo hạng được website khách sạn công bố ngày 22/11/2026, với đơn vị mặc định USD. Chưa chọn ngày ở; xác nhận thuế, phụ thu và điều kiện tại nguồn.",
+          "en": "Category-specific from-rate published by the hotel on 22 November 2026 in its default USD currency. No stay dates selected; confirm taxes, supplements and conditions at source."
+        }
+      },
+      "evidence": {
+        "price": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "The category card shows a from-rate; site default currency is USD."
+        },
+        "capacity": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/deluxe-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "The room description states a maximum of two adults."
+        },
+        "occupancyNote": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/deluxe-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page separately states the child allowance."
+        },
+        "beds": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the category description."
+        },
+        "images": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/deluxe-premium/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      },
+      "capacity": 2,
+      "occupancyNote": {
+        "vi": "Hai người lớn và một trẻ em dùng giường có sẵn; giường phụ phải xác nhận với khách sạn.",
+        "en": "Two adults and one child using existing bedding; confirm any extra bed with the hotel."
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      },
+      "images": [
+        {
+          "path": "/images/room-types/hcm-67116-premium-deluxe-room-extra-1.webp",
+          "originalUrl": "https://image-tc.galaxy.tf/wijpeg-afqnavmv53t78mt02yjoymnrx/deluxe-premium-1_wide.jpg?crop=0%2C104%2C2000%2C1125",
+          "sourceUrl": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/deluxe-premium/",
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    },
+    "family-deluxe-room": {
+      "price": {
+        "amount": 108,
+        "currency": "USD",
+        "unit": "night",
+        "sourceUrl": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+        "checkedAt": "2026-11-22",
+        "isLive": false,
+        "context": {
+          "vi": "Giá từ theo hạng được website khách sạn công bố ngày 22/11/2026, với đơn vị mặc định USD. Chưa chọn ngày ở; xác nhận thuế, phụ thu và điều kiện tại nguồn.",
+          "en": "Category-specific from-rate published by the hotel on 22 November 2026 in its default USD currency. No stay dates selected; confirm taxes, supplements and conditions at source."
+        }
+      },
+      "evidence": {
+        "price": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "The category card shows a from-rate; site default currency is USD."
+        },
+        "beds": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the category description."
+        }
+      },
+      "beds": {
+        "vi": "Một giường lớn và một giường sofa",
+        "en": "One king bed and one sofa bed"
+      }
+    },
+    "club-deluxe-room": {
+      "price": {
+        "amount": 172,
+        "currency": "USD",
+        "unit": "night",
+        "sourceUrl": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+        "checkedAt": "2026-11-22",
+        "isLive": false,
+        "context": {
+          "vi": "Giá từ theo hạng được website khách sạn công bố ngày 22/11/2026, với đơn vị mặc định USD. Chưa chọn ngày ở; xác nhận thuế, phụ thu và điều kiện tại nguồn.",
+          "en": "Category-specific from-rate published by the hotel on 22 November 2026 in its default USD currency. No stay dates selected; confirm taxes, supplements and conditions at source."
+        }
+      },
+      "evidence": {
+        "price": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "The category card shows a from-rate; site default currency is USD."
+        },
+        "capacity": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/club-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "The room description states a maximum of two adults."
+        },
+        "occupancyNote": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/club-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page separately states the child allowance."
+        },
+        "beds": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the category description."
+        },
+        "images": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/club-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      },
+      "capacity": 2,
+      "occupancyNote": {
+        "vi": "Hai người lớn và một trẻ em dùng giường có sẵn; giường phụ phải xác nhận với khách sạn.",
+        "en": "Two adults and one child using existing bedding; confirm any extra bed with the hotel."
+      },
+      "beds": {
+        "vi": "Một giường lớn hoặc hai giường đơn",
+        "en": "One king bed or twin beds"
+      },
+      "images": [
+        {
+          "path": "/images/room-types/hcm-67116-club-deluxe-room-extra-1.webp",
+          "originalUrl": "https://image-tc.galaxy.tf/wijpeg-3cr7ctlth2w4b8vvs3yn1ovx1/club-deluxe-4_wide.jpg?crop=0%2C6%2C664%2C374",
+          "sourceUrl": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/club-deluxe/",
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    },
+    "club-premium-deluxe-room": {
+      "price": {
+        "amount": 183,
+        "currency": "USD",
+        "unit": "night",
+        "sourceUrl": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+        "checkedAt": "2026-11-22",
+        "isLive": false,
+        "context": {
+          "vi": "Giá từ theo hạng được website khách sạn công bố ngày 22/11/2026, với đơn vị mặc định USD. Chưa chọn ngày ở; xác nhận thuế, phụ thu và điều kiện tại nguồn.",
+          "en": "Category-specific from-rate published by the hotel on 22 November 2026 in its default USD currency. No stay dates selected; confirm taxes, supplements and conditions at source."
+        }
+      },
+      "evidence": {
+        "price": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "The category card shows a from-rate; site default currency is USD."
+        },
+        "beds": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the category description."
+        }
+      },
+      "beds": {
+        "vi": "Một giường lớn",
+        "en": "One king bed"
+      }
+    },
+    "club-family-deluxe-room": {
+      "beds": {
+        "vi": "Một giường lớn và một giường sofa",
+        "en": "One king bed and one sofa bed"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the category description."
+        }
+      }
+    },
+    "club-executive-suite": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/club-executive-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The room description states a maximum of two adults."
+        },
+        "occupancyNote": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/club-executive-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page separately states the child allowance."
+        },
+        "beds": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding appears in the category description."
+        },
+        "images": {
+          "url": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/club-executive-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      },
+      "occupancyNote": {
+        "vi": "Hai người lớn và một trẻ em dùng giường có sẵn; giường phụ phải xác nhận với khách sạn.",
+        "en": "Two adults and one child using existing bedding; confirm any extra bed with the hotel."
+      },
+      "beds": {
+        "vi": "Một giường lớn hoặc hai giường đơn",
+        "en": "One king bed or twin beds"
+      },
+      "images": [
+        {
+          "path": "/images/room-types/hcm-67116-club-executive-suite-extra-1.webp",
+          "originalUrl": "https://image-tc.galaxy.tf/wijpeg-4gexot9didyr33pvuckkx2wjt/new-club-executive-suite_wide.jpg?crop=0%2C104%2C2000%2C1125",
+          "sourceUrl": "https://www.eastinhotelsresidences.com/eastingrandsaigon/accommodation/club-executive-suite/",
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    }
+  },
+  "vungtau-7410702": {
+    "classic-double-city-view": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://premierpearlhotel.vn/room/classic-double-city-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page explicitly describes adult or guest occupancy."
+        }
+      }
+    },
+    "premier-suite-oceanfront": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://premierpearlhotel.vn/room/premier-suite-oceanfront/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page explicitly describes adult or guest occupancy."
+        }
+      }
+    }
+  },
+  "phuquoc-4729545": {
+    "deluxe": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page explicitly describes adult or guest occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "The page states bedding or child restrictions."
+        },
+        "images": {
+          "url": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      },
+      "occupancyNote": {
+        "vi": "Hai người lớn và hai trẻ em dưới 6 tuổi dùng giường có sẵn.",
+        "en": "Two adults and two children under 6 sharing existing beds."
+      },
+      "images": [
+        {
+          "path": "/images/room-types/phuquoc-4729545-deluxe-extra-1.webp",
+          "originalUrl": "https://bwpremier-sonaseaphuquoc.com/wp-content/uploads/2018/10/DSC08115-HDR.jpg",
+          "sourceUrl": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/deluxe/",
+          "checkedAt": "2026-11-22"
+        },
+        {
+          "path": "/images/room-types/phuquoc-4729545-deluxe-extra-2.webp",
+          "originalUrl": "https://bwpremier-sonaseaphuquoc.com/wp-content/uploads/2018/10/DSC07792-HDR.jpg",
+          "sourceUrl": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/deluxe/",
+          "checkedAt": "2026-11-22"
+        },
+        {
+          "path": "/images/room-types/phuquoc-4729545-deluxe-extra-3.webp",
+          "originalUrl": "https://bwpremier-sonaseaphuquoc.com/wp-content/uploads/2018/10/DSC07832-HDR.jpg",
+          "sourceUrl": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/deluxe/",
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    },
+    "executive-deluxe": {
+      "capacity": 3,
+      "evidence": {
+        "capacity": {
+          "url": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/executive-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page explicitly describes adult or guest occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/executive-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "The page states bedding or child restrictions."
+        },
+        "images": {
+          "url": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/executive-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      },
+      "occupancyNote": {
+        "vi": "Tối đa ba người lớn khi thêm giường phụ và hai trẻ em dưới 6 tuổi dùng giường có sẵn; xác nhận giường phụ/phụ thu.",
+        "en": "Up to three adults with an extra bed and two children under 6 sharing existing beds; confirm the extra bed and supplements."
+      },
+      "images": [
+        {
+          "path": "/images/room-types/phuquoc-4729545-executive-deluxe-extra-1.webp",
+          "originalUrl": "https://bwpremier-sonaseaphuquoc.com/wp-content/uploads/2018/11/DSC08417-HDR.jpg",
+          "sourceUrl": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/executive-deluxe/",
+          "checkedAt": "2026-11-22"
+        },
+        {
+          "path": "/images/room-types/phuquoc-4729545-executive-deluxe-extra-2.webp",
+          "originalUrl": "https://bwpremier-sonaseaphuquoc.com/wp-content/uploads/2018/11/DSC08428-HDR.jpg",
+          "sourceUrl": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/executive-deluxe/",
+          "checkedAt": "2026-11-22"
+        },
+        {
+          "path": "/images/room-types/phuquoc-4729545-executive-deluxe-extra-3.webp",
+          "originalUrl": "https://bwpremier-sonaseaphuquoc.com/wp-content/uploads/2018/11/DSC08448-HDR.jpg",
+          "sourceUrl": "https://bwpremier-sonaseaphuquoc.com/cus_accommodation/executive-deluxe/",
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    }
+  },
+  "hcm-84168": {
+    "family-suite": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://www.palacesaigon.com/rooms/family-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page explicitly describes adult or guest occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://www.palacesaigon.com/rooms/family-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The page states bedding or child restrictions."
+        },
+        "areaM2": {
+          "url": "https://www.palacesaigon.com/rooms/family-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-feature list explicitly gives the floor area."
+        },
+        "beds": {
+          "url": "https://www.palacesaigon.com/rooms/family-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding is specified in the room-feature list."
+        }
+      },
+      "occupancyNote": {
+        "vi": "Hai người lớn và hai trẻ em theo mô tả khách sạn; xác nhận độ tuổi và phụ thu.",
+        "en": "Two adults and two children according to the hotel description; confirm age limits and supplements."
+      },
+      "areaM2": 37,
+      "beds": {
+        "vi": "Một giường đôi và một giường đơn",
+        "en": "One double bed and one single bed"
+      }
+    },
+    "deluxe-city-view": {
+      "areaM2": 24,
+      "evidence": {
+        "areaM2": {
+          "url": "https://www.palacesaigon.com/rooms/deluxe-city-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-feature list explicitly gives the floor area."
+        }
+      }
+    },
+    "deluxe": {
+      "areaM2": 17,
+      "evidence": {
+        "areaM2": {
+          "url": "https://www.palacesaigon.com/rooms/deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-feature list explicitly gives the floor area."
+        },
+        "beds": {
+          "url": "https://www.palacesaigon.com/rooms/deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding is specified in the room-feature list."
+        }
+      },
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One large double bed"
+      }
+    },
+    "premier-deluxe": {
+      "areaM2": 20,
+      "evidence": {
+        "areaM2": {
+          "url": "https://www.palacesaigon.com/rooms/premier-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-feature list explicitly gives the floor area."
+        },
+        "beds": {
+          "url": "https://www.palacesaigon.com/rooms/premier-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding is specified in the room-feature list."
+        }
+      },
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One large double bed"
+      }
+    },
+    "palace-premier-suite": {
+      "areaM2": 51,
+      "evidence": {
+        "areaM2": {
+          "url": "https://www.palacesaigon.com/rooms/palace-premier-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-feature list explicitly gives the floor area."
+        },
+        "beds": {
+          "url": "https://www.palacesaigon.com/rooms/palace-premier-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding is specified in the room-feature list."
+        }
+      },
+      "beds": {
+        "vi": "Một giường đôi",
+        "en": "One double bed"
+      }
+    },
+    "palace-suite": {
+      "areaM2": 51,
+      "evidence": {
+        "areaM2": {
+          "url": "https://www.palacesaigon.com/rooms/palace-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-feature list explicitly gives the floor area."
+        },
+        "beds": {
+          "url": "https://www.palacesaigon.com/rooms/palace-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Bedding is specified in the room-feature list."
+        }
+      },
+      "beds": {
+        "vi": "Một giường đôi",
+        "en": "One double bed"
+      }
+    }
+  },
+  "nhatrang-149999": {
+    "executive-room": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://www.novotelnhatrang.com/the-rooms/executive-room/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page explicitly describes adult or guest occupancy."
+        }
+      }
+    },
+    "junior-suite": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://www.novotelnhatrang.com/the-rooms/junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page explicitly describes adult or guest occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://www.novotelnhatrang.com/the-rooms/junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The page states bedding or child restrictions."
+        }
+      },
+      "occupancyNote": {
+        "vi": "Hai người lớn và hai trẻ em; xác nhận độ tuổi, giường và phụ thu tại nguồn.",
+        "en": "Two adults and two children; confirm age, bedding and supplements at source."
+      }
+    }
+  },
+  "vungtau-328343": {
+    "heritage-grand-deluxe-king": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://imperialhotel.vn/rooms-suites/heritage-grand-deluxe-king/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page explicitly describes adult or guest occupancy."
+        }
+      }
+    },
+    "heritage-deluxe": {
+      "capacity": 2,
+      "evidence": {
+        "capacity": {
+          "url": "https://imperialhotel.vn/rooms-suites/heritage-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page explicitly describes adult or guest occupancy."
+        },
+        "occupancyNote": {
+          "url": "https://imperialhotel.vn/rooms-suites/heritage-deluxe/",
+          "checkedAt": "2026-11-22",
+          "support": "The page states bedding or child restrictions."
+        }
+      },
+      "occupancyNote": {
+        "vi": "Hai người lớn và hai trẻ em; người lớn thứ ba cần giường phụ có phụ thu và xác nhận tình trạng.",
+        "en": "Two adults and two children; a third adult requires an extra bed, a supplement and availability confirmation."
+      }
+    }
+  },
+  "vungtau-2420646": {
+    "deluxe-room": {
+      "images": [
+        {
+          "path": "/images/room-types/vungtau-2420646-deluxe-room-extra-1.webp",
+          "originalUrl": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/23/2016/07/08045832/Deluxe-724x357.jpg",
+          "sourceUrl": "https://www.pullmanvungtau.com/rooms-suites/deluxe-room/",
+          "checkedAt": "2026-11-22"
+        }
+      ],
+      "evidence": {
+        "images": {
+          "url": "https://www.pullmanvungtau.com/rooms-suites/deluxe-room/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      }
+    },
+    "exclusive-suite": {
+      "images": [
+        {
+          "path": "/images/room-types/vungtau-2420646-exclusive-suite-extra-1.webp",
+          "originalUrl": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/23/2016/07/08051249/39-724x357.jpg",
+          "sourceUrl": "https://www.pullmanvungtau.com/rooms-suites/exclusive-suite/",
+          "checkedAt": "2026-11-22"
+        }
+      ],
+      "evidence": {
+        "images": {
+          "url": "https://www.pullmanvungtau.com/rooms-suites/exclusive-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      }
+    },
+    "presidential-suite": {
+      "images": [
+        {
+          "path": "/images/room-types/vungtau-2420646-presidential-suite-extra-1.webp",
+          "originalUrl": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/23/2016/07/08051653/421-724x357.jpg",
+          "sourceUrl": "https://www.pullmanvungtau.com/rooms-suites/presidential-suite/",
+          "checkedAt": "2026-11-22"
+        },
+        {
+          "path": "/images/room-types/vungtau-2420646-presidential-suite-extra-2.webp",
+          "originalUrl": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/23/2016/07/08051653/presidential-suite2-724x357.jpg",
+          "sourceUrl": "https://www.pullmanvungtau.com/rooms-suites/presidential-suite/",
+          "checkedAt": "2026-11-22"
+        }
+      ],
+      "evidence": {
+        "images": {
+          "url": "https://www.pullmanvungtau.com/rooms-suites/presidential-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional photographs are linked to this room category on the official page; resized duplicates were excluded."
+        }
+      }
+    }
+  },
+  "hcm-5999511": {
+    "connecting-deluxe-rooms": {
+      "beds": {
+        "vi": "Giường đôi hoặc giường đơn",
+        "en": "Double or twin bedding"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://lavelasaigon.com/room/connecting-room/",
+          "checkedAt": "2026-11-22",
+          "support": "The room information panel identifies its bedding."
+        }
+      }
+    },
+    "luxury-king": {
+      "beds": {
+        "vi": "Giường cỡ king",
+        "en": "King bedding"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://lavelasaigon.com/room/luxury-king/",
+          "checkedAt": "2026-11-22",
+          "support": "The room information panel identifies its bedding."
+        }
+      }
+    },
+    "premier-deluxe-corner": {
+      "beds": {
+        "vi": "Giường cỡ king",
+        "en": "King bedding"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://lavelasaigon.com/room/deluxe-corner/",
+          "checkedAt": "2026-11-22",
+          "support": "The room information panel identifies its bedding."
+        }
+      }
+    },
+    "premier-luxury-twin-king": {
+      "beds": {
+        "vi": "Giường đôi hoặc giường đơn",
+        "en": "Double or twin bedding"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://lavelasaigon.com/room/luxury-deluxe-twin-king/",
+          "checkedAt": "2026-11-22",
+          "support": "The room information panel identifies its bedding."
+        }
+      }
+    },
+    "premier-luxury-corner": {
+      "beds": {
+        "vi": "Giường cỡ king",
+        "en": "King bedding"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://lavelasaigon.com/room/luxury-deluxe-corner/",
+          "checkedAt": "2026-11-22",
+          "support": "The room information panel identifies its bedding."
+        }
+      }
+    },
+    "signature-suite": {
+      "beds": {
+        "vi": "Hai giường cỡ king",
+        "en": "Two king beds"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://lavelasaigon.com/room/suite-room/",
+          "checkedAt": "2026-11-22",
+          "support": "The room information panel identifies its bedding."
+        }
+      }
+    },
+    "presidential-suite": {
+      "beds": {
+        "vi": "Hai giường cỡ king",
+        "en": "Two king beds"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://lavelasaigon.com/room/president-room/",
+          "checkedAt": "2026-11-22",
+          "support": "The room information panel identifies its bedding."
+        }
+      }
+    }
+  },
+  "phuquoc-4604730": {
+    "standard-room-with-balcony": {
+      "beds": {
+        "vi": "Một giường cỡ king hoặc hai giường đơn",
+        "en": "One king bed or two single beds"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://premierresidencesphuquoc.com/rooms-suites/standard-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-structure list identifies the bedding configuration."
+        }
+      }
+    },
+    "superior-suite-1-king-bed-with-balcony": {
+      "beds": {
+        "vi": "Một giường cỡ king",
+        "en": "One king bed"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://premierresidencesphuquoc.com/rooms-suites/superior-suite-1-king-bed-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-structure list identifies the bedding configuration."
+        }
+      }
+    },
+    "superior-suite-2-king-beds-with-balcony": {
+      "beds": {
+        "vi": "Hai giường cỡ king",
+        "en": "Two king beds"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://premierresidencesphuquoc.com/rooms-suites/superior-suite-2-king-beds-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-structure list identifies the bedding configuration."
+        },
+        "capacity": {
+          "url": "https://premierresidencesphuquoc.com/rooms-suites/superior-suite-2-king-beds-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The category description explicitly accommodates three to four travelers."
+        }
+      },
+      "capacity": 4
+    },
+    "apartment-2-bedrooms": {
+      "beds": {
+        "vi": "Giường cỡ king và giường đơn",
+        "en": "King and twin bedding"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://premierresidencesphuquoc.com/rooms-suites/apartment-2-bedrooms/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-structure list identifies the bedding configuration."
+        }
+      }
+    },
+    "family-room-2-bedrooms": {
+      "beds": {
+        "vi": "Giường cỡ king và giường đơn",
+        "en": "King and twin bedding"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://premierresidencesphuquoc.com/rooms-suites/family-room-2-bedrooms/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-structure list identifies the bedding configuration."
+        }
+      }
+    },
+    "3-bedrooms-apartment": {
+      "beds": {
+        "vi": "Hai giường cỡ king và một giường cỡ queen",
+        "en": "Two king beds and one queen bed"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://premierresidencesphuquoc.com/rooms-suites/3-bedroom-apartment-phu-quoc/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-structure list identifies the bedding configuration."
+        }
+      }
+    },
+    "penthouse-2-bedrooms-with-private-pool": {
+      "beds": {
+        "vi": "Hai phòng ngủ với giường cỡ king",
+        "en": "Two bedrooms with king beds"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://premierresidencesphuquoc.com/rooms-suites/penthouse-2-bedrooms-with-private-pool/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-structure list identifies the bedding configuration."
+        }
+      }
+    },
+    "apartment-3-bedrooms-with-private-pool": {
+      "beds": {
+        "vi": "Hai giường cỡ king và giường đơn",
+        "en": "Two king beds and twin bedding"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://premierresidencesphuquoc.com/rooms-suites/apartment-3-bedrooms-with-private-pool/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-structure list identifies the bedding configuration."
+        }
+      }
+    },
+    "garden-villa-3-bedrooms-with-private-pool": {
+      "beds": {
+        "vi": "Ba phòng ngủ bố trí giường cỡ king và giường đơn; cấu hình tùy căn",
+        "en": "Three bedrooms with king and twin bedding; configuration varies by villa"
+      },
+      "evidence": {
+        "beds": {
+          "url": "https://premierresidencesphuquoc.com/rooms-suites/garden-villa-3-bedrooms-with-private-pool/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-structure list identifies the bedding configuration."
+        }
+      }
+    }
+  },
+  "phuquoc-1070003392": {
+    "studio-pool-view-king-room-with-balcony": {
+      "areaM2": 44,
+      "evidence": {
+        "areaM2": {
+          "url": "https://www.movenpickresortwaverlyphuquoc.com/villas-and-residences/studio-pool-view-king-room-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The current official category page consistently lists this room area."
+        },
+        "capacity": {
+          "url": "https://www.movenpickresortwaverlyphuquoc.com/villas-and-residences/studio-pool-view-king-room-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The room-features section states two adults plus one child."
+        },
+        "occupancyNote": {
+          "url": "https://www.movenpickresortwaverlyphuquoc.com/villas-and-residences/studio-pool-view-king-room-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The adult and child allowance is explicit and consistent with the three-guest description."
+        },
+        "beds": {
+          "url": "https://www.movenpickresortwaverlyphuquoc.com/villas-and-residences/studio-pool-view-king-room-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The bed-type section and description both identify one king bed."
+        }
+      },
+      "capacity": 2,
+      "occupancyNote": {
+        "vi": "Hai người lớn và một trẻ em; xác nhận giới hạn tuổi và phụ thu tại khách sạn.",
+        "en": "Two adults and one child; confirm child ages and supplements with the hotel."
+      },
+      "beds": {
+        "vi": "Một giường cỡ king",
+        "en": "One king bed"
+      }
+    },
+    "studio-sea-view-king-room-with-balcony": {
+      "areaM2": 44,
+      "evidence": {
+        "areaM2": {
+          "url": "https://www.movenpickresortwaverlyphuquoc.com/villas-and-residences/studio-sea-view-king-room-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The current official category page consistently lists this room area."
+        }
+      }
+    },
+    "studio-sea-view-twin-room-with-balcony": {
+      "areaM2": 44,
+      "evidence": {
+        "areaM2": {
+          "url": "https://www.movenpickresortwaverlyphuquoc.com/villas-and-residences/studio-sea-view-twin-room-with-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The current official category page consistently lists this room area."
+        }
+      }
+    }
+  },
+  "phuquoc-4657226": {
+    "villa-3-bedroom": {
+      "price": {
+        "amount": 477,
+        "currency": "USD",
+        "unit": "night",
+        "sourceUrl": "https://vinpearl.com/en/hotels/vinpearl-wonderworld-phu-quoc/rooms",
+        "checkedAt": "2026-11-22",
+        "isLive": false,
+        "context": {
+          "vi": "Giá từ do Vinpearl hiển thị cho đúng hạng biệt thự khi tra cứu ngày 22/11/2026; chưa chọn ngày lưu trú. Giá có thể thay đổi; xác nhận thuế, phí và điều kiện tại nguồn.",
+          "en": "Vinpearl category-specific from-rate accessed on 22 November 2026 without selected stay dates. Rates may change; confirm taxes, fees and conditions at source."
+        }
+      },
+      "evidence": {
+        "price": {
+          "url": "https://vinpearl.com/en/hotels/vinpearl-wonderworld-phu-quoc/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "The official grade card displays this approximate USD/night from-rate."
+        },
+        "capacity": {
+          "url": "https://vinpearl.com/en/hotels/vinpearl-wonderworld-phu-quoc/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "The official grade card explicitly lists twelve guests."
+        },
+        "occupancyNote": {
+          "url": "https://vinpearl.com/en/hotels/vinpearl-wonderworld-phu-quoc/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "Guest total is explicit, but age mix and extra-bed terms require confirmation."
+        }
+      },
+      "capacity": 12,
+      "occupancyNote": {
+        "vi": "Nguồn ghi tối đa 12 khách cho cả biệt thự; cần xác nhận cơ cấu người lớn/trẻ em, giường phụ và phụ thu.",
+        "en": "The source lists twelve guests for the whole villa; confirm the adult/child mix, extra beds and supplements."
+      }
+    },
+    "deluxe-family-villa-3-bedroom-safari": {
+      "price": {
+        "amount": 526,
+        "currency": "USD",
+        "unit": "night",
+        "sourceUrl": "https://vinpearl.com/en/hotels/vinpearl-wonderworld-phu-quoc/rooms",
+        "checkedAt": "2026-11-22",
+        "isLive": false,
+        "context": {
+          "vi": "Giá từ do Vinpearl hiển thị cho đúng hạng biệt thự khi tra cứu ngày 22/11/2026; chưa chọn ngày lưu trú. Giá có thể thay đổi; xác nhận thuế, phí và điều kiện tại nguồn.",
+          "en": "Vinpearl category-specific from-rate accessed on 22 November 2026 without selected stay dates. Rates may change; confirm taxes, fees and conditions at source."
+        }
+      },
+      "evidence": {
+        "price": {
+          "url": "https://vinpearl.com/en/hotels/vinpearl-wonderworld-phu-quoc/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "The official grade card displays this approximate USD/night from-rate."
+        },
+        "capacity": {
+          "url": "https://vinpearl.com/en/hotels/vinpearl-wonderworld-phu-quoc/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "The official grade card explicitly lists twelve guests."
+        },
+        "occupancyNote": {
+          "url": "https://vinpearl.com/en/hotels/vinpearl-wonderworld-phu-quoc/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "Guest total is explicit, but age mix and extra-bed terms require confirmation."
+        }
+      },
+      "capacity": 12,
+      "occupancyNote": {
+        "vi": "Nguồn ghi tối đa 12 khách cho cả biệt thự; cần xác nhận cơ cấu người lớn/trẻ em, giường phụ và phụ thu.",
+        "en": "The source lists twelve guests for the whole villa; confirm the adult/child mix, extra beds and supplements."
+      }
+    }
+  },
+  "vungtau-2593913": {
+    "diamond-king": {
+      "areaM2": 46,
+      "evidence": {
+        "areaM2": {
+          "url": "https://malibuhotel.com.vn/hotel/the-malibu-hotel/844/room.html",
+          "checkedAt": "2026-11-22",
+          "support": "The category heading specifies its room area."
+        },
+        "beds": {
+          "url": "https://malibuhotel.com.vn/hotel/the-malibu-hotel/844/room.html",
+          "checkedAt": "2026-11-22",
+          "support": "The category heading specifies bed count and width."
+        }
+      },
+      "beds": {
+        "vi": "1 giường rộng 1,8 m",
+        "en": "1 bed, 1.8 m wide"
+      }
+    },
+    "premier-twin": {
+      "areaM2": 40,
+      "evidence": {
+        "areaM2": {
+          "url": "https://malibuhotel.com.vn/hotel/the-malibu-hotel/846/room.html",
+          "checkedAt": "2026-11-22",
+          "support": "The category heading specifies its room area."
+        },
+        "beds": {
+          "url": "https://malibuhotel.com.vn/hotel/the-malibu-hotel/846/room.html",
+          "checkedAt": "2026-11-22",
+          "support": "The category heading specifies bed count and width."
+        }
+      },
+      "beds": {
+        "vi": "2 giường rộng 1,4 m",
+        "en": "2 beds, 1.4 m wide"
+      }
+    },
+    "malibu-suite": {
+      "areaM2": 60,
+      "evidence": {
+        "areaM2": {
+          "url": "https://malibuhotel.com.vn/hotel/the-malibu-hotel/885/room.html",
+          "checkedAt": "2026-11-22",
+          "support": "The category heading specifies its room area."
+        },
+        "beds": {
+          "url": "https://malibuhotel.com.vn/hotel/the-malibu-hotel/885/room.html",
+          "checkedAt": "2026-11-22",
+          "support": "The category heading specifies bed count and width."
+        }
+      },
+      "beds": {
+        "vi": "1 giường rộng 1,8 m",
+        "en": "1 bed, 1.8 m wide"
+      }
+    },
+    "family-suite": {
+      "areaM2": 60,
+      "evidence": {
+        "areaM2": {
+          "url": "https://malibuhotel.com.vn/hotel/the-malibu-hotel/887/room.html",
+          "checkedAt": "2026-11-22",
+          "support": "The category heading specifies its room area."
+        },
+        "beds": {
+          "url": "https://malibuhotel.com.vn/hotel/the-malibu-hotel/887/room.html",
+          "checkedAt": "2026-11-22",
+          "support": "The category heading specifies bed count and width."
+        }
+      },
+      "beds": {
+        "vi": "2 giường rộng 1,8 m",
+        "en": "2 beds, 1.8 m wide"
+      }
+    }
+  }
+}

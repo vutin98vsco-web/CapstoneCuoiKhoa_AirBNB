@@ -1,0 +1,18 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    init: true
+    environment:
+      NODE_ENV: production
+      HOSTNAME: 0.0.0.0
+      PORT: 3000
+      TNB_BOOKINGS_DB_PATH: /data/tnbnb.sqlite
+      CYBERSOFT_TOKEN: ${CYBERSOFT_TOKEN:-}
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - tnbnb_data:/data
+    stop_grace_period: 20s
+volumes:
+  tnbnb_data:

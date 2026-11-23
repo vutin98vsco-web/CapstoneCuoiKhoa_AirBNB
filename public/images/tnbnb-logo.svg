@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>TNbnb</title>
+  <desc>An original coral home symbol with a white TN monogram.</desc>
+  <path d="M9 29.5a5 5 0 0 1 1.8-3.8L28.8 11a5 5 0 0 1 6.4 0l18 14.7a5 5 0 0 1 1.8 3.8V51a6 6 0 0 1-6 6H15a6 6 0 0 1-6-6V29.5Z" fill="#FF666B"/>
+  <path d="M18 31h12m-6 0v16m12 0V31l11 16V31" stroke="#fff" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

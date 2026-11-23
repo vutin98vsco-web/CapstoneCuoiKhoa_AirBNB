@@ -1,0 +1,41 @@
+/* Demo proportions: 112px at the top and 82px after scrolling. */
+.reference-header { position: fixed; z-index: 50; inset: 0 0 auto; background: white; color: #111; border-bottom: 1px solid #e6eae6; box-shadow: 0 4px 24px #1927200a; font-family: Arial, Helvetica, sans-serif; transition: background-color .25s, color .25s, border-color .25s; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.reference-header.header-over-video { background: transparent; color: white; border-bottom-color: transparent; box-shadow: none; }
+.reference-header .header-inner { display: flex; align-items: center; justify-content: space-between; width: calc(100% - 32px); max-width: 1280px; min-height: 82px; padding-inline: 16px; gap: 24px; transition: min-height .25s; }
+.reference-header.header-over-video:not(.header-scrolled) .header-inner { min-height: 112px; }
+.reference-header .brand { gap: 12px; color: #ff666b; font-size: 24px; line-height: 1; font-weight: 700; }
+.reference-header .brand img { width: 32px; height: 32px; }
+.reference-header .main-nav { display: flex; align-items: center; gap: 32px; }
+.reference-header .main-nav a { position: relative; padding-block: 12px; color: #111; font-size: 16px; font-weight: 400; line-height: 1.5; }
+.reference-header .main-nav a.active, .reference-header .main-nav a:hover { color: #ff666b; }
+.reference-header.header-over-video .brand { color: #ff858b; }
+.reference-header.header-over-video .main-nav a { color: #fffffff0; text-shadow: 0 1px 5px #0003; }
+.reference-header.header-over-video .main-nav a.active, .reference-header.header-over-video .main-nav a:hover { color: #ff9da2; }
+.reference-header .header-actions { display: flex; align-items: center; gap: 0; }
+.profile-wrap { position: relative; }
+.reference-header .profile-button { display: grid; place-items: center; width: 50px; height: 50px; padding: 4px; border: 0; border-radius: 50%; background: #d5d7dc; }
+.reference-header .profile-avatar { display: grid; place-items: center; width: 42px; height: 42px; border: 3px solid #ff666b; border-radius: 50%; background: #1d3036; color: white; }
+.reference-header .profile-button:hover { background: #c6c9cf; }
+.reference-header.header-over-video .profile-button { background: #fff3; }
+.reference-header.header-over-video .profile-button:hover { background: #ffffff52; }
+.reference-header.header-over-video .profile-avatar { background: #14272b8c; border-color: #ff858b; }
+.profile-menu { position: absolute; top: calc(100% + 12px); right: 0; width: 265px; padding: 12px 0; border: 1px solid var(--line); border-radius: 14px; background: white; color: var(--ink); box-shadow: 0 12px 40px #0002; font-family: 'Be Vietnam Pro', Arial, sans-serif; }
+.profile-menu strong { display: block; padding: 8px 20px 14px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.profile-menu a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 20px; font-size: 14px; }
+.profile-menu a:hover { background: var(--soft); }
+.reference-header .mobile-toggle { display: none; }
+@media(max-width:1150px) { .reference-header .main-nav { gap: 24px; } .reference-header .header-inner { gap: 18px; } }
+@media(max-width:1050px) {
+  .reference-header .header-inner, .reference-header.header-over-video:not(.header-scrolled) .header-inner { min-height: 76px; padding-inline: 0; gap: 12px; }
+  .reference-header .brand { font-size: 24px; gap: 8px; }
+  .reference-header .header-actions { gap: 10px; }
+  .reference-header .mobile-toggle { display: grid; }
+  .reference-header .main-nav { display: none; position: absolute; top: 76px; left: 0; right: 0; padding: 12px 24px; border-top: 1px solid #eee; background: white; box-shadow: 0 10px 20px #0000000d; }
+  .reference-header .main-nav.nav-open { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .reference-header .main-nav a { font-size: 16px; padding: 13px 0; }
+  .reference-header.header-over-video .main-nav { background: #101e1cf5; border-top-color: #ffffff26; }
+  .reference-header .profile-button { width: 48px; height: 48px; }
+  .reference-header .profile-avatar { width: 40px; height: 40px; }
+  .reference-header .profile-avatar svg { width: 22px; height: 22px; }
+  .listing-page, .detail { padding-top: 104px; }
+}

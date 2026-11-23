@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.env*
+!.env.example
+.reference/
+.data/
+.backups/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.log

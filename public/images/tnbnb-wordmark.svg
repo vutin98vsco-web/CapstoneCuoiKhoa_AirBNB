@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="72" viewBox="0 0 260 72" fill="none">
+  <title>TNbnb</title>
+  <desc>TNbnb logo: a coral house with a TN monogram and matching wordmark.</desc>
+  <g transform="translate(2 4)">
+    <path d="M9 29.5a5 5 0 0 1 1.8-3.8L28.8 11a5 5 0 0 1 6.4 0l18 14.7a5 5 0 0 1 1.8 3.8V51a6 6 0 0 1-6 6H15a6 6 0 0 1-6-6V29.5Z" fill="#FF666B"/>
+    <path d="M18 31h12m-6 0v16m12 0V31l11 16V31" stroke="#fff" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="80" y="53" fill="#FF666B" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" letter-spacing="-1">TNbnb</text>
+</svg>

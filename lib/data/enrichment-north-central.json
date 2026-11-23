@@ -1,0 +1,1754 @@
+{
+  "hanoi-4689061": {
+    "deluxe-balcony": {
+      "capacity": 2,
+      "areaM2": 20,
+      "beds": {
+        "vi": "Một giường đôi cỡ Queen",
+        "en": "One queen bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds"
+          ],
+          "url": "https://acoustichotel.com/rooms-suites/17/junior-suite-balcony",
+          "checkedAt": "2026-11-22",
+          "support": "The related-room card explicitly named Deluxe Balcony lists one queen bed, maximum two adults and 20 square metres."
+        }
+      ]
+    },
+    "junior-suite-balcony": {
+      "capacity": 2,
+      "areaM2": 28,
+      "occupancyNote": {
+        "vi": "Nguồn công bố tối đa 2 người lớn và 1 trẻ em; cần xác nhận tuổi trẻ em và phụ phí với khách sạn. Giới hạn khách trong biểu mẫu dùng số người lớn.",
+        "en": "The hotel publishes a maximum of 2 adults and 1 child; confirm child ages and supplements with the hotel. The form uses the adult limit."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "occupancyNote"
+          ],
+          "url": "https://acoustichotel.com/rooms-suites/1018/deluxe-balcony",
+          "checkedAt": "2026-11-22",
+          "support": "The named Junior Suite Balcony card gives 28 square metres and an allowance of two adults plus one child; capacity conservatively records the adult maximum."
+        }
+      ]
+    }
+  },
+  "hanoi-1072087836": {
+    "deluxe-internal": {
+      "capacity": 2,
+      "areaM2": 28,
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One king bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds"
+          ],
+          "url": "https://hanoithelegendhotel.com/rooms-suites/deluxe-internal-window-room",
+          "checkedAt": "2026-11-22",
+          "support": "Room specifications state 28 square metres, one king bed and a maximum of two adults."
+        },
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://hanoithelegendhotel.com/rooms-suites/deluxe-internal-window-room",
+          "checkedAt": "2026-11-22",
+          "support": "The same room-specific published rate was rechecked on 22 November 2026. This refreshes provenance only; it is not a live quote for selected stay dates."
+        }
+      ],
+      "price": {
+        "amount": 2400000,
+        "currency": "VND",
+        "context": {
+          "vi": "Giá từ được cơ sở công bố, cần xác nhận ngày ở, bữa sáng, thuế và phụ phí.",
+          "en": "Published from-price on the room page, subject to dates and rate conditions."
+        },
+        "sourceUrl": "https://hanoithelegendhotel.com/rooms-suites/deluxe-internal-window-room",
+        "checkedAt": "2026-11-22",
+        "unit": "night",
+        "isLive": false
+      }
+    },
+    "executive-city": {
+      "capacity": 2,
+      "areaM2": 25,
+      "beds": {
+        "vi": "Một giường đôi lớn hoặc hai giường đơn",
+        "en": "One king bed or two single beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds"
+          ],
+          "url": "https://hanoithelegendhotel.com/rooms-suites/executive-city-view-room",
+          "checkedAt": "2026-11-22",
+          "support": "Room specifications give 25 square metres, king or twin bedding and maximum occupancy of two adults."
+        },
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://hanoithelegendhotel.com/rooms-suites/executive-city-view-room",
+          "checkedAt": "2026-11-22",
+          "support": "The same room-specific published rate was rechecked on 22 November 2026. This refreshes provenance only; it is not a live quote for selected stay dates."
+        }
+      ],
+      "price": {
+        "amount": 3200000,
+        "currency": "VND",
+        "context": {
+          "vi": "Giá từ được cơ sở công bố, cần xác nhận ngày ở, bữa sáng, thuế và phụ phí.",
+          "en": "Published from-price on the room page, subject to dates and rate conditions."
+        },
+        "sourceUrl": "https://hanoithelegendhotel.com/rooms-suites/executive-city-view-room",
+        "checkedAt": "2026-11-22",
+        "unit": "night",
+        "isLive": false
+      }
+    }
+  },
+  "hanoi-389793": {
+    "hanoi-suite": {
+      "beds": {
+        "vi": "Một giường; nguồn chưa nêu loại giường",
+        "en": "One bed; the source does not specify its type"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://grandplazahanoi.com/room/hanoi-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The room features table lists bed count one; it does not identify a king, queen or twin configuration."
+        }
+      ]
+    }
+  },
+  "danang-660728": {
+    "superior-standard": {
+      "beds": {
+        "vi": "Một giường Queen hoặc hai giường đơn",
+        "en": "One queen bed or twin beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://brillianthotel.vn/en/rooms/superior-standard/",
+          "checkedAt": "2026-11-22",
+          "support": "The room page specifies Queen or Twin bedding; its area is a range, so no single numeric area is assigned."
+        }
+      ]
+    }
+  },
+  "danang-3928471": {
+    "beachfront-apartment": {
+      "beds": {
+        "vi": "Hai giường đôi lớn theo thông số của cơ sở",
+        "en": "Two king beds as listed by the hotel"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://haianbeachhotelspa.com/accommodation/beachfront-1-bedroom-apartment/",
+          "checkedAt": "2026-11-22",
+          "support": "The page for Beachfront 1 Bedroom Apartment lists Type Beds: 02 King Bed. No occupancy is inferred from bed count."
+        }
+      ]
+    }
+  },
+  "danang-499401": {
+    "superior-city-twin": {
+      "capacity": 2,
+      "areaM2": 28,
+      "occupancyNote": {
+        "vi": "Nguồn công bố tối đa 2 người lớn và 1 trẻ em; cần xác nhận tuổi trẻ em và phụ phí với khách sạn. Giới hạn khách trong biểu mẫu dùng số người lớn.",
+        "en": "The hotel publishes a maximum of 2 adults and 1 child; confirm child ages and supplements with the hotel. The form uses the adult limit."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "occupancyNote"
+          ],
+          "url": "https://www.novotel-danang-premier.com/rooms-suites/superior-room-city-view-2-single-beds/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room features state three total people consisting of two adults and one child; the numeric limit records the two-adult maximum. Area is explicitly published."
+        }
+      ]
+    },
+    "novotel-suite-river": {
+      "capacity": 2,
+      "areaM2": 56,
+      "occupancyNote": {
+        "vi": "Nguồn công bố tối đa 2 người lớn và 1 trẻ em; cần xác nhận tuổi trẻ em và phụ phí với khách sạn. Giới hạn khách trong biểu mẫu dùng số người lớn.",
+        "en": "The hotel publishes a maximum of 2 adults and 1 child; confirm child ages and supplements with the hotel. The form uses the adult limit."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "occupancyNote"
+          ],
+          "url": "https://www.novotel-danang-premier.com/rooms-suites/novotel-suite-balcony-han-river-view-bathtub-premier-lounge-access-1-king-bed/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room features state three total people consisting of two adults and one child; the numeric limit records the two-adult maximum. Area is explicitly published."
+        }
+      ]
+    }
+  },
+  "danang-3914152": {
+    "deluxe": {
+      "areaM2": 41,
+      "beds": {
+        "vi": "Một giường đôi hoặc hai giường đơn",
+        "en": "One double bed or two single beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "areaM2",
+            "beds"
+          ],
+          "url": "https://www.melia.com/en/hotels/vietnam/da-nang/melia-vinpearl-danang-riverfront/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "The Deluxe Room card lists 41 square metres and double or twin bedding."
+        }
+      ]
+    },
+    "junior-suite": {
+      "areaM2": 60,
+      "evidence": [
+        {
+          "fields": [
+            "areaM2"
+          ],
+          "url": "https://www.melia.com/en/hotels/vietnam/da-nang/melia-vinpearl-danang-riverfront/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "The Junior Suite card publishes 60 square metres. A dining table seating four is not interpreted as room occupancy."
+        }
+      ]
+    }
+  },
+  "danang-8933116": {
+    "corner-deluxe-king": {
+      "capacity": 3,
+      "areaM2": 30,
+      "occupancyNote": {
+        "vi": "Nguồn công bố tối đa 3 người lớn và 1 trẻ em; cần xác nhận tuổi trẻ em và phụ phí với khách sạn. Giới hạn khách trong biểu mẫu dùng số người lớn.",
+        "en": "The hotel publishes a maximum of 3 adults and 1 child; confirm child ages and supplements with the hotel. The form uses the adult limit."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "occupancyNote"
+          ],
+          "url": "https://wink-hotels.com/hotel/wink-hotel-danang-centre/",
+          "checkedAt": "2026-11-22",
+          "support": "The named King Bed City View Corner Deluxe section publishes 30 square metres and three adults plus one child. Corrects the prior undifferentiated four-guest value to the explicit adult maximum."
+        }
+      ]
+    },
+    "king-suite-city": {
+      "capacity": 2,
+      "areaM2": 35,
+      "occupancyNote": {
+        "vi": "Nguồn công bố tối đa 2 người lớn và 1 trẻ em; cần xác nhận tuổi trẻ em và phụ phí với khách sạn. Giới hạn khách trong biểu mẫu dùng số người lớn.",
+        "en": "The hotel publishes a maximum of 2 adults and 1 child; confirm child ages and supplements with the hotel. The form uses the adult limit."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "occupancyNote"
+          ],
+          "url": "https://wink-hotels.com/hotel/wink-hotel-danang-centre/",
+          "checkedAt": "2026-11-22",
+          "support": "The King Bed Suite City View section lists 35 square metres and two adults plus one child."
+        }
+      ]
+    }
+  },
+  "danang-4262218": {
+    "premier-suite-city": {
+      "areaM2": 45,
+      "beds": {
+        "vi": "Một giường Super King hoặc hai giường đơn",
+        "en": "One super king bed or twin beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "areaM2",
+            "beds"
+          ],
+          "url": "https://tmshotel.vn/accommodation/premier-suite-city-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The named suite page lists 45 square metres and Super King or twin bedding."
+        }
+      ]
+    },
+    "family-suite-two-bedroom": {
+      "areaM2": 70,
+      "beds": {
+        "vi": "Một giường Super King và một giường King trong hai phòng ngủ",
+        "en": "One super king bed and one king bed in two bedrooms"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "areaM2",
+            "beds"
+          ],
+          "url": "https://tmshotel.vn/accommodation/family-suite-2-bedroom/",
+          "checkedAt": "2026-11-22",
+          "support": "The room features list 70 square metres and two separate bedrooms with one super king and one king bed."
+        }
+      ]
+    }
+  },
+  "hoian-2659250": {
+    "superior-city-view": {
+      "beds": {
+        "vi": "Một giường đôi lớn hoặc hai giường đơn",
+        "en": "One king bed or twin beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/superior-city-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration."
+        }
+      ]
+    },
+    "deluxe-city-view": {
+      "beds": {
+        "vi": "Một giường đôi lớn hoặc hai giường đơn",
+        "en": "One king bed or twin beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/deluxe-city-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration."
+        }
+      ]
+    },
+    "deluxe-rice-field-view": {
+      "beds": {
+        "vi": "Một giường đôi lớn hoặc hai giường đơn",
+        "en": "One king bed or twin beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/deluxe-rice-field-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration."
+        }
+      ]
+    },
+    "deluxe-grand-view": {
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One king bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/deluxe-grand-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration."
+        }
+      ]
+    },
+    "superior-triple": {
+      "beds": {
+        "vi": "Một giường đôi lớn và một giường đơn",
+        "en": "One king bed and one single bed"
+      },
+      "capacity": 4,
+      "occupancyNote": {
+        "vi": "Tối đa 4 khách khi bổ sung giường phụ có thu phí; cần được khách sạn xác nhận trước.",
+        "en": "Up to four guests with a paid extra bed, subject to advance hotel confirmation."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds",
+            "capacity",
+            "occupancyNote"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/superior-triple/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration. Maximum four people is conditional on arranging a paid extra bed."
+        }
+      ]
+    },
+    "deluxe-triple-balcony": {
+      "beds": {
+        "vi": "Một giường đôi lớn và một giường đơn",
+        "en": "One king bed and one single bed"
+      },
+      "capacity": 4,
+      "occupancyNote": {
+        "vi": "Tối đa 4 khách khi bổ sung giường phụ có thu phí; cần được khách sạn xác nhận trước.",
+        "en": "Up to four guests with a paid extra bed, subject to advance hotel confirmation."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds",
+            "capacity",
+            "occupancyNote"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/deluxe-triple-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration. Maximum four people is conditional on arranging a paid extra bed."
+        }
+      ]
+    },
+    "junior-suite": {
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One king bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/junior-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration."
+        }
+      ]
+    },
+    "junior-suite-balcony": {
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One king bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/junior-suite-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration."
+        }
+      ]
+    },
+    "suite-city-view": {
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One king bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/suite-city-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration."
+        }
+      ]
+    },
+    "suite-grand-view": {
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One king bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/suite-grand-view/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration."
+        }
+      ]
+    },
+    "family-connecting-room": {
+      "beds": {
+        "vi": "Một giường đôi lớn và hai giường đơn",
+        "en": "One king bed and two single beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://lasentahotel.com/rooms-suites/family-connecting-room/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly publishes the bedding configuration."
+        }
+      ]
+    }
+  },
+  "hoian-2226942": {
+    "little-residence": {
+      "price": {
+        "amount": 100,
+        "currency": "USD",
+        "unit": "night",
+        "isLive": false,
+        "checkedAt": "2026-11-22",
+        "sourceUrl": "https://lhaghotels.com/hotels/littleresidence/rooms",
+        "context": {
+          "vi": "Giá ưu đãi từ 100 USD++ mỗi đêm được công bố cho hạng Little Residence, nhãn giảm 50%; chưa gồm thuế/phí dịch vụ, chưa gắn với ngày ở cụ thể. Cần xác nhận điều kiện tại cơ sở.",
+          "en": "Published promotional from-rate of USD 100++ per night for Little Residence, labelled 50% off; excludes taxes/service charges and is not a quote for selected stay dates. Confirm conditions with the hotel."
+        }
+      },
+      "evidence": [
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://lhaghotels.com/hotels/littleresidence/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "The Little Residence specification shows the already-discounted from-rate USD100++, against a USD200++ standard rate; no further discount is applied."
+        }
+      ]
+    },
+    "junior-suite": {
+      "price": {
+        "amount": 70,
+        "currency": "USD",
+        "unit": "night",
+        "sourceUrl": "https://lhaghotels.com/hotels/littleresidence/rooms",
+        "checkedAt": "2026-11-22",
+        "isLive": false,
+        "context": {
+          "vi": "Giá tham khảo theo hạng phòng được website cơ sở công bố khi tra cứu ngày 22/11/2026; không phải báo giá cho ngày lưu trú đã chọn. Xác nhận thuế, phí và điều kiện tại nguồn. Giá ưu đãi ghi ++, chưa gồm thuế và phí dịch vụ.",
+          "en": "Published room-category reference price accessed on 22 November 2026; not a quote for selected stay dates. Confirm taxes, fees and conditions at source. Promotional price marked ++, excluding taxes and service charges."
+        }
+      },
+      "evidence": [
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://lhaghotels.com/hotels/littleresidence/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "The same room-specific published rate was rechecked on 22 November 2026. This refreshes provenance only; it is not a live quote for selected stay dates."
+        }
+      ]
+    },
+    "residence-suite": {
+      "price": {
+        "amount": 142,
+        "currency": "USD",
+        "unit": "night",
+        "sourceUrl": "https://lhaghotels.com/hotels/littleresidence/rooms",
+        "checkedAt": "2026-11-22",
+        "isLive": false,
+        "context": {
+          "vi": "Giá tham khảo theo hạng phòng được website cơ sở công bố khi tra cứu ngày 22/11/2026; không phải báo giá cho ngày lưu trú đã chọn. Xác nhận thuế, phí và điều kiện tại nguồn. Giá ưu đãi ghi ++, chưa gồm thuế và phí dịch vụ.",
+          "en": "Published room-category reference price accessed on 22 November 2026; not a quote for selected stay dates. Confirm taxes, fees and conditions at source. Promotional price marked ++, excluding taxes and service charges."
+        }
+      },
+      "evidence": [
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://lhaghotels.com/hotels/littleresidence/rooms",
+          "checkedAt": "2026-11-22",
+          "support": "The same room-specific published rate was rechecked on 22 November 2026. This refreshes provenance only; it is not a live quote for selected stay dates."
+        }
+      ]
+    }
+  },
+  "dalat-7081": {
+    "luxury-balcony": {
+      "areaM2": 44,
+      "evidence": [
+        {
+          "fields": [
+            "areaM2"
+          ],
+          "url": "https://www.dalatpalacehotel.com/en/luxury-balcony/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room page explicitly publishes its floor area. For Luxury Balcony the 44-square-metre room is separate from the 15-square-metre terrace."
+        }
+      ]
+    },
+    "the-royal-executive-suite": {
+      "areaM2": 84,
+      "evidence": [
+        {
+          "fields": [
+            "areaM2"
+          ],
+          "url": "https://www.dalatpalacehotel.com/en/the-royal-executive-suite/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room page explicitly publishes its floor area. For Luxury Balcony the 44-square-metre room is separate from the 15-square-metre terrace."
+        }
+      ]
+    },
+    "the-royal-superior": {
+      "areaM2": 35.5,
+      "evidence": [
+        {
+          "fields": [
+            "areaM2"
+          ],
+          "url": "https://www.dalatpalacehotel.com/en/the-royal-superior/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room page explicitly publishes its floor area. For Luxury Balcony the 44-square-metre room is separate from the 15-square-metre terrace."
+        }
+      ]
+    },
+    "the-suites": {
+      "areaM2": 90,
+      "evidence": [
+        {
+          "fields": [
+            "areaM2"
+          ],
+          "url": "https://www.dalatpalacehotel.com/en/the-suites/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room page explicitly publishes its floor area. For Luxury Balcony the 44-square-metre room is separate from the 15-square-metre terrace."
+        }
+      ]
+    },
+    "the-royal-suites": {
+      "areaM2": 58,
+      "evidence": [
+        {
+          "fields": [
+            "areaM2"
+          ],
+          "url": "https://www.dalatpalacehotel.com/en/the-royal-suites/",
+          "checkedAt": "2026-11-22",
+          "support": "The named room page explicitly publishes its floor area. For Luxury Balcony the 44-square-metre room is separate from the 15-square-metre terrace."
+        }
+      ]
+    }
+  },
+  "dalat-2678148": {
+    "superior-double": {
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One king bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://www.irisdalathotel.com/accommodations/superior-double.html",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly states the bedding. The published area is a range, so no single numeric area is assigned."
+        }
+      ]
+    },
+    "superior-twin": {
+      "beds": {
+        "vi": "Hai giường đơn",
+        "en": "Two single beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://www.irisdalathotel.com/accommodations/superior-twin.html",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly states the bedding. The published area is a range, so no single numeric area is assigned."
+        }
+      ]
+    },
+    "deluxe-family": {
+      "areaM2": 35,
+      "beds": {
+        "vi": "Hai giường đôi",
+        "en": "Two double beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "areaM2",
+            "beds"
+          ],
+          "url": "https://www.irisdalathotel.com/accommodations/deluxe-family.html",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly states the bedding and an area of about 35 square metres."
+        }
+      ]
+    },
+    "superior-living-room": {
+      "areaM2": 35,
+      "beds": {
+        "vi": "Một giường đôi lớn và một giường sofa",
+        "en": "One king bed and one sofa bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "areaM2",
+            "beds"
+          ],
+          "url": "https://www.irisdalathotel.com/accommodations/superior-living-room.html",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly states the bedding and an area of about 35 square metres."
+        }
+      ]
+    },
+    "deluxe-king-window": {
+      "beds": {
+        "vi": "Một giường đôi",
+        "en": "One double bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://www.irisdalathotel.com/accommodations/deluxe-king-window.html",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly states the bedding. The published area is a range, so no single numeric area is assigned."
+        }
+      ]
+    },
+    "deluxe-king-balcony": {
+      "beds": {
+        "vi": "Một giường đôi",
+        "en": "One double bed"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "beds"
+          ],
+          "url": "https://www.irisdalathotel.com/accommodations/deluxe-king-balcony.html",
+          "checkedAt": "2026-11-22",
+          "support": "The named room description explicitly states the bedding. The published area is a range, so no single numeric area is assigned."
+        }
+      ]
+    }
+  },
+  "dalat-9967439": {
+    "deluxe-twin": {
+      "capacity": 2,
+      "beds": {
+        "vi": "Hai giường đơn",
+        "en": "Two single beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds"
+          ],
+          "url": "https://merperledalat.vn/en/accmomodation/deluxe-twin/",
+          "checkedAt": "2026-11-22",
+          "support": "The exact room detail page publishes maximum adult occupancy and the number of single beds."
+        },
+        {
+          "fields": [
+            "images"
+          ],
+          "url": "https://merperledalat.vn/en/accmomodation/deluxe-twin/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional distinct images belong to the selected room detail gallery; other-room thumbnails and decorative virtual-tour images are excluded."
+        }
+      ],
+      "images": [
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-twin-extra-1.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Twin-7.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-twin/",
+          "caption": {
+            "vi": "Góc chụp bổ sung của phòng hai giường đơn tại MerPerle Dalat",
+            "en": "Additional view of Deluxe Twin at MerPerle Dalat"
+          },
+          "checkedAt": "2026-11-22"
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-twin-extra-2.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Twin-3.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-twin/",
+          "caption": {
+            "vi": "Góc chụp bổ sung của phòng hai giường đơn tại MerPerle Dalat",
+            "en": "Additional view of Deluxe Twin at MerPerle Dalat"
+          },
+          "checkedAt": "2026-11-22"
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-twin-extra-3.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Twin-2.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-twin/",
+          "caption": {
+            "vi": "Góc chụp bổ sung của phòng hai giường đơn tại MerPerle Dalat",
+            "en": "Additional view of Deluxe Twin at MerPerle Dalat"
+          },
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    },
+    "deluxe-triple": {
+      "capacity": 3,
+      "beds": {
+        "vi": "Ba giường đơn",
+        "en": "Three single beds"
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds"
+          ],
+          "url": "https://merperledalat.vn/en/accmomodation/deluxe-triple/",
+          "checkedAt": "2026-11-22",
+          "support": "The exact room detail page publishes maximum adult occupancy and the number of single beds."
+        },
+        {
+          "fields": [
+            "images"
+          ],
+          "url": "https://merperledalat.vn/en/accmomodation/deluxe-triple/",
+          "checkedAt": "2026-11-22",
+          "support": "Additional distinct images belong to the selected room detail gallery; other-room thumbnails and decorative virtual-tour images are excluded."
+        }
+      ],
+      "images": [
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-triple-extra-1.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Tripple-9.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-triple/",
+          "caption": {
+            "vi": "Góc chụp bổ sung của phòng ba giường đơn tại MerPerle Dalat",
+            "en": "Additional view of Deluxe Triple at MerPerle Dalat"
+          },
+          "checkedAt": "2026-11-22"
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-triple-extra-2.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Tripple-7.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-triple/",
+          "caption": {
+            "vi": "Góc chụp bổ sung của phòng ba giường đơn tại MerPerle Dalat",
+            "en": "Additional view of Deluxe Triple at MerPerle Dalat"
+          },
+          "checkedAt": "2026-11-22"
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-triple-extra-3.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Tripple-3.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-triple/",
+          "caption": {
+            "vi": "Góc chụp bổ sung của phòng ba giường đơn tại MerPerle Dalat",
+            "en": "Additional view of Deluxe Triple at MerPerle Dalat"
+          },
+          "checkedAt": "2026-11-22"
+        }
+      ]
+    },
+    "deluxe-double": {
+      "capacity": 2,
+      "areaM2": 32,
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One king bed"
+      },
+      "occupancyNote": {
+        "vi": "Nhà cung cấp công bố 2 người lớn, có thể thêm 1 trẻ em theo điều kiện/phụ phí riêng. Cần xác nhận tuổi trẻ em và giường phụ.",
+        "en": "The provider lists 2 adults and permits 1 additional children subject to conditions/supplements. Confirm child ages and extra beds."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.monkeytravel.com/vn/en/hotel/dalat/dalatcity/product/product_detail.php?product_id=1076867799",
+          "checkedAt": "2026-11-22",
+          "support": "Bookable room record explicitly identifies adult/child occupancy, area and bed configuration. No property-level rate is assigned to the grade."
+        },
+        {
+          "fields": [
+            "images"
+          ],
+          "url": "https://merperledalat.vn/en/wp-json/wp/v2/media?parent=19741&per_page=100",
+          "checkedAt": "2026-11-22",
+          "support": "Official published media records are attached to this exact room post ID and have matching room-category titles. Only named room photographs are retained; banners, virtual-tour graphics and mismatched-category media are excluded."
+        }
+      ],
+      "images": [
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-double-extra-1.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Double-7.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-double/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng cao cấp giường đôi tại MerPerle Dalat",
+            "en": "A view of DELUXE DOUBLE at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-double-extra-2.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Double-6.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-double/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng cao cấp giường đôi tại MerPerle Dalat",
+            "en": "A view of DELUXE DOUBLE at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-double-extra-3.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Double-2.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-double/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng cao cấp giường đôi tại MerPerle Dalat",
+            "en": "A view of DELUXE DOUBLE at MerPerle Dalat"
+          }
+        }
+      ]
+    },
+    "deluxe-family": {
+      "capacity": 3,
+      "areaM2": 40,
+      "beds": {
+        "vi": "Một giường đôi và một giường đơn",
+        "en": "One double bed and one single bed"
+      },
+      "occupancyNote": {
+        "vi": "Nhà cung cấp công bố 3 người lớn, có thể thêm 2 trẻ em theo điều kiện/phụ phí riêng. Cần xác nhận tuổi trẻ em và giường phụ.",
+        "en": "The provider lists 3 adults and permits 2 additional children subject to conditions/supplements. Confirm child ages and extra beds."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.monkeytravel.com/vn/en/hotel/dalat/dalatcity/product/product_detail.php?product_id=1076867799",
+          "checkedAt": "2026-11-22",
+          "support": "Bookable room record explicitly identifies adult/child occupancy, area and bed configuration. No property-level rate is assigned to the grade."
+        },
+        {
+          "fields": [
+            "images"
+          ],
+          "url": "https://merperledalat.vn/en/wp-json/wp/v2/media?parent=19743&per_page=100",
+          "checkedAt": "2026-11-22",
+          "support": "Official published media records are attached to this exact room post ID and have matching room-category titles. Only named room photographs are retained; banners, virtual-tour graphics and mismatched-category media are excluded."
+        }
+      ],
+      "images": [
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-family-extra-1.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Family-7-1.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-family/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng cao cấp gia đình tại MerPerle Dalat",
+            "en": "A view of DELUXE FAMILY at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-family-extra-2.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Family-5-2.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-family/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng cao cấp gia đình tại MerPerle Dalat",
+            "en": "A view of DELUXE FAMILY at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-deluxe-family-extra-3.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Deluxe-Family-2-3.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/deluxe-family/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng cao cấp gia đình tại MerPerle Dalat",
+            "en": "A view of DELUXE FAMILY at MerPerle Dalat"
+          }
+        }
+      ]
+    },
+    "executive-suite": {
+      "capacity": 3,
+      "areaM2": 65,
+      "beds": {
+        "vi": "Một giường đôi lớn và một giường sofa",
+        "en": "One king bed and one sofa bed"
+      },
+      "occupancyNote": {
+        "vi": "Tiêu chuẩn 2 người lớn; tối đa 3 người lớn hoặc 3 người lớn và 1 trẻ em theo nhà cung cấp, có điều kiện giường phụ/giường sofa và phụ phí. Cần xác nhận trước với khách sạn.",
+        "en": "Standard occupancy is two adults; the provider allows up to three adults or three adults and one child with extra-bed/sofa-bed conditions and supplements. Confirm with the hotel before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.monkeytravel.com/vn/en/hotel/dalat/dalatcity/product/product_detail.php?product_id=1076867799",
+          "checkedAt": "2026-11-22",
+          "support": "Bookable room record explicitly identifies adult/child occupancy, area and bed configuration. No property-level rate is assigned to the grade."
+        },
+        {
+          "fields": [
+            "images"
+          ],
+          "url": "https://merperledalat.vn/en/wp-json/wp/v2/media?parent=19745&per_page=100",
+          "checkedAt": "2026-11-22",
+          "support": "Official published media records are attached to this exact room post ID and have matching room-category titles. Only named room photographs are retained; banners, virtual-tour graphics and mismatched-category media are excluded."
+        }
+      ],
+      "images": [
+        {
+          "path": "/images/room-types/dalat-9967439-executive-suite-extra-1.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Executive-Suite-12-1.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/executive-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang điều hành tại MerPerle Dalat",
+            "en": "A view of EXECUTIVE SUITE at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-executive-suite-extra-2.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Executive-Suite-6-2.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/executive-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang điều hành tại MerPerle Dalat",
+            "en": "A view of EXECUTIVE SUITE at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-executive-suite-extra-3.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Executive-Suite-2-3.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/executive-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang điều hành tại MerPerle Dalat",
+            "en": "A view of EXECUTIVE SUITE at MerPerle Dalat"
+          }
+        }
+      ]
+    },
+    "garden-grand-suite": {
+      "capacity": 3,
+      "areaM2": 121,
+      "beds": {
+        "vi": "Một giường đôi lớn và một giường sofa",
+        "en": "One king bed and one sofa bed"
+      },
+      "occupancyNote": {
+        "vi": "Tiêu chuẩn 2 người lớn; tối đa 3 người lớn hoặc 3 người lớn và 1 trẻ em theo nhà cung cấp, có điều kiện giường phụ/giường sofa và phụ phí. Cần xác nhận trước với khách sạn.",
+        "en": "Standard occupancy is two adults; the provider allows up to three adults or three adults and one child with extra-bed/sofa-bed conditions and supplements. Confirm with the hotel before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.monkeytravel.com/vn/en/hotel/dalat/dalatcity/product/product_detail.php?product_id=1076867799",
+          "checkedAt": "2026-11-22",
+          "support": "Bookable room record explicitly identifies adult/child occupancy, area and bed configuration. No property-level rate is assigned to the grade."
+        },
+        {
+          "fields": [
+            "images"
+          ],
+          "url": "https://merperledalat.vn/en/wp-json/wp/v2/media?parent=19747&per_page=100",
+          "checkedAt": "2026-11-22",
+          "support": "Official published media records are attached to this exact room post ID and have matching room-category titles. Only named room photographs are retained; banners, virtual-tour graphics and mismatched-category media are excluded."
+        }
+      ],
+      "images": [
+        {
+          "path": "/images/room-types/dalat-9967439-garden-grand-suite-extra-1.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Garden-Suite-1.jpg",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/garden-grand-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang lớn có vườn tại MerPerle Dalat",
+            "en": "A view of GARDEN GRAND SUITE at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-garden-grand-suite-extra-2.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Garden-Suite-3.jpg",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/garden-grand-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang lớn có vườn tại MerPerle Dalat",
+            "en": "A view of GARDEN GRAND SUITE at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-garden-grand-suite-extra-3.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Garden-Suite-6.jpg",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/garden-grand-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang lớn có vườn tại MerPerle Dalat",
+            "en": "A view of GARDEN GRAND SUITE at MerPerle Dalat"
+          }
+        }
+      ]
+    },
+    "luxury-grand-suite": {
+      "capacity": 3,
+      "areaM2": 85,
+      "beds": {
+        "vi": "Một giường đôi lớn",
+        "en": "One king bed"
+      },
+      "occupancyNote": {
+        "vi": "Tiêu chuẩn 2 người lớn; tối đa 3 người lớn hoặc 3 người lớn và 1 trẻ em theo nhà cung cấp, có điều kiện giường phụ/giường sofa và phụ phí. Cần xác nhận trước với khách sạn.",
+        "en": "Standard occupancy is two adults; the provider allows up to three adults or three adults and one child with extra-bed/sofa-bed conditions and supplements. Confirm with the hotel before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.monkeytravel.com/vn/en/hotel/dalat/dalatcity/product/product_detail.php?product_id=1076867799",
+          "checkedAt": "2026-11-22",
+          "support": "Bookable room record explicitly identifies adult/child occupancy, area and bed configuration. No property-level rate is assigned to the grade."
+        },
+        {
+          "fields": [
+            "images"
+          ],
+          "url": "https://merperledalat.vn/en/wp-json/wp/v2/media?parent=19749&per_page=100",
+          "checkedAt": "2026-11-22",
+          "support": "Official published media records are attached to this exact room post ID and have matching room-category titles. Only named room photographs are retained; banners, virtual-tour graphics and mismatched-category media are excluded."
+        }
+      ],
+      "images": [
+        {
+          "path": "/images/room-types/dalat-9967439-luxury-grand-suite-extra-1.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Luxury-room-8.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/luxury-grand-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang lớn sang trọng tại MerPerle Dalat",
+            "en": "A view of LUXURY GRAND SUITE at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-luxury-grand-suite-extra-2.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Luxury-room-4.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/luxury-grand-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang lớn sang trọng tại MerPerle Dalat",
+            "en": "A view of LUXURY GRAND SUITE at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-luxury-grand-suite-extra-3.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/07/Luxury-room-2-1.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/luxury-grand-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang lớn sang trọng tại MerPerle Dalat",
+            "en": "A view of LUXURY GRAND SUITE at MerPerle Dalat"
+          }
+        }
+      ]
+    },
+    "president-suite": {
+      "capacity": 4,
+      "areaM2": 165,
+      "beds": {
+        "vi": "Một giường đôi lớn và hai giường đơn",
+        "en": "One king bed and two single beds"
+      },
+      "occupancyNote": {
+        "vi": "Nhà cung cấp công bố 4 người lớn, có thể thêm 2 trẻ em theo điều kiện/phụ phí riêng. Cần xác nhận tuổi trẻ em và giường phụ.",
+        "en": "The provider lists 4 adults and permits 2 additional children subject to conditions/supplements. Confirm child ages and extra beds."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.monkeytravel.com/vn/en/hotel/dalat/dalatcity/product/product_detail.php?product_id=1076867799",
+          "checkedAt": "2026-11-22",
+          "support": "Bookable room record explicitly identifies adult/child occupancy, area and bed configuration. No property-level rate is assigned to the grade."
+        },
+        {
+          "fields": [
+            "images"
+          ],
+          "url": "https://merperledalat.vn/en/wp-json/wp/v2/media?parent=19751&per_page=100",
+          "checkedAt": "2026-11-22",
+          "support": "Official published media records are attached to this exact room post ID and have matching room-category titles. Only named room photographs are retained; banners, virtual-tour graphics and mismatched-category media are excluded."
+        }
+      ],
+      "images": [
+        {
+          "path": "/images/room-types/dalat-9967439-president-suite-extra-1.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/03/President-Suite-6.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/president-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang tổng thống tại MerPerle Dalat",
+            "en": "A view of PRESIDENT SUITE at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-president-suite-extra-2.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/03/President-Suite-4.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/president-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang tổng thống tại MerPerle Dalat",
+            "en": "A view of PRESIDENT SUITE at MerPerle Dalat"
+          }
+        },
+        {
+          "path": "/images/room-types/dalat-9967439-president-suite-extra-3.webp",
+          "originalUrl": "https://merperledalat.vn/wp-content/uploads/2023/03/President-Suite-2.png",
+          "sourceUrl": "https://merperledalat.vn/en/accmomodation/president-suite/",
+          "checkedAt": "2026-11-22",
+          "caption": {
+            "vi": "Không gian thuộc hạng Phòng hạng sang tổng thống tại MerPerle Dalat",
+            "en": "A view of PRESIDENT SUITE at MerPerle Dalat"
+          }
+        }
+      ]
+    }
+  },
+  "danang-4657626": {
+    "king-guestroom-ocean": {
+      "capacity": 3,
+      "areaM2": 37,
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Nang-Hotels-Hilton-Da-Nang.h19288251.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The exact king ocean-view room / king river-view suite card lists a total of three guests. Published areas are 398 and 646 square feet, respectively; corresponding metric values are corroborated by the provider ONDA listing."
+        }
+      ]
+    },
+    "king-suite-river": {
+      "capacity": 3,
+      "areaM2": 60,
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Nang-Hotels-Hilton-Da-Nang.h19288251.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The exact king ocean-view room / king river-view suite card lists a total of three guests. Published areas are 398 and 646 square feet, respectively; corresponding metric values are corroborated by the provider ONDA listing."
+        }
+      ]
+    }
+  },
+  "hanoi-6966450": {
+    "premium-suite": {
+      "capacity": 3,
+      "areaM2": 68,
+      "beds": {
+        "vi": "Một giường đôi lớn theo thông tin nhà cung cấp",
+        "en": "One king bed as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com.vn/en/Hanoi-Hotels-Sheraton-Hanoi-West.h3918847.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The explicitly named Premium Suite and Executive Suite room cards list three guests, one king bed and their metric room areas."
+        }
+      ]
+    },
+    "executive-suite": {
+      "capacity": 3,
+      "areaM2": 101,
+      "beds": {
+        "vi": "Một giường đôi lớn theo thông tin nhà cung cấp",
+        "en": "One king bed as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "areaM2",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com.vn/en/Hanoi-Hotels-Sheraton-Hanoi-West.h3918847.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The explicitly named Premium Suite and Executive Suite room cards list three guests, one king bed and their metric room areas."
+        }
+      ]
+    }
+  },
+  "dalat-4640468": {
+    "superior": {
+      "capacity": 3,
+      "beds": {
+        "vi": "Một giường Queen theo thông tin nhà cung cấp",
+        "en": "One queen bed as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Lat-Hotels-Hotel-Colline.h33375518.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The matching named room card publishes the total guest limit and bed configuration. This is a supplier occupancy figure; extra-person charges and adult/child rules require confirmation."
+        }
+      ]
+    },
+    "deluxe-double": {
+      "capacity": 3,
+      "beds": {
+        "vi": "Một giường Queen theo thông tin nhà cung cấp",
+        "en": "One queen bed as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Lat-Hotels-Hotel-Colline.h33375518.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The matching named room card publishes the total guest limit and bed configuration. This is a supplier occupancy figure; extra-person charges and adult/child rules require confirmation."
+        }
+      ]
+    },
+    "deluxe-twin": {
+      "capacity": 3,
+      "beds": {
+        "vi": "Hai giường đơn lớn theo thông tin nhà cung cấp",
+        "en": "Two large single beds as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Lat-Hotels-Hotel-Colline.h33375518.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The matching named room card publishes the total guest limit and bed configuration. This is a supplier occupancy figure; extra-person charges and adult/child rules require confirmation."
+        }
+      ]
+    },
+    "studio": {
+      "capacity": 4,
+      "beds": {
+        "vi": "Một giường đôi lớn theo thông tin nhà cung cấp",
+        "en": "One king bed as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Lat-Hotels-Hotel-Colline.h33375518.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The matching named room card publishes the total guest limit and bed configuration. This is a supplier occupancy figure; extra-person charges and adult/child rules require confirmation."
+        }
+      ]
+    },
+    "signature-suite": {
+      "capacity": 4,
+      "beds": {
+        "vi": "Một giường đôi lớn theo thông tin nhà cung cấp",
+        "en": "One king bed as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Lat-Hotels-Hotel-Colline.h33375518.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The matching named room card publishes the total guest limit and bed configuration. This is a supplier occupancy figure; extra-person charges and adult/child rules require confirmation."
+        }
+      ]
+    },
+    "colline-junior-suite": {
+      "capacity": 4,
+      "beds": {
+        "vi": "Một giường đôi lớn theo thông tin nhà cung cấp",
+        "en": "One king bed as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Lat-Hotels-Hotel-Colline.h33375518.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The matching named room card publishes the total guest limit and bed configuration. This is a supplier occupancy figure; extra-person charges and adult/child rules require confirmation."
+        }
+      ]
+    },
+    "colline-suite": {
+      "capacity": 4,
+      "beds": {
+        "vi": "Một giường đôi lớn theo thông tin nhà cung cấp",
+        "en": "One king bed as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Lat-Hotels-Hotel-Colline.h33375518.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The matching named room card publishes the total guest limit and bed configuration. This is a supplier occupancy figure; extra-person charges and adult/child rules require confirmation."
+        }
+      ]
+    },
+    "deluxe-family": {
+      "capacity": 4,
+      "beds": {
+        "vi": "Hai giường đôi lớn theo thông tin nhà cung cấp",
+        "en": "Two king beds as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Lat-Hotels-Hotel-Colline.h33375518.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The matching named room card publishes the total guest limit and bed configuration. This is a supplier occupancy figure; extra-person charges and adult/child rules require confirmation."
+        }
+      ]
+    },
+    "cozy-studio-condotel-2br": {
+      "capacity": 4,
+      "beds": {
+        "vi": "Một giường đôi và một giường Queen theo thông tin nhà cung cấp",
+        "en": "One double bed and one queen bed as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Lat-Hotels-Hotel-Colline.h33375518.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The matching named room card publishes the total guest limit and bed configuration. This is a supplier occupancy figure; extra-person charges and adult/child rules require confirmation."
+        }
+      ]
+    },
+    "family-penthouse": {
+      "capacity": 4,
+      "beds": {
+        "vi": "Hai giường Queen theo thông tin nhà cung cấp",
+        "en": "Two queen beds as listed by the provider"
+      },
+      "occupancyNote": {
+        "vi": "Sức chứa tổng do nhà cung cấp công bố; cần xác nhận số người lớn/trẻ em, giường phụ và phụ phí trước khi đặt.",
+        "en": "Total occupancy published by the provider; confirm adult/child composition, extra beds and supplements before booking."
+      },
+      "evidence": [
+        {
+          "fields": [
+            "capacity",
+            "beds",
+            "occupancyNote"
+          ],
+          "url": "https://www.expedia.com/Da-Lat-Hotels-Hotel-Colline.h33375518.Hotel-Information",
+          "checkedAt": "2026-11-22",
+          "support": "The matching named room card publishes the total guest limit and bed configuration. This is a supplier occupancy figure; extra-person charges and adult/child rules require confirmation."
+        }
+      ]
+    }
+  },
+  "hanoi-4966966": {
+    "oriental-pearl": {
+      "price": {
+        "amount": 225,
+        "currency": "USD",
+        "context": {
+          "vi": "Giá công bố từ 225 USD++, cần xác nhận ngày ở, thuế và phí dịch vụ với cơ sở.",
+          "en": "Published from 225 USD++, subject to dates, taxes and fees."
+        },
+        "sourceUrl": "https://theorientaljadehotel.com/accommodation/oriental-pearl-room",
+        "checkedAt": "2026-11-22",
+        "unit": "night",
+        "isLive": false
+      },
+      "evidence": [
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://theorientaljadehotel.com/accommodation/oriental-pearl-room",
+          "checkedAt": "2026-11-22",
+          "support": "The same room-specific published rate was rechecked on 22 November 2026. This refreshes provenance only; it is not a live quote for selected stay dates."
+        }
+      ]
+    },
+    "ruby-city": {
+      "price": {
+        "amount": 495,
+        "currency": "USD",
+        "context": {
+          "vi": "Giá công bố từ 495 USD++, cần xác nhận ngày ở, thuế và phí dịch vụ với cơ sở.",
+          "en": "Published from 495 USD++, subject to dates, taxes and fees."
+        },
+        "sourceUrl": "https://theorientaljadehotel.com/accommodation/ruby-city-view-room",
+        "checkedAt": "2026-11-22",
+        "unit": "night",
+        "isLive": false
+      },
+      "evidence": [
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://theorientaljadehotel.com/accommodation/ruby-city-view-room",
+          "checkedAt": "2026-11-22",
+          "support": "The same room-specific published rate was rechecked on 22 November 2026. This refreshes provenance only; it is not a live quote for selected stay dates."
+        }
+      ]
+    }
+  },
+  "hoian-891251": {
+    "junior-suite": {
+      "price": {
+        "amount": 130,
+        "currency": "USD",
+        "context": {
+          "vi": "Giá công bố từ 130 USD++, cần xác nhận ngày ở, thuế và phí dịch vụ với cơ sở. Nguồn hiển thị nhãn ưu đãi 35%.",
+          "en": "Published from 130 USD++ with a 35% special discount label. Taxes, service fees, dates and conditions require confirmation."
+        },
+        "sourceUrl": "https://lhaghotels.com/hotels/allegrohoian/rooms#junior-suite",
+        "checkedAt": "2026-11-22",
+        "unit": "night",
+        "isLive": false
+      },
+      "evidence": [
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://lhaghotels.com/hotels/allegrohoian/rooms#junior-suite",
+          "checkedAt": "2026-11-22",
+          "support": "The same room-specific published rate was rechecked on 22 November 2026. This refreshes provenance only; it is not a live quote for selected stay dates."
+        }
+      ]
+    },
+    "little-suite": {
+      "price": {
+        "amount": 156,
+        "currency": "USD",
+        "context": {
+          "vi": "Giá công bố từ 156 USD++, cần xác nhận ngày ở, thuế và phí dịch vụ với cơ sở. Nguồn hiển thị nhãn ưu đãi 35%.",
+          "en": "Published from 156 USD++ with a 35% special discount label. Taxes, service fees, dates and conditions require confirmation."
+        },
+        "sourceUrl": "https://lhaghotels.com/hotels/allegrohoian/rooms#little-suite",
+        "checkedAt": "2026-11-22",
+        "unit": "night",
+        "isLive": false
+      },
+      "evidence": [
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://lhaghotels.com/hotels/allegrohoian/rooms#little-suite",
+          "checkedAt": "2026-11-22",
+          "support": "The same room-specific published rate was rechecked on 22 November 2026. This refreshes provenance only; it is not a live quote for selected stay dates."
+        }
+      ]
+    }
+  },
+  "hoian-347805": {
+    "superior-windows": {
+      "price": {
+        "amount": 1190000,
+        "currency": "VND",
+        "context": {
+          "vi": "Giá từ được cơ sở công bố, cần xác nhận ngày ở, bữa sáng, thuế và phụ phí.",
+          "en": "Published from-price. Confirm dates, breakfast, taxes and fees with the hotel."
+        },
+        "sourceUrl": "https://www.goldenholidayhoianhotel.com/rooms-suites/15/superior-double-twin-with-windows",
+        "checkedAt": "2026-11-22",
+        "unit": "night",
+        "isLive": false
+      },
+      "evidence": [
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://www.goldenholidayhoianhotel.com/rooms-suites/15/superior-double-twin-with-windows",
+          "checkedAt": "2026-11-22",
+          "support": "The same room-specific published rate was rechecked on 22 November 2026. This refreshes provenance only; it is not a live quote for selected stay dates."
+        }
+      ]
+    },
+    "deluxe-balcony": {
+      "price": {
+        "amount": 1390000,
+        "currency": "VND",
+        "context": {
+          "vi": "Giá từ được cơ sở công bố, cần xác nhận ngày ở, bữa sáng, thuế và phụ phí.",
+          "en": "Published from-price. Confirm dates, breakfast, taxes and fees with the hotel."
+        },
+        "sourceUrl": "https://www.goldenholidayhoianhotel.com/rooms-suites/17/deluxe-double-twin-with-balcony",
+        "checkedAt": "2026-11-22",
+        "unit": "night",
+        "isLive": false
+      },
+      "evidence": [
+        {
+          "fields": [
+            "price"
+          ],
+          "url": "https://www.goldenholidayhoianhotel.com/rooms-suites/17/deluxe-double-twin-with-balcony",
+          "checkedAt": "2026-11-22",
+          "support": "The same room-specific published rate was rechecked on 22 November 2026. This refreshes provenance only; it is not a live quote for selected stay dates."
+        }
+      ]
+    }
+  }
+}

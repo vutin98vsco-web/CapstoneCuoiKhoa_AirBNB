@@ -1,0 +1,106 @@
+.language-switcher {
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 22px;
+  font-family: 'Be Vietnam Pro', Arial, sans-serif;
+}
+
+.language-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 7px 12px 7px 8px;
+  border: 1px solid #e8e4e4;
+  border-radius: 30px;
+  background: #fff;
+  color: #39433f;
+  box-shadow: 0 2px 4px #272d2910;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+.language-trigger:hover, .language-trigger.is-open {
+  border-color: #f3b3b6;
+  background: #fffafa;
+  box-shadow: 0 3px 12px #cc505014;
+}
+
+.language-globe {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff0f0;
+  color: #cf4154;
+}
+
+.language-trigger-label { font-size: 12px; font-weight: 600; white-space: nowrap; }
+.language-trigger-code { display: none; font-size: 11px; font-weight: 700; letter-spacing: .5px; }
+.language-chevron { color: #939995; transition: transform .2s; }
+.language-trigger.is-open .language-chevron { transform: rotate(180deg); color: #cf4154; }
+
+.header-over-video .language-trigger {
+  background: rgb(255 255 255 / 10%);
+  border-color: rgb(255 255 255 / 26%);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 6%);
+}
+.header-over-video .language-trigger:hover,
+.header-over-video .language-trigger.is-open { background: rgb(255 255 255 / 19%); border-color: rgb(255 255 255 / 48%); }
+.header-over-video .language-globe { background: rgb(255 255 255 / 12%); color: #ffd8da; }
+.header-over-video .language-chevron,
+.header-over-video .language-trigger.is-open .language-chevron { color: rgb(255 255 255 / 80%); }
+
+.language-panel {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 55;
+  width: 254px;
+  max-width: calc(100vw - 32px);
+  padding: 8px;
+  border: 1px solid #eee7e7;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 15px 45px #27332b1a, 0 3px 10px #27332b08;
+  animation: language-reveal .16s ease-out;
+}
+
+.language-panel-heading { padding: 9px 11px 14px; margin-bottom: 5px; border-bottom: 1px solid #f2eeee; }
+.language-panel-heading > span { color: #2b3530; font-size: 13px; font-weight: 650; }
+.language-panel-heading p { margin-top: 4px; color: #959a97; font-size: 10px; line-height: 1.7; }
+.language-option { display: flex; align-items: center; gap: 11px; width: 100%; min-height: 56px; padding: 9px 11px; margin-top: 3px; border-radius: 11px; background: transparent; color: #515a55; text-align: left; transition: background .15s; }
+.language-option:hover { background: #f8f9f7; }
+.language-option.is-selected { background: #fff2f2; color: #b73347; }
+.language-option:focus-visible { outline: 2px solid #d74a60; outline-offset: -2px; }
+.language-option[aria-disabled='true'] { cursor: wait; }
+.language-badge { display: grid; place-items: center; width: 34px; height: 34px; flex-shrink: 0; border: 1px solid #e5e9e4; border-radius: 9px; background: #fff; color: #717a73; font-size: 10px; font-weight: 700; letter-spacing: .5px; }
+.is-selected .language-badge { border-color: #f5cbcd; color: #c34255; }
+.language-option-name { flex: 1; font-size: 12px; font-weight: 550; }
+.language-check { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #d64a5c; color: white; }
+.language-option-dot { width: 7px; height: 7px; margin-inline: 7px; border: 1px solid #d7dcd7; border-radius: 50%; }
+.language-spinner { width: 17px; height: 17px; margin-inline: 3px; border: 2px solid #f3d8dc; border-top-color: #c34255; border-radius: 50%; animation: language-spin .7s linear infinite; }
+@keyframes language-reveal { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes language-spin { to { transform: rotate(360deg); } }
+
+@media(max-width:1150px) {
+  .language-switcher { margin-right: 15px; }
+  .language-trigger { gap: 7px; padding-right: 10px; }
+}
+@media(max-width:1050px) { .language-switcher { margin-right: 0; } }
+@media(max-width:600px) {
+  .language-trigger { min-height: 42px; gap: 6px; padding: 6px 10px; }
+  .language-globe { width: 22px; height: 22px; background: transparent; }
+  .language-trigger-label { display: none; }
+  .language-trigger-code { display: inline; }
+  .language-panel { right: -90px; }
+}
+@media(max-width:420px) {
+  .language-trigger { gap: 5px; padding-inline: 8px; }
+  .language-globe { width: 18px; }
+  .language-globe svg { width: 17px; }
+  .language-panel { right: -86px; }
+}
